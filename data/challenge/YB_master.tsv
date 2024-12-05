@@ -1,0 +1,81 @@
+animal	cage	number	tag	cc	sex	dob	inoculation_date	death_date	prion_endpoint	acm	endpoint_comments	intercurrent_details	acm_comments	dpi
+YBA1	YBA	1	RT	88452	F	2021-07-06	2021-08-26	2021-10-25	FALSE	FALSE	before treatment group assignment		before treatment group assignment	60
+YBA2	YBA	2	RB	88452	F	2021-07-06	2021-08-26	2022-01-24	FALSE	TRUE	moribund		counted in all-cause	151
+YBA3	YBA	3	LT	88452	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBA4	YBA	4	LB	88452	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBB1	YBB	1	RT	88453	F	2021-07-06	2021-08-26	2022-03-08	FALSE	FALSE	surgical complications		surgical complications	194
+YBB2	YBB	2	RB	88453	F	2021-07-06	2021-08-26	2022-11-30	TRUE	TRUE	weight loss		counted in all-cause	461
+YBB3	YBB	3	LT	88453	F	2021-07-06	2021-08-26	2022-11-14	TRUE	TRUE	weight loss		counted in all-cause	445
+YBB4	YBB	4	LB	88453	F	2021-07-06	2021-08-26	2022-06-08	FALSE	TRUE	intercurrent	necrotic foot	counted in all-cause	286
+YBC1	YBC	1	RT	88454	F	2021-07-06	2021-08-26	2022-02-14	FALSE	TRUE	found dead		counted in all-cause	172
+YBC2	YBC	2	RB	88454	F	2021-07-06	2021-08-26	2022-02-02	FALSE	TRUE	found dead		counted in all-cause	160
+YBC3	YBC	3	LT	88454	F	2021-07-06	2021-08-26	2022-02-14	FALSE	TRUE	weight loss		counted in all-cause	172
+YBC4	YBC	4	LB	88454	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBD1	YBD	1	RT	88455	F	2021-07-06	2021-08-26	2022-03-08	FALSE	FALSE	surgical complications		surgical complications	194
+YBD2	YBD	2	RB	88455	F	2021-07-06	2021-08-26	2022-09-01	FALSE	TRUE	found dead		counted in all-cause	371
+YBD3	YBD	3	LT	88455	F	2021-07-06	2021-08-26	2022-11-11	TRUE	TRUE	weight loss		counted in all-cause	442
+YBD4	YBD	4	LB	88455	F	2021-07-06	2021-08-26	2022-11-11	FALSE	TRUE	found dead		counted in all-cause	442
+YBE1	YBE	1	RT	88456	F	2021-07-06	2021-08-26	2022-05-27	FALSE	TRUE	found dead		counted in all-cause	274
+YBE2	YBE	2	RB	88456	F	2021-07-06	2021-08-26	2021-12-30	FALSE	FALSE	surgical complications		surgical complications	126
+YBE3	YBE	3	LT	88456	F	2021-07-06	2021-08-26	2021-08-26	FALSE	FALSE	surgical complications		surgical complications	0
+YBE4	YBE	4	LB	88456	F	2021-07-06	2021-08-26	2022-06-22	FALSE	TRUE	found dead		counted in all-cause	300
+YBF1	YBF	1	RT	88457	F	2021-07-06	2021-08-26	2022-07-01	TRUE	TRUE	weight loss		counted in all-cause	309
+YBF2	YBF	2	RB	88457	F	2021-07-06	2021-08-26	2021-12-30	FALSE	FALSE	surgical complications		surgical complications	126
+YBF3	YBF	3	LT	88457	F	2021-07-06	2021-08-26	2022-04-11	TRUE	TRUE	weight loss		counted in all-cause	228
+YBF4	YBF	4	LB	88457	F	2021-07-06	2021-08-26	2022-05-04	TRUE	TRUE	weight loss		counted in all-cause	251
+YBG1	YBG	1	RT	88458	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBG2	YBG	2	RB	88458	F	2021-07-06	2021-08-26	2021-12-30	FALSE	FALSE	surgical complications		surgical complications	126
+YBG3	YBG	3	LT	88458	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBG4	YBG	4	LB	88458	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBH1	YBH	1	RT	88459	F	2021-07-06	2021-08-26	2022-03-23	FALSE	TRUE	found dead		counted in all-cause	209
+YBH2	YBH	2	RB	88459	F	2021-07-06	2021-08-26	2022-05-18	FALSE	TRUE	intercurrent	vaginal prolapse	counted in all-cause	265
+YBH3	YBH	3	LT	88459	F	2021-07-06	2021-08-26	2021-08-26	FALSE	FALSE	surgical complications		surgical complications	0
+YBH4	YBH	4	LB	88459	F	2021-07-06	2021-08-26	2022-08-17	FALSE	TRUE	found dead		counted in all-cause	356
+YBI1	YBI	1	RT	88460	F	2021-07-06	2021-08-26	2022-02-02	TRUE	TRUE	weight loss		counted in all-cause	160
+YBI2	YBI	2	RB	88460	F	2021-07-06	2021-08-26	2022-06-01	FALSE	TRUE	found dead		counted in all-cause	279
+YBI3	YBI	3	LT	88460	F	2021-07-06	2021-08-26	2022-02-11	TRUE	TRUE	weight loss		counted in all-cause	169
+YBI4	YBI	4	LB	88460	F	2021-07-06	2021-08-26	2022-02-11	TRUE	TRUE	weight loss		counted in all-cause	169
+YBJ1	YBJ	1	RT	88461	F	2021-07-06	2021-08-26	2022-02-02	TRUE	TRUE	weight loss		counted in all-cause	160
+YBJ2	YBJ	2	RB	88461	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBJ3	YBJ	3	LT	88461	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBJ4	YBJ	4	LB	88461	F	2021-07-06	2021-08-26	2022-01-14	TRUE	TRUE	weight loss		counted in all-cause	141
+YBK1	YBK	1	RT	88462	F	2021-07-06	2021-08-26	2022-02-07	FALSE	TRUE	found dead		counted in all-cause	165
+YBK2	YBK	2	RB	88462	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBK3	YBK	3	LT	88462	F	2021-07-06	2021-08-26	2022-02-14	FALSE	TRUE	found dead		counted in all-cause	172
+YBK4	YBK	4	LB	88462	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBL1	YBL	1	RT	88463	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBL2	YBL	2	RB	88463	F	2021-07-06	2021-08-26	2022-02-14	TRUE	TRUE	weight loss		counted in all-cause	172
+YBL3	YBL	3	LT	88463	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBL4	YBL	4	LB/** torn right ear	88463	F	2021-07-06	2021-08-26	2022-06-08	TRUE	TRUE	weight loss		counted in all-cause	286
+YBM1	YBM	1	RT	88464	F	2021-07-06	2021-08-26	2022-03-02	TRUE	TRUE	weight loss		counted in all-cause	188
+YBM2	YBM	2	RB	88464	F	2021-07-06	2021-08-26	2022-02-09	TRUE	TRUE	weight loss		counted in all-cause	167
+YBM3	YBM	3	LT	88464	F	2021-07-06	2021-08-26	2022-02-02	TRUE	TRUE	weight loss		counted in all-cause	160
+YBM4	YBM	4	LB/** torn right ear	88464	F	2021-07-06	2021-08-26	2022-04-11	FALSE	TRUE	found dead		counted in all-cause	228
+YBN1	YBN	1	RT	88465	F	2021-07-06	2021-08-26	2022-06-29	TRUE	TRUE	weight loss		counted in all-cause	307
+YBN2	YBN	2	RB	88465	F	2021-07-06	2021-08-26	2022-02-21	TRUE	TRUE	weight loss		counted in all-cause	179
+YBN3	YBN	3	LT	88465	F	2021-07-06	2021-08-26	2021-08-26	FALSE	FALSE	excluded		surgical complications	0
+YBN4	YBN	4	LB	88465	F	2021-07-06	2021-08-26	2021-09-04	FALSE	FALSE	before treatment group assignment		before treatment group assignment	9
+YBO1	YBO	1	RT	88466	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBO2	YBO	2	RB	88466	F	2021-07-06	2021-08-26	2022-02-02	FALSE	TRUE	found dead		counted in all-cause	160
+YBO3	YBO	3	LT	88466	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBO4	YBO	4	LB	88466	F	2021-07-06	2021-08-26	2022-02-11	TRUE	TRUE	weight loss		counted in all-cause	169
+YBP1	YBP	1	RT	88467	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBP2	YBP	2	RB	88467	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBP3	YBP	3	LT	88467	F	2021-07-06	2021-08-26	2022-02-14	TRUE	TRUE	weight loss		counted in all-cause	172
+YBP4	YBP	4	LB	88467	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBQ1	YBQ	1	RT	88468	F	2021-07-06	2021-08-26	2022-05-02	FALSE	TRUE	found dead		counted in all-cause	249
+YBQ2	YBQ	2	RB	88468	F	2021-07-06	2021-08-26	2022-02-01	FALSE	TRUE	found dead		counted in all-cause	159
+YBQ3	YBQ	3	LT	88468	F	2021-07-06	2021-08-26	2022-02-04	TRUE	TRUE	weight loss		counted in all-cause	162
+YBQ4	YBQ	4	LB	88468	F	2021-07-06	2021-08-26	2022-02-07	TRUE	TRUE	weight loss		counted in all-cause	165
+YBS1	YBS	1	RT	88470	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBS2	YBS	2	RB	88470	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBS3	YBS	3	LT	88470	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBS4	YBS	4	LB	88470	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBT1	YBT	1	RT	88471	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBT2	YBT	2	RB	88471	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBT3	YBT	3	LT	88471	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBT4	YBT	4	LB	88471	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBU1	YBU	1	RT	88472	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBU2	YBU	2	RB	88472	F	2021-07-06	2021-08-26	2023-01-09	FALSE	FALSE	end of experiment		end of experiment	501
+YBU3	YBU	3	LT	88472	F	2021-07-06	2021-08-26	2022-09-16	FALSE	TRUE	intercurrent	dermatitis	counted in all-cause	386
+YBU4	YBU	4	LB	88472	F	2021-07-06	2021-08-26	2022-11-16	FALSE	TRUE	intercurrent	dermatitis	counted in all-cause	447

@@ -1,0 +1,46 @@
+tx	n_animals
+-	20
+1035-exNA	15
+1035-hiPS	16
+1682-exNA	18
+1682-hiPS	12
+2226-exNA	6
+2226-hiPS	5
+2349exNA-BTT	8
+2349exNA-ETT	8
+2439-P3 v1	6
+2439-exNA	56
+2439-loPS-exNA	40
+2439exNA-HG	8
+2439exNA-UMass	8
+2439hiPS-exNA	10
+2439loPS-exNA	12
+2440-exNA	21
+2440-hiPS	21
+2520-P3 v1	6
+2520-exNA	6
+2710-P3 v1	7
+2768-P3 v1	6
+2768-exNA	6
+HGb1	8
+HGb3	8
+HGb4	8
+NTC	16
+NTC-P3 v1	6
+NTC-exNA	6
+UMass	9
+aCSF	8
+exclude	1
+fixed tail-exNA	42
+fixed tail-hiPS	42
+fixed tail-loPS	8
+matched tail-hiPS	24
+newHG	8
+no inject	1
+no injection	47
+none	28
+ntc-exNA	5
+origHG	8
+origUM	8
+saline	45
+	17

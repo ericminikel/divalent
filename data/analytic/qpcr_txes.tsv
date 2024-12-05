@@ -1,0 +1,77 @@
+study_id	sample_group	tx	disp
+CMR-1313	saline	saline	
+CMR-1313	NTC	NTC	
+CMR-1313	2440-hiPS	2440-hiPS	
+CMR-1313	2440-exNA	2440-exNA	
+CMR-1313	no lysate	no lysate	
+	1682-exNA 100		
+	1682-exNA 33.34		
+	1682-exNA 11.11		
+	1682-exNA 3.705		
+	1682-exNA 1.235		
+	1682-exNA 0.4115		
+	1682-exNA 0.1235		
+	1682-exNA 0.0455		
+	1682-exNA 0.015		
+	untreated		
+	1035-exNA 100		
+	1035-exNA 33.34		
+	1035-exNA 11.11		
+	1035-exNA 3.705		
+	1035-exNA 1.235		
+	1035-exNA 0.4115		
+	1035-exNA 0.1235		
+	1035-exNA 0.0455		
+	1035-exNA 0.015		
+	no lysate		
+	1682-hiPS 100		
+	1682-hiPS 33.34		
+	1682-hiPS 11.11		
+	1682-hiPS 3.705		
+	1682-hiPS 1.235		
+	1682-hiPS 0.4115		
+	1682-hiPS 0.1235		
+	1682-hiPS 0.0455		
+	1682-hiPS 0.015		
+CMR-1418	saline	saline	
+CMR-1418			
+CMR-1418	NTC	NTC	
+CMR-1418	2440-hiPS	2440-hiPS	
+CMR-1418	2440-exNA	2440-exNA	
+CMR-1418	no lysate	no lysate	
+CMR-1465	saline	saline	
+CMR-1465	NTC	NTC-P3 v1	
+CMR-1465	P3 v1-2439	2439-P3 v1	
+CMR-1465			
+CMR-1465	P3 v1-2520	2520-P3 v1	
+CMR-1465	P3 v1-2710	2710-P3 v1	
+CMR-1465	P3 v1-2768	2768-P3 v1	
+CMR-1465	no lysate	no lysate	
+CMR-1465	2439	2439-P3 v1	
+CMR-1465	2520	2520-P3 v1	
+CMR-1656	saline	saline	
+CMR-1656	1682-exNA	1682-exNA	
+CMR-1656	NTC-exNA	NTC-exNA	
+CMR-1656	no lysate	no lysate	
+CMR-1697	saline	saline	
+CMR-1697	NTC-exNA	NTC-exNA	
+CMR-1697	2768	2768-exNA	
+CMR-1697	2439	2439-exNA	
+CMR-1697	2520	2520-exNA	
+CMR-1697	no lysate	no lysate	
+CMR-1697			
+CMR-1697	PBS	saline	
+CMR-1697	NTC	NTC	
+CMR-1871	saline	saline	saline 0 nmol
+CMR-1871	0.4 NMOLE exNA		2439-s4 fixed tail 0.2 nmol
+CMR-1871	0.4 NMOLE P3V1F-HI PS		2439-s1 fixed tail 0.2 nmol
+CMR-1871	0.4 NMOLE P3V1M		2439-s1 matched tail 0.2 nmol
+CMR-1871	10 NMOLE exNA		2439-s4 fixed tail 5 nmol
+CMR-1871	10 NMOLE P3V1F-HI PS		2439-s1 fixed tail 5 nmol
+CMR-1871	10 NMOLE P3V1F-LO PS		2439-s3 fixed tail 5 nmol
+CMR-1871	10 NMOLE P3V1M		2439-s1 matched tail 5 nmol
+CMR-1871	2 NMOLE exNA		2439-s4 fixed tail 1 nmol
+CMR-1871	2 NMOLE P3V1F-HI PS		2439-s1 fixed tail 1 nmol
+CMR-1871	2 NMOLE P3V1M		2439-s1 matched tail 1 nmol
+CMR-1871	no lysate		no lysate
+CMR-1871	NA		

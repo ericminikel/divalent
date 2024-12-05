@@ -1,0 +1,1501 @@
+LOCUS       pStart-K       48422 bp    DNA     circular     19-FEB-2013
+SOURCE      
+  ORGANISM  
+COMMENT     http://www.informaxinc.com/
+COMMENT     This file is created by Vector NTI
+            http://www.invitrogen.com/
+COMMENT     ORIGDB|GenBank
+COMMENT     VNTDATE|654177933|
+COMMENT     VNTDBDATE|654177933|
+COMMENT     LSOWNER|
+COMMENT     VNTNAME|pStart-K|
+COMMENT     VNTAUTHORNAME|Demo User|
+COMMENT     Vector_NTI_Display_Data_(Do_Not_Edit!)
+COMMENT     (SXF 
+COMMENT      (CGexDoc "pStart-K" 0 48422 
+COMMENT       (CDBMol 0 0 1 1 1 0 0 0 0 "" "" 0 0 0 0 (CObList) (CObList) (CObList) 
+COMMENT        (CObList) -1 "") 
+COMMENT       (CDocSetData 1 1 0 0 0 0 "MAIN" 1 1 1 1 0 0 1 1 0 1 10 10 4294967295 50 0 
+COMMENT        1 0 (CHomObj 0 0 0 3 75) (CWordArray) (CWordArray) 
+COMMENT        (CStringList "BamHI" "EcoRV" "KpnI" "NotI" "SalI") 
+COMMENT        (CStringList "atg" "gtg") (CStringList "taa" "tga" "tag") (CObList) 1 
+COMMENT        "{(0,1),2}" 0 0 "" 0 4294967295 0 0 0 0 0 0 0 "MAIN" 0 0 30 0 
+COMMENT        (CProteinMotifSearchObject 70 20 1 1 1 1 0 0 1 0 0 0 0 0)) 
+COMMENT       (CMolPar 0 0 0 0 4294967295 1 48422 0 0 0 0 0 0 0 0) (CStringList) 
+COMMENT       (CStringList) (CObList) (COAPar 25 250 50 0 6 4 3 7) 
+COMMENT       (COAPar 25 250 50 0 6 4 3 7) (COAPar 25 250 50 0 6 4 3 7) 
+COMMENT       (CObList 
+COMMENT        #0=(CRSite (CStringList) "BamHI" "ggatcc" 2 0 8 6654 0 12371 0 15702 0 
+COMMENT            25996 0 29852 0 38897 0 39508 0 40844 0 0 "") 
+COMMENT        #1=(CRSite (CStringList) "EcoRV" "gatatc" 4 0 3 19839 0 26560 0 30768 0 
+COMMENT            0 "") 
+COMMENT        #2=(CRSite (CStringList) "KpnI" "ggtacc" 6 0 2 3635 0 18365 0 0 "") 
+COMMENT        #3=(CRSite (CStringList) "NotI" "gcggccgc" 3 0 2 4 0 45962 0 0 "") 
+COMMENT        #4=(CRSite (CStringList) "SalI" "gtcgac" 2 0 1 18630 0 0 "")) 
+COMMENT       (CObList 
+COMMENT        #5=(CFSignal (CObList) "p15A origin of replication" 21 0 0 46000 46910 0 
+COMMENT            (CStringList) (CStringList) 1 1 1 1 "56151..57061") 
+COMMENT        #6=(CFSignal (CObList) "kana" 21 0 0 47240 48055 0 (CStringList) 
+COMMENT            (CStringList) 1 1 1 1 "57391..58206") 
+COMMENT        #7=(CFSignal (CObList) "NotI" 21 0 0 2 9 0 (CStringList) (CStringList) 1 
+COMMENT            1 1 1 "2..9") 
+COMMENT        #8=(CFSignal (CObList) "NotI" 21 0 0 45960 45967 0 (CStringList) 
+COMMENT            (CStringList) 1 1 1 1 "56111..56118") 
+COMMENT        #9=(CFSignal (CObList) "PRNP" 21 0 0 20180 35617 0 (CStringList) 
+COMMENT            (CStringList) 1 1 1 1 "") 
+COMMENT        #10=(CFSignal (CObList) "5HA" 21 0 0 10 59 0 (CStringList) (CStringList) 
+COMMENT             1 1 1 1 "") 
+COMMENT        #11=(CFSignal (CObList) "3HA" 21 0 0 45910 45959 0 (CStringList) 
+COMMENT             (CStringList) 1 1 1 1 "")) (CObList) (CObList) (CObList) (CObList) 
+COMMENT       (CObList) (CObList) 
+COMMENT       (CTextView 0 
+COMMENT        #12=(CGroupPar (CParagraph 0 (0 0) 1 2 0 0 180) 
+COMMENT             (CObjectList 
+COMMENT              #13=(CRefLinePar 
+COMMENT                   (CLinePar (CParagraph 0 (0 0) 0 2 0 0 233) "pStart-K" 2) 5 "" 
+COMMENT                   0 4) 
+COMMENT              #14=(CFolderPar 
+COMMENT                   (CGroupPar (CParagraph 1 (0 0) 1 1 0 0 178) 
+COMMENT                    (CObjectList 
+COMMENT                     #15=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "DNA 'pStart-K'" 1) 
+COMMENT                     #16=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "Local object" 1) 
+COMMENT                     #17=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "Created: 02/19/13 12:05\317\302\316\347" 1) 
+COMMENT                     #18=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "Last Modified: 02/19/13 12:05\317\302\316\347" 1) 
+COMMENT                     #19=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "length: 48422 bp" 1) 
+COMMENT                     #20=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "storage type: Basic" 1) 
+COMMENT                     #21=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "form: Circular" 1))) "General Description") 
+COMMENT              #22=(CFolderPar 
+COMMENT                   (CGroupPar (CParagraph 2 (0 0) 1 1 0 0 178) 
+COMMENT                    (CObjectList 
+COMMENT                     #23=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "Original Source Database: GenBank" 1) 
+COMMENT                     #24=(CLinePar (CParagraph 0 (0 0) 1 2 1 0 180) 
+COMMENT                          "Modification Date in the Original DB: 19-FEB-2013" 1))) 
+COMMENT                   "Standard Fields") 
+COMMENT              #25=(CRefLinePar 
+COMMENT                   (CLinePar (CParagraph 0 (0 0) 0 2 0 0 233) "Comments" 2) 1 "" 
+COMMENT                   0 0) 
+COMMENT              #26=(CFolderPar 
+COMMENT                   (CGroupPar (CParagraph 8 (0 0) 1 2 0 0 178) (CObjectList)) 
+COMMENT                   "Annotations") 
+COMMENT              #27=(CFolderPar 
+COMMENT                   (CGroupPar (CParagraph 12 (6 0) 1 1 0 0 178) 
+COMMENT                    (CObjectList 
+COMMENT                     #28=(CFolderPar 
+COMMENT                          (CGroupPar (CParagraph 21 (7 21 0) 1 1 1 0 178) 
+COMMENT                           (CObjectList 
+COMMENT                            #29=(CFolderPar 
+COMMENT                                 (CGroupPar (CParagraph 2 (3 #7# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #30=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 2     End: 9   " 1) 
+COMMENT                                   #31=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Original Location Description:" 1) 
+COMMENT                                   #32=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "   2..9" 1))) "NotI") 
+COMMENT                            #33=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 10 (3 #10# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #34=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 10    End: 59  " 1))) "5HA") 
+COMMENT                            #35=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 20180 (3 #9# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #36=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 20180  End: 35617" 1))) "PRNP") 
+COMMENT                            #37=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 45910 (3 #11# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #38=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 45910  End: 45959" 1))) "3HA") 
+COMMENT                            #39=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 45960 (3 #8# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #40=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 45960  End: 45967" 1) 
+COMMENT                                   #41=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Original Location Description:" 1) 
+COMMENT                                   #42=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "   56111..56118" 1))) "NotI") 
+COMMENT                            #43=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 46000 (3 #5# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #44=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 46000  End: 46910" 1) 
+COMMENT                                   #45=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Original Location Description:" 1) 
+COMMENT                                   #46=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "   56151..57061" 1))) 
+COMMENT                                 "p15A origin of replication") 
+COMMENT                            #47=(CFolderPar 
+COMMENT                                 (CGroupPar 
+COMMENT                                  (CParagraph 47240 (3 #6# 0) 1 2 2 0 194) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #48=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Start: 47240  End: 48055" 1) 
+COMMENT                                   #49=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "Original Location Description:" 1) 
+COMMENT                                   #50=(CLinePar 
+COMMENT                                        (CParagraph 0 (0 0) 1 2 3 0 180) 
+COMMENT                                        "   57391..58206" 1))) "kana"))) 
+COMMENT                          "Misc. Feature (7 total)"))) "Feature Map") 
+COMMENT              #51=(CFolderPar 
+COMMENT                   (CGroupPar (CParagraph 13 (0 0) 1 1 0 0 178) 
+COMMENT                    (CObjectList 
+COMMENT                     #52=(CRSFolderPar 
+COMMENT                          (CFolderPar 
+COMMENT                           (CGroupPar (CParagraph 77458520 (8 0) 1 1 1 0 178) 
+COMMENT                            (CObjectList 
+COMMENT                             #53=(CGroupPar 
+COMMENT                                  (CParagraph 0 (10 #0# 0) 1 2 2 0 180) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #54=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 1) 1 2 2 0 191) 
+COMMENT                                        " N1: 6654 " 1) 
+COMMENT                                   #55=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 2) 1 2 2 0 191) 
+COMMENT                                        " N2: 12371 " 1) 
+COMMENT                                   #56=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 3) 1 2 2 0 191) 
+COMMENT                                        " N3: 15702 " 1) 
+COMMENT                                   #57=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 4) 1 2 2 0 191) 
+COMMENT                                        " N4: 25996 " 1) 
+COMMENT                                   #58=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 5) 1 2 2 0 191) 
+COMMENT                                        " N5: 29852 " 1) 
+COMMENT                                   #59=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 6) 1 2 2 0 191) 
+COMMENT                                        " N6: 38897 " 1) 
+COMMENT                                   #60=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 7) 1 2 2 0 191) 
+COMMENT                                        " N7: 39508 " 1) 
+COMMENT                                   #61=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #0# 8) 1 2 2 0 191) 
+COMMENT                                        " N8: 40844 " 1))))) "BamHI: 8 sites") 1 
+COMMENT                          5 "GGATCC" "CCTAGG") 
+COMMENT                     #62=(CRSFolderPar 
+COMMENT                          (CFolderPar 
+COMMENT                           (CGroupPar (CParagraph 77458488 (8 0) 1 1 1 0 178) 
+COMMENT                            (CObjectList 
+COMMENT                             #63=(CGroupPar 
+COMMENT                                  (CParagraph 0 (10 #1# 0) 1 2 2 0 180) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #64=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #1# 1) 1 2 2 0 191) 
+COMMENT                                        " N1: 19839 " 1) 
+COMMENT                                   #65=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #1# 2) 1 2 2 0 191) 
+COMMENT                                        " N2: 26560 " 1) 
+COMMENT                                   #66=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #1# 3) 1 2 2 0 191) 
+COMMENT                                        " N3: 30768 " 1))))) "EcoRV: 3 sites") 3 
+COMMENT                          3 "GATATC" "CTATAG") 
+COMMENT                     #67=(CRSFolderPar 
+COMMENT                          (CFolderPar 
+COMMENT                           (CGroupPar (CParagraph 77448056 (8 0) 1 1 1 0 178) 
+COMMENT                            (CObjectList 
+COMMENT                             #68=(CGroupPar 
+COMMENT                                  (CParagraph 0 (10 #2# 0) 1 2 2 0 180) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #69=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #2# 1) 1 2 2 0 191) 
+COMMENT                                        " N1: 3635 " 1) 
+COMMENT                                   #70=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #2# 2) 1 2 2 0 191) 
+COMMENT                                        " N2: 18365 " 1))))) "KpnI: 2 sites") 5 
+COMMENT                          1 "GGTACC" "CCATGG") 
+COMMENT                     #71=(CRSFolderPar 
+COMMENT                          (CFolderPar 
+COMMENT                           (CGroupPar (CParagraph 77448536 (8 0) 1 1 1 0 178) 
+COMMENT                            (CObjectList 
+COMMENT                             #72=(CGroupPar 
+COMMENT                                  (CParagraph 0 (10 #3# 0) 1 2 2 0 180) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #73=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #3# 1) 1 2 2 0 191) 
+COMMENT                                        " N1: 4 " 1) 
+COMMENT                                   #74=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #3# 2) 1 2 2 0 191) 
+COMMENT                                        " N2: 45962 " 1))))) "NotI: 2 sites") 2 
+COMMENT                          6 "GCGGCCGC" "CGCCGGCG") 
+COMMENT                     #75=(CRSFolderPar 
+COMMENT                          (CFolderPar 
+COMMENT                           (CGroupPar (CParagraph 77448216 (8 0) 1 1 1 0 178) 
+COMMENT                            (CObjectList 
+COMMENT                             #76=(CGroupPar 
+COMMENT                                  (CParagraph 0 (10 #4# 0) 1 2 2 0 180) 
+COMMENT                                  (CObjectList 
+COMMENT                                   #77=(CLinePar 
+COMMENT                                        (CParagraph 0 (1 #4# 1) 1 2 2 0 191) 
+COMMENT                                        " N1: 18630 " 1))))) "SalI: 1 site") 1 5 
+COMMENT                          "GTCGAC" "CAGCTG"))) "Restriction/Methylation Map")))) 
+COMMENT       (CGraphView 
+COMMENT        (CWStyleSheet 
+COMMENT         (CObjectList 
+COMMENT          #78=(CWidgetStyle "RSite Label" 1 (LOGPEN 0 0 13408563) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Georgia") 0.555556 0 1 5 
+COMMENT               "@N (@S)" 0) 
+COMMENT          #79=(CWidgetStyle "Signal Label" 1 (LOGPEN 0 0 0) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 700 0 0 0 0 3 2 1 34 "Arial") 0.666667 0 1 1 
+COMMENT               "@N" 0) 
+COMMENT          #80=(CWidgetStyle "Molecule Label 2" 0 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Georgia") 0.555556 0 1 16 
+COMMENT               "@L bp" 0) 
+COMMENT          #81=(CWidgetStyle "Molecule Label 1" 0 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Verdana") 0.833333 0 1 1 
+COMMENT               "@N" 0) 
+COMMENT          #82=(CWidgetStyle "Shape 3" 1 (LOGPEN 0 0 3355545) 1 1 
+COMMENT               (LOGBRUSH 0 6724095 0) 0 0 1 (LOGSHAPE 9 1 0.8 1.8 0)) 
+COMMENT          #83=(CWidgetStyle "Shape 1" 1 (LOGPEN 0 0 6723840) 1 1 
+COMMENT               (LOGBRUSH 0 10079334 0) 0 0 1 (LOGSHAPE 9 1 0.8 1.8 0)) 
+COMMENT          #84=(CWidgetStyle "Axis" 1 (LOGPEN 0 0 10079436) 2 1 
+COMMENT               (LOGBRUSH 0 13434879 0) 0 0 1 (LOGSHAPE 10 1 0 0 0)) 
+COMMENT          #85=(CWidgetStyle "Line 2" 1 (LOGPEN 0 0 6723840) 8 0 0 0 1 
+COMMENT               (LOGSHAPE 1 1.9 0 0 0)) 
+COMMENT          #86=(CWidgetStyle "RSite" 1 (LOGPEN 0 0 10053171) 8 0 0 0 1 
+COMMENT               (LOGSHAPE 1 1.9 0 0 0)) 
+COMMENT          #87=(CWidgetStyle "Short Signal" 1 (LOGPEN 0 0 13395507) 10 0 0 0 1 
+COMMENT               (LOGSHAPE 1 1.9 0 0 0)) 
+COMMENT          #88=(CWidgetStyle "Uniq RSite Label" 1 (LOGPEN 0 0 153) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Georgia") 0.555556 128 1 5 
+COMMENT               "@N (@S)" 0) 
+COMMENT          #89=(CWidgetStyle "Vanilla" 1 (LOGPEN 0 0 0) 1 1 
+COMMENT               (LOGBRUSH 0 16777215 0) 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 7 48 2 18 "Times New Roman") 0.8 0 1 
+COMMENT               2 "?" 0) 
+COMMENT          #90=(CWidgetStyle "Mark 1" 0 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 2 7 48 2 2 "Windings") 0.7 0 1 2 "?" 0) 
+COMMENT          #91=(CWidgetStyle "Motif Label" 1 (LOGPEN 0 0 16744512) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Arial") 0.611111 8388608 1 
+COMMENT               65535 "@N (@H)" 0) 
+COMMENT          #92=(CWidgetStyle "Fragment Label 2" 1 (LOGPEN 0 0 0) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 49 "Courier New") 1.05 0 1 48 
+COMMENT               "@F bp (molecule @L bp)" 0) 
+COMMENT          #93=(CWidgetStyle "Fragment Label 1" 1 (LOGPEN 0 0 0) 1 0 1 
+COMMENT               (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Arial") 0.91 0 1 1 
+COMMENT               "Fragment of @N" 0) 
+COMMENT          #94=(CWidgetStyle "Shape 4" 1 (LOGPEN 0 0 0) 1 1 
+COMMENT               (LOGBRUSH 2 8388608 5) 0 0 0) 
+COMMENT          #95=(CWidgetStyle "Shape 2" 1 (LOGPEN 0 0 0) 1 1 (LOGBRUSH 0 128 0) 0 
+COMMENT               0 0) 
+COMMENT          #96=(CWidgetStyle "Shape 0" 1 (LOGPEN 0 0 0) 1 1 (LOGBRUSH 0 0 0) 0 0 
+COMMENT               0) 
+COMMENT          #97=(CWidgetStyle "ORF" 1 (LOGPEN 0 0 16384) 8 0 0 0 1 
+COMMENT               (LOGSHAPE 7 0.2 3.41182 2.86186 0.609808)) 
+COMMENT          #98=(CWidgetStyle "Line 4" 1 (LOGPEN 0 0 32768) 8 0 0 0 0) 
+COMMENT          #99=(CWidgetStyle "Line 3" 1 (LOGPEN 0 0 16711680) 8 0 0 0 0) 
+COMMENT          #100=(CWidgetStyle "Line 1" 1 (LOGPEN 0 0 16711680) 1 0 0 0 0) 
+COMMENT          #101=(CWidgetStyle "Short Promoter" 1 (LOGPEN 0 0 128) 6 0 0 0 0) 
+COMMENT          #102=(CWidgetStyle "Motif" 1 (LOGPEN 0 0 0) 1 0 0 0 0) 
+COMMENT          #103=(CWidgetStyle "Line 0" 1 (LOGPEN 0 0 0) 8 0 0 0 0) 
+COMMENT          #104=(CWidgetStyle "Void" 0 0 0 0 0) 
+COMMENT          #105=(CWidgetStyle "General Label" 1 (LOGPEN 0 0 0) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Times New Roman") 0.91 0 
+COMMENT                1 3 "@T @N " 0) 
+COMMENT          #106=(CWidgetStyle "Position" 1 (LOGPEN 0 0 0) 1 0 0 0 0) 
+COMMENT          #107=(CWidgetStyle "Annotation" 0 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Times New Roman") 0.91 0 
+COMMENT                0 0) 
+COMMENT          #108=(CWidgetStyle "Position Label" 1 (LOGPEN 0 0 8388608) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 1 0 0 3 2 1 34 "Arial") 0.63 8388608 1 1 
+COMMENT                "@N" 0) 
+COMMENT          #109=(CWidgetStyle "Range" 1 (LOGPEN 0 0 0) 1 1 
+COMMENT                (LOGBRUSH 0 16777215 0) 0 0 0) 
+COMMENT          #110=(CWidgetStyle "Range Label" 1 (LOGPEN 0 0 8388608) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 1 0 0 3 2 1 34 "Arial") 0.63 8388608 1 1 
+COMMENT                "@N" 0) 
+COMMENT          #111=(CWidgetStyle "ORF Label" 1 (LOGPEN 0 0 49216) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 18 "Times New Roman") 
+COMMENT                0.611111 0 1 65535 "@N" 0) 
+COMMENT          #112=(CWidgetStyle "CDS Label" 1 (LOGPEN 0 0 4227264) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Arial") 0.555556 255 1 1 
+COMMENT                "@N" 0) 
+COMMENT          #113=(CWidgetStyle "Shape 5" 1 (LOGPEN 0 0 0) 3 1 
+COMMENT                (LOGBRUSH 0 16777113 0) 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 7 48 2 50 "Arial") 0.9 0 0 1 
+COMMENT                (LOGSHAPE 9 1 0.8 1.8 0)) 
+COMMENT          #114=(CWidgetStyle "CDS" 1 (LOGPEN 0 0 0) 1 1 (LOGBRUSH 2 39423 3) 0 0 
+COMMENT                1 (LOGSHAPE 9 1 0.8 1.8 0)) 
+COMMENT          #115=(CWidgetStyle "Label 2" 1 (LOGPEN 0 0 4227264) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Arial") 0.944444 8388608 
+COMMENT                1 1 "@N" 0) 
+COMMENT          #116=(CWidgetStyle "Label 3" 1 (LOGPEN 0 0 8421376) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 700 255 0 0 0 3 2 1 34 "Arial") 0.833333 255 1 
+COMMENT                5 "@N (@S)" 0) 
+COMMENT          #117=(CWidgetStyle "Label 4" 1 (LOGPEN 0 0 8437824) 1 0 1 
+COMMENT                (LOGFONT 0 0 0 0 400 0 0 0 0 3 2 1 34 "Arial") 0.722222 0 1 5 
+COMMENT                "@N (@S)" 0)) 0.164644 1.74233 0.164644 2.53336 
+COMMENT         (70 (CShapeMapEntry 0 "Unique RSite" 1 "Uniq RSite Label") 67 
+COMMENT          (CShapeMapEntry 0 "ORF" 0 "ORF Label")) 40.0378 40.0378 39 39 0.1 
+COMMENT         -3144) 1 1 0 1 1 
+COMMENT        (mapper: 19.0024 -17.9636 40.0378 40.0378 0.01 10 -1 48422 48422 1 0 0) 
+COMMENT        #118=(CGroupWidget (CWidget 0 (0 0) 1 2 0 0 Nil -321 100) 
+COMMENT              (CObjectList 
+COMMENT               #119=(CGroupWidget (CWidget 1 (0 0) 1 2 0 0 Nil -386 100) 
+COMMENT                     (CObjectList 
+COMMENT                      #120=(CAxis 
+COMMENT                            (CWideLine (CWidget 0 (0 0) 1 2 0 0 #84# 78847252 0) 
+COMMENT                             (LOGPEN 0 0 10079436) 2 (LOGBRUSH 0 13434879 0) 1 
+COMMENT                             6.27431 6.27231 1 0.0214037) 0.0129552) 
+COMMENT                      #121=(CLabel 
+COMMENT                            (CWidget 1001 (0 0) 1 2 0 0 #81# -1044135481 100) 
+COMMENT                            (LOGPEN 0 0 13408563) 1 
+COMMENT                            (LOGFONT 58 22 0 0 400 0 0 0 0 3 2 1 34 "Verdana") 
+COMMENT                            1.74233 0.833333 0 "pStart-k-PRNP" "pStart-k-PRNP" 
+COMMENT                            65535 0 0.871165 0 -10 8.5669 1.39868 Nil) 
+COMMENT                      #122=(CLabel 
+COMMENT                            (CWidget 1002 (0 0) 1 2 0 0 #80# 23506332 100) 
+COMMENT                            (LOGPEN 0 0 13408563) 1 
+COMMENT                            (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 "Georgia") 
+COMMENT                            1.74233 0.555556 0 "48422 bp" "@L bp" 16 0 -0.871165 
+COMMENT                            0 -10.8 3.04712 0.799245 Nil)) (CObjectList)) 
+COMMENT               #123=(CGroupWidget (CWidget 10 (6 0) 1 2 0 0 Nil -455 100) 
+COMMENT                     (CObjectList 
+COMMENT                      #124=(CGroupWidget 
+COMMENT                            (CWidget 21 (7 21 0) 1 2 0 0 Nil -525 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #125=(CWideArrow 
+COMMENT                                   (CWideLine 
+COMMENT                                    (CWidget 0 (3 #5# 0) 1 2 0 0 #83# 0 100) 
+COMMENT                                    (LOGPEN 0 0 6723840) 1 
+COMMENT                                    (LOGBRUSH 0 10079334 0) 1 0.195883 0.313905 
+COMMENT                                    1 0.082322) 0.8 1.8 0) 
+COMMENT                             #126=(CLabel (CWidget 0 (0 0) 1 2 0 0 #79# 0 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 
+COMMENT                                   "p15A origin of replication" "@N" 1 -9.37217 
+COMMENT                                   13.9386 0 -10 10.9397 1.04901 #125#) 
+COMMENT                             #127=(CWideArrow 
+COMMENT                                   (CWideLine 
+COMMENT                                    (CWidget 0 (3 #6# 0) 1 2 0 0 #83# 0 100) 
+COMMENT                                    (LOGPEN 0 0 6723840) 1 
+COMMENT                                    (LOGBRUSH 0 10079334 0) 1 0.0475457 0.15326 
+COMMENT                                    1 0.082322) 0.8 1.8 0) 
+COMMENT                             #128=(CLabel (CWidget 0 (0 0) 1 2 0 0 #79# 4 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "kana" "@N" 1 
+COMMENT                                   -3.24714 15.681 0 -10 2.2229 1.04901 #127#) 
+COMMENT                             #129=(CScratch 
+COMMENT                                   (CWidget 0 (3 #7# 0) 1 2 0 0 #87# 111246496 
+COMMENT                                    100) (LOGPEN 0 8 13395507) 10 1 6.27306 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #130=(CLabel (CWidget 0 (0 0) 1 2 0 0 #79# 0 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "NotI" "@N" 1 
+COMMENT                                   1.9264 13.9386 0 -10 1.77332 1.04901 #129#) 
+COMMENT                             #131=(CScratch 
+COMMENT                                   (CWidget 0 (3 #8# 0) 1 2 0 0 #87# 111245936 
+COMMENT                                    100) (LOGPEN 0 8 13395507) 10 1 0.319088 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #132=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #79# -943601727 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "NotI" "@N" 1 
+COMMENT                                   -7.39694 10.454 0 -10 1.77332 1.04901 #131#) 
+COMMENT                             #133=(CWideArrow 
+COMMENT                                   (CWideLine 
+COMMENT                                    (CWidget 0 (3 #9# 0) 1 2 0 0 #83# 0 100) 
+COMMENT                                    (LOGPEN 0 0 6723840) 1 
+COMMENT                                    (LOGBRUSH 0 10079334 0) 1 1.65892 3.65895 1 
+COMMENT                                    0.082322) 0.8 1.8 0) 
+COMMENT                             #134=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #79# -238092617 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "PRNP" "@N" 1 
+COMMENT                                   -7.70185 -10.454 0 -10 2.57257 1.04901 #133#) 
+COMMENT                             #135=(CScratch 
+COMMENT                                   (CWidget 0 (3 #10# 0) 1 2 0 0 #87# 111246136 
+COMMENT                                    100) (LOGPEN 0 8 13395507) 10 1 6.27202 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #136=(CLabel (CWidget 0 (0 0) 1 2 0 0 #79# 4 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "5HA" "@N" 1 
+COMMENT                                   7.39694 10.454 0 -10 1.87323 1.04901 #135#) 
+COMMENT                             #137=(CScratch 
+COMMENT                                   (CWidget 0 (3 #11# 0) 1 2 0 0 #87# 111246736 
+COMMENT                                    100) (LOGPEN 0 8 13395507) 10 1 0.325565 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #138=(CLabel (CWidget 0 (0 0) 1 2 0 0 #79# 0 100) 
+COMMENT                                   (LOGPEN 0 0 0) 1 
+COMMENT                                   (LOGFONT 46 17 0 0 700 0 0 0 0 3 2 1 34 
+COMMENT                                    "Arial") 1.74233 0.666667 0 "3HA" "@N" 1 
+COMMENT                                   -9.62519 8.71165 0 -10 1.87323 1.04901 #137#)) 
+COMMENT                            (CObjectList))) (CObjectList)) 
+COMMENT               #139=(CGroupWidget (CWidget 11 (8 0) 1 2 0 0 Nil -1014 100) 
+COMMENT                     (CObjectList 
+COMMENT                      #140=(CGroupWidget 
+COMMENT                            (CWidget 1 (10 #4# 0) 1 2 0 0 Nil -944 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #141=(CScratch 
+COMMENT                                   (CWidget 1 (1 #4# 1) 1 2 0 0 #86# 1 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 3.85975 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #142=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #88# -724254252 100) 
+COMMENT                                   (LOGPEN 0 0 153) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 128 
+COMMENT                                   "{\\i Sal}I (18630)" "@N (@S)" 5 10.9854 
+COMMENT                                   -10.454 0 -10 3.97125 0.799245 #141#)) 
+COMMENT                            (CObjectList)) 
+COMMENT                      #143=(CGroupWidget 
+COMMENT                            (CWidget 2 (10 #2# 0) 1 2 0 0 Nil -665 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #144=(CScratch 
+COMMENT                                   (CWidget 1 (1 #2# 1) 1 2 0 0 #86# 1 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 5.80239 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #145=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# -724252716 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Kpn}I (3635)" "@N (@S)" 5 11.1149 
+COMMENT                                   8.71165 0 -10 3.97125 0.799245 #144#) 
+COMMENT                             #146=(CScratch 
+COMMENT                                   (CWidget 2 (1 #2# 2) 1 2 0 0 #86# 100987840 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 3.89409 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #147=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# -943205181 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Kpn}I (18365)" "@N (@S)" 5 11.3327 
+COMMENT                                   -8.71165 0 -10 4.32092 0.799245 #146#)) 
+COMMENT                            (CObjectList)) 
+COMMENT                      #148=(CGroupWidget 
+COMMENT                            (CWidget 2 (10 #3# 0) 1 2 0 0 Nil -386 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #149=(CScratch 
+COMMENT                                   (CWidget 1 (1 #3# 1) 1 2 0 0 #86# 111246336 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 6.2728 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #150=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 2090203698 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Not}I (4)" "@N (@S)" 5 2.50201 12.1963 
+COMMENT                                   0 -10 2.6475 0.799245 #149#) 
+COMMENT                             #151=(CScratch 
+COMMENT                                   (CWidget 2 (1 #3# 2) 1 2 0 0 #86# 111246416 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 0.318828 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #152=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 0 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Not}I (45962)" "@N (@S)" 5 -7.11586 
+COMMENT                                   12.1963 0 -10 4.24599 0.799245 #151#)) 
+COMMENT                            (CObjectList)) 
+COMMENT                      #153=(CGroupWidget 
+COMMENT                            (CWidget 3 (10 #1# 0) 1 2 0 0 Nil -874 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #154=(CScratch 
+COMMENT                                   (CWidget 1 (1 #1# 1) 1 2 0 0 #86# 111246656 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 3.70313 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #155=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 962 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Eco}RV (19839)" "@N (@S)" 5 10.1048 
+COMMENT                                   -12.1963 0 -10 4.8704 0.799245 #154#) 
+COMMENT                             #156=(CScratch 
+COMMENT                                   (CWidget 2 (1 #1# 2) 1 2 0 0 #86# 0 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 2.8324 1.9 0.082322 
+COMMENT                                   1) 
+COMMENT                             #157=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 0 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Eco}RV (26560)" "@N (@S)" 5 -7.44165 
+COMMENT                                   -12.1963 0 -10 4.94533 0.799245 #156#) 
+COMMENT                             #158=(CScratch 
+COMMENT                                   (CWidget 3 (1 #1# 3) 1 2 0 0 #86# 111246176 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 2.28725 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #159=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 3801680 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Eco}RV (30768)" "@N (@S)" 5 -13.1327 
+COMMENT                                   -6.96932 0 -10 4.94533 0.799245 #158#)) 
+COMMENT                            (CObjectList)) 
+COMMENT                      #160=(CGroupWidget 
+COMMENT                            (CWidget 8 (10 #0# 0) 1 2 0 0 Nil -1223 100) 
+COMMENT                            (CObjectList 
+COMMENT                             #161=(CScratch 
+COMMENT                                   (CWidget 1 (1 #0# 1) 1 2 0 0 #86# 111246816 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 5.41127 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #162=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 2114510688 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (6654)" "@N (@S)" 5 12.8888 
+COMMENT                                   6.96932 0 -10 4.8704 0.799245 #161#) 
+COMMENT                             #163=(CScratch 
+COMMENT                                   (CWidget 2 (1 #0# 2) 1 2 0 0 #86# 0 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 4.67062 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #164=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 0 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (12371)" "@N (@S)" 5 14.9987 0 0 
+COMMENT                                   -10 4.77049 0.799245 #163#) 
+COMMENT                             #165=(CScratch 
+COMMENT                                   (CWidget 3 (1 #0# 3) 1 2 0 0 #86# 97698888 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 4.23908 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #166=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 1414812737 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (15702)" "@N (@S)" 5 14.0669 
+COMMENT                                   -5.22699 0 -10 4.94533 0.799245 #165#) 
+COMMENT                             #167=(CScratch 
+COMMENT                                   (CWidget 4 (1 #0# 4) 1 2 0 0 #86# 1 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 2.90547 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #168=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 23641252 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (25996)" "@N (@S)" 5 -6.74097 
+COMMENT                                   -13.9386 0 -10 5.22007 0.799245 #167#) 
+COMMENT                             #169=(CScratch 
+COMMENT                                   (CWidget 5 (1 #0# 5) 1 2 0 0 #86# 111246256 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 2.40592 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #170=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 0 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (29852)" "@N (@S)" 5 -11.7595 
+COMMENT                                   -8.71165 0 -10 5.12016 0.799245 #169#) 
+COMMENT                             #171=(CScratch 
+COMMENT                                   (CWidget 6 (1 #0# 6) 1 2 0 0 #86# 111245856 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 1.23412 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #172=(CLabel (CWidget 0 (0 0) 1 2 0 0 #78# 7 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (38897)" "@N (@S)" 5 -14.6389 
+COMMENT                                   3.48466 0 -10 5.22007 0.799245 #171#) 
+COMMENT                             #173=(CScratch 
+COMMENT                                   (CWidget 7 (1 #0# 7) 1 2 0 0 #86# 0 100) 
+COMMENT                                   (LOGPEN 0 6 10053171) 8 1 1.15496 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #174=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# -725155058 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (39508)" "@N (@S)" 5 -14.2472 
+COMMENT                                   5.22699 0 -10 5.22007 0.799245 #173#) 
+COMMENT                             #175=(CScratch 
+COMMENT                                   (CWidget 8 (1 #0# 8) 1 2 0 0 #86# 111246576 
+COMMENT                                    100) (LOGPEN 0 6 10053171) 8 1 0.981877 1.9 
+COMMENT                                   0.082322 1) 
+COMMENT                             #176=(CLabel 
+COMMENT                                   (CWidget 0 (0 0) 1 2 0 0 #78# 1414812737 100) 
+COMMENT                                   (LOGPEN 0 0 13408563) 1 
+COMMENT                                   (LOGFONT 38 14 0 0 400 0 0 0 0 3 2 1 18 
+COMMENT                                    "Georgia") 1.74233 0.555556 0 
+COMMENT                                   "{\\i Bam}HI (40844)" "@N (@S)" 5 -13.387 
+COMMENT                                   6.96932 0 -10 5.3949 0.799245 #175#)) 
+COMMENT                            (CObjectList))) (CObjectList)) 
+COMMENT               #177=(CGroupWidget (CWidget 14 (16 0) 1 2 0 0 Nil -1153 100) 
+COMMENT                     (CObjectList) (CObjectList)) 
+COMMENT               #178=(CGroupWidget (CWidget 12 (0 0) 1 2 0 0 Nil -1153 100) 
+COMMENT                     (CObjectList) (CObjectList))) (CObjectList))) 
+COMMENT       (CSeqView 10 10 (CObjectList) 
+COMMENT        (CObList #179=(AnlzFontColorItem 45999 46909 41943168) 
+COMMENT         #180=(AnlzFontColorItem 47239 48054 37173247) 
+COMMENT         #181=(AnlzFontColorItem 1 8 33554687) 
+COMMENT         #182=(AnlzFontColorItem 45959 45966 33554687) 
+COMMENT         #183=(AnlzFontColorItem 9 20178 33554432) 
+COMMENT         #184=(AnlzFontColorItem 35617 45958 33554432) 
+COMMENT         #185=(AnlzFontColorItem 20179 35616 33619712)) 1 
+COMMENT        (CObList #186=(AnlzFontBackColorItem 0 0 41975808) 
+COMMENT         #187=(AnlzFontBackColorItem 1 8 50331647) 
+COMMENT         #188=(AnlzFontBackColorItem 45967 45998 41943168) 
+COMMENT         #189=(AnlzFontBackColorItem 59 45908 50331647) 
+COMMENT         #190=(AnlzFontBackColorItem 9 58 50266112) 
+COMMENT         #191=(AnlzFontBackColorItem 45959 45966 50331647) 
+COMMENT         #192=(AnlzFontBackColorItem 45909 45958 50266112))) (CObList) 27747628 
+COMMENT       (CStringList) 27435304 27747692 (CObList)))
+FEATURES             Location/Qualifiers
+     misc_feature    46000..46910
+                     /vntifkey="21"
+                     /label=p15A\origin\of\replication
+     misc_feature    47240..48055
+                     /vntifkey="21"
+                     /label=kana
+     misc_feature    2..9
+                     /vntifkey="21"
+                     /label=NotI
+     misc_feature    45960..45967
+                     /vntifkey="21"
+                     /label=NotI
+     misc_feature    20180..35617
+                     /vntifkey="21"
+                     /label=PRNP
+     misc_feature    10..59
+                     /vntifkey="21"
+                     /label=5HA
+     misc_feature    45910..45959
+                     /vntifkey="21"
+                     /label=3HA
+BASE COUNT    13419 a     10949 c     10636 g     13418 t 
+ORIGIN
+        1 cgcggccgct ttaagagtca tgcagctgga gacagattct gaccctcccc aaattgctcc 
+       61 tggggataat atcactattg taaaacctaa gatcagtgct taggatattt cgcagttcct 
+      121 gcatttggtg aatcagctgg caccacccag attggtaact ggctcgtctg atcttgtggt 
+      181 ccccactcag gaactgactc agcgcaagaa gacatcttcg acttcctatg attttatctc 
+      241 tgacccaacc aatgagcact cctaactcat tgccccccac caccaaatta tccttaaaaa 
+      301 ctctgacccc agaatacttg aggagactga tttgagaaat gataaaactc gggtctcccg 
+      361 tacagccagt tctgcgtgaa ttactctttc tctattgcaa ttcccctatc ttgatgaatc 
+      421 atctctgtct aggcagtggg caaggtgaac cctattgggc agttacaaaa ctgtcccaag 
+      481 aatgaaaaga ttaaatctga atatttaaat tcaaagaact ctttacattg caggaaacat 
+      541 ctgtgaaaag aagagctctg tacccaggac atcctggcag aattcgattt actttattaa 
+      601 aaagaaaatt aacttttcca ttatgaaaag aataaagaat atacaaatat attctaagaa 
+      661 aatacagatt agcaaaagga aggaataaaa atcatccatt gcactaccac ccagaaaaat 
+      721 actctgttaa tgttttggca catctctttt agtcctatta atatacatat tattttttac 
+      781 ataattgcaa tttacacaat atcaaaaatt taaattttct atcatttaaa aacactttta 
+      841 aaattataaa attaatacat gctaatgaaa aggtttaaaa ttggagggaa aatacgaaga 
+      901 aaaaggttgc ccagaatcca cttacccaga attaaccaca gttaatactg gggtgcattt 
+      961 cttcatagcc ttatctgcac ttttgtacat aatctaatct aattcttttt tttttttttt 
+     1021 tttttttttg agacagagtt tcactcttgt tgcataggct ggagtgcagt tgcacaatct 
+     1081 cggctcactg caacctctgc ctccctggtt caagcaattc tcctgcctca gcctgcccac 
+     1141 tagctgggat tacaggcgtg cgccagcacg cctggctaat ttttgtattt ttagtagaga 
+     1201 cagggtttta ccatgttggc caggctggtc tcgaactcct gacctcaggt gatccactgc 
+     1261 ctcggcctcc caaagtgctg gtattacagg cgtgggccag cgcgcccggc taatctaatc 
+     1321 taattcttaa acattgttaa tatggagcat ttcagagact ccagacagta aatgatgtaa 
+     1381 aggcttatgg aggggataaa aggttagcca caaggtgatt taatagtctt tcattttaaa 
+     1441 taaagcctaa atactcaaga taattcaaaa tgagtttcaa acatgcaaaa acccatacaa 
+     1501 aacatgtagt aactcttcta ttaatacctg aggtttaagt ggcttagcca cgataagcag 
+     1561 cattggaacg tgacagcaca cacttgttta agttccgtga agtagtgagg ctttcatgac 
+     1621 aagcctgttt tctggttcta ggagagccat acaagtagga aaggaggaag cagaagggcc 
+     1681 aggcctcatt actaccacag accccacatc atcccattag aatttggact ttggggccca 
+     1741 agctgaataa attcttttgt actgcaacag tttcatgggg gaagagaggc aagagctgtg 
+     1801 ctcaaaggga aacacatcgc cttaaatgct ctcattgtga catgaggaga aatggaaaaa 
+     1861 ttaacccagc actcaacaca gtaacataaa gaagactgaa agaagaatgt aataaaaata 
+     1921 acaactaagt gtgagggaga aaatgaaaaa tctgtaaatt gatcaatcca cccaagagcc 
+     1981 agtttctggg ctgtgggtca attcaccaga aaacaatttg ctgacagtca aatgctccct 
+     2041 ctccctctgc ctttgcacac tagggccatc ttctcattgt gtcctcacat ggcctttcct 
+     2101 gggtgcacac atgtggaaag agagtcctct gtcttcctgc tctttttttt ttttttgaga 
+     2161 tggagtttcc ctcttgttgc ccaggctgga gtgcagtggc gccatctcag ctcactgcga 
+     2221 cctccgcctc ctgggttcaa gcgattctcc agcctcagcc tcccgagtag ctgggattac 
+     2281 aggcacctgc caccacactc gaccaatttt tgtattttta gtagagacgg gctttcgccc 
+     2341 tcttggccag gctggtctcg aattcctgag ctcgtgatct gcccacctca gcctcccaaa 
+     2401 gtgctgtgat tacagccata agccaccaca cccggcctgt cttcctcttc ttacaagggc 
+     2461 actagtccca tcaggggttc tagttacttc ccaaagtccc cacctccaaa taccatcata 
+     2521 ttgggggtta gggcctcaac atatgaaggg gcggcagtca ggggcagtgg agggagaaca 
+     2581 caaacattca gtccatagaa gatacaattc taaaagactg aatttatcat ctgatgaatt 
+     2641 gactgggcct gcatgggtac atttttaaaa taagctagga agggggaaag ccttcttaag 
+     2701 catgaacatg aaacctggaa gccacaaagg acatgataaa tgaatgtgac taacaatatt 
+     2761 aaatttatta attttttttt atttgagaca gtctcactct gtcacccagg ctggtgtgta 
+     2821 gtggcacaat cttggctcac tgcaacctct ccctctgggg ttcaagcgat tatcccgcct 
+     2881 cagcctcctg agtagctggt actatgggca tgtaccacca caccttccta attttttaaa 
+     2941 tttttagtag agaggggttt tgccatgttg cccaggctgg tctgaaactc ctgacctcaa 
+     3001 gtgactgccc acctcggcct cccaaagtgc tgggatttat aggcataagc gcctggccac 
+     3061 aattttacat ttctacactg taaaggtatg tttgtgcttg tgtgtgtgtg tgtgtgtgtg 
+     3121 tgtgtgtgtg tgtgtgtgtg tcttaaatga aatcaaaaga aaatatctgt aatgaaaaag 
+     3181 accaaaatta atttcccact tatcaaaaag tttgcataaa tcagtagtga gaaaaaccac 
+     3241 cttattaaaa aaattagaga agtatgtgaa cagacttatt acagggcaaa aaatacaaat 
+     3301 gatcaataca catgaaaaga tgtccaacct tccaataaca taaatttgaa tcactaaata 
+     3361 taacttttta atgtatccaa gtaccaaaat gtaaaagatt gataataagt tatgttggca 
+     3421 acagcgtgga gaacacatgt gttctgatac caggaatgca aatgggtgtc cttttttgtt 
+     3481 gagaaatctg gcaatatcta tgaaaatttt aagcatgccc acttatggaa tgtgtcttac 
+     3541 agaaatcact tgcacaagga ggcaaagata atgtacaaag atattgtata tagaagcata 
+     3601 aattcttggt gttggaaagg aacctgtggg gtacccagtc caagctttga ggtccactcc 
+     3661 agtgccagga tgccctgggc tacatccctg actctctctg cctgggtgtc ccttagatct 
+     3721 tatatggttg gtgactgtat aatctagtaa catataggcc tttcaaacca tgagcagaat 
+     3781 atcttcagga acttgtgtga gcatcagaca cctactctcc tccgagtgcc caatggtcct 
+     3841 tcactgggag cacttaaggc agcgtttctc aaacttcaat gtacaaacaa attatctgag 
+     3901 gctcttgcca aaatgcaaat actgatttgg tctgggatgg gcctgagatt ctgcctttct 
+     3961 aaccagctcc caggttagat gatgcggatg ctgctggtcc agggaccaca gtctgagtag 
+     4021 caaggtcatg agacgtactc tattttctac ctttggtctt cttgttttca cacctgggtt 
+     4081 ttccatcaag tatgtaggca tcagtcccgt gactctcatg tcctacagat aggccccatg 
+     4141 acttggtcat gcccttagca ttgacctcgt acactcatgc tccactccac tattttcacc 
+     4201 atctgttctc ctgtagagca gggtagtagg tgatggctgt ggccaccaca gactcctaac 
+     4261 tcagacacca gaccgtatgt ccttcctgct caaggtcatc ccagctgctc ctcaatatgc 
+     4321 caggcagacc gcatctctgg caccagcact tgttgccccc tgtgcccaga attccactct 
+     4381 cccagacatc cacggagctt gactctcatt tccttctagt atctactcaa ataggagaaa 
+     4441 gcagggctag agatgcaaat ttgggtgtca ccagcaaaca gatattgttt aaaaccatga 
+     4501 gaccagagga gatcactcgg agagtataga cagaggcaaa tgggagcctt ggctgaagtc 
+     4561 ctgtggcagc acccacgtac aggatgagga ggaggaagag ggggaggcag caacaagagg 
+     4621 agtgccagtg ggagacaagg gaaccaggta tggggcactc aagaagccaa gagaagagca 
+     4681 tggctggaga aggatggcgt gatcagcact cctgtgtaaa agcagcagct tgaacactca 
+     4741 tgaaaatacc gtgggcggtg agcacaggga gaatggggga ggagatgcag caagggcact 
+     4801 ttggagaggt cactaaggtc gctgatccct ggagtcgaat gctgggttgg cagtgaggaa 
+     4861 gccaaaggcc tgccctattt ttaccattga atccccaaaa ggctgattaa ttggtgacac 
+     4921 ctggcccctc tggacatgaa gatggaggaa aaggctgaag taatgagaac tggaaaaaag 
+     4981 ctgtttaagg aattgtcaga tccccagatc tccccaactc tgtttagcca gatcactgac 
+     5041 tttctgccct cccctgcaga aagccagaga ttcatttcaa gagggtgaat acaggatctg 
+     5101 gttaggagac actgaactca gtggaaagca aggagtcaca ctgagaacag gagaactaca 
+     5161 tgagtgtggg cactgcggat gctggggcag ccctatccca tcccccagcc tcattcctca 
+     5221 tgcggttccc agaacgccag ccaccatccc aacaggaagc agagaggttt ccagtcaaag 
+     5281 ggcccagaca gttgaagctg ccaagcccca cctgtgcact cggagcatcc aatcagctgt 
+     5341 gaagggctca cccttccaca cgagcagatt gccagatggc tgaggaagaa aggtacagga 
+     5401 aagataaatc ccaaaccaat acaaaataat caactggaag acactggaac tatacaagga 
+     5461 gaagaacact tcaaaaaaaa tcatgagggc cgggcgcggt ggctcacgcc tgtaatccca 
+     5521 gcactttggg aggccgaggc gggcggatca cgaggtcagg agatcgagac catcctggct 
+     5581 aacacagtga aaccccgtct ctactaaaaa atacaaaaaa ttagccgggc gtggtggcgg 
+     5641 gcgcctgtag tcccagctac gcgggaggct gaggcaggag aatggcgtga acccgggagg 
+     5701 cggagcttgc agtgagccga gatcgcgccg ctgcactcca gcctgggcga cagagcgaga 
+     5761 ctccgtctca aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaatc atgaacactt 
+     5821 ttacagccaa gaaatactat ccaggaaatg agataatgga gcagtgccta ctaactctga 
+     5881 gttacattgt atgacactta gttgatgtct accagagaat tggggttttt tttggtggga 
+     5941 agaaatccca catgtcagtg accagaggtg aagtattgta tagtgagtgt gagtagaaaa 
+     6001 tttgtttaaa gtttgggtgc tttttaaaaa atatttctta caactatatt tagatggtag 
+     6061 aagaaaacaa atccagaaag attgcacagc agatgtgata tttgaatgtg gagctggaag 
+     6121 tataccaagg atttcaccca ggtggacaaa gatagggaga atattcaaag cagagacaac 
+     6181 aattgataca aaaaaaaaag atgaaagggg ccaggcgtgg tggcctgtaa tcccagcact 
+     6241 ttgggaggct gaggtgggca gatcacctga ggtcaggagt ttgagaccag cctggccaat 
+     6301 gtggtgaaac tccatctcta ctaaaaatac aaaaattagc caggtgtggt ggcgggcacc 
+     6361 tgtagcccta gctactcctc aggaggctga ggcatgagaa ttgtttgaac ctgggaggtg 
+     6421 aaggttgcag ttagctgaga ttgcgccact gcactccatc ctgggccaca gagcgagact 
+     6481 ctgtctcaaa aaaaaaagat gaaagggtaa gcgtggtatg agatagcaca tcaacccaaa 
+     6541 atggattggc attcaacacc aaataattga ttttcactca tgcatcctca ggttgcctgg 
+     6601 gattgggcca acatagactg agtttggcag gcttggatct caattgcagg ttggatccag 
+     6661 gagtatttca tcctctttgg accaacagct gtctaaggca ggctcttttc atgatggagg 
+     6721 cagaagaaca agaaaacaag cacatttcaa gcctctggac ccaccgcgtc cactaacatg 
+     6781 ccattggcca gcataattta catggacaag ctcaacacta atgggttgga taagtatatt 
+     6841 cctcactcac aaaagcttaa actttattcc tgaacaataa actctagcca ggtggggtgg 
+     6901 ggagcacctg tagttccagc tactcaggaa actgaggcag aaggattgct ggaccccagg 
+     6961 agtttgagac cagctgggca acacagtgag actatatctc aataaagaaa taaataaata 
+     7021 aaacaataat aaaagccaac tctttaaagt gtgtttgggg aataacatga acatatgtaa 
+     7081 cttctgtttt tcagttaact ttctgtatgc atttccctta tttccatcct tccttccttc 
+     7141 ctccctctct ctccctcttt ctctttctcc ctttctctct ttctctttct ctctttctct 
+     7201 ttctcccctt ccttccttct ctttctttct ttcgttcttt ctttctttct tgagatggag 
+     7261 tctcactctg ttgcccaggc tggagcgcaa tggtgcgatc ttggctcact gcaacttccg 
+     7321 cctctcgggt tcaagcaatt ctcccatctc agcctcccca gtagctggga ttacaggcac 
+     7381 tcaccaccat gcccagctaa tttttgtatt tttagtagag actgggtttc accacactgg 
+     7441 ccaggctggt cttgaattcc tcccaaagtg ctgggattac aagcatgagc caccatgtct 
+     7501 ggcccccttg attcttttat gagatgagca tgtgcagcta caaaaggaaa cacaggagag 
+     7561 gctcaggaaa aaacaaagtc tcttgtactc acaggtccca gagaccggag gcatggcaag 
+     7621 ccatgaaggg ccacatggga gagacaccag agtggtcagg aagcaaaaga caggaggaga 
+     7681 aagccgaggc tagagccttc attggggttt cagtgggaaa agcagaacag ggcagggtaa 
+     7741 acagtttagg actggttcgt ttgcataatt tggttgatct ttggcctata gtagtgatct 
+     7801 ctagttgcct agtacctggc cctgggatga ttaaggcaga ggaatattgc ttcctgagct 
+     7861 gcatgggcca gatagggaag gtctggttta ggactggttt gttttcatat caaaggcacg 
+     7921 ttcctggctg ggtccttcgt tatctctaag aattggctgg cccagggggg aacagtctct 
+     7981 ctccagctaa aaaggttttt caggatcaaa gtatacagac aacttaaaaa aaaacaagag 
+     8041 taaaagttat ttgaccaaca tcagccatgt gtggctaatg aacacttaaa atgtgacagg 
+     8101 tgtgattgag gaattaaatt ttagttttat ttaaatgttt taatgtaaat ttaaagagca 
+     8161 catgtggctt atagctatgg aacatgcagc tgtgaacact atagttaaaa ctgacatttt 
+     8221 gatctgagga ttccttttat ttaatcagtt ctgaaactat agttttctac atttatatat 
+     8281 ttgttctatt gtgaatttta ggatttattt tgatgatgta ctttttcttt gtgaagttta 
+     8341 gaaatgacca tgggggtcat gtgggccaaa ttaactcaat tcctggacaa aaactatttc 
+     8401 cccgaccacc ccaagcttct tgccaatgtg cgcccttggg acaagaaagg ctaggagaag 
+     8461 ctgtggacaa attaagataa acctggcaat atcattagac aaataaccca aagtgaatcc 
+     8521 ctcttctgat ggtcaacatc agatggtcac acagaaatgt tattttccta tgagtaattt 
+     8581 tgcattattg ttacatatga tttccactta caaatgccac aaatattatg caagtacctc 
+     8641 tctactggga aggaatataa caattctaac aaataaacat aaaagcagtg tgtacataag 
+     8701 aatgcctcta tacaattttt tgagcatcaa aatcttagaa agttgaaaaa taccaatgaa 
+     8761 atatagcatt cttattcttt ctcatttctt ttatctgttc tttagagaaa aaaagatgga 
+     8821 gcagaaagca agaaaattgt ccaacagaat tattgcaact gacttagttt cttataaaca 
+     8881 aagaatgcat tgaaagagaa aaccttgcct cagcaaagta tattacacaa taagaaagaa 
+     8941 gaatttcaaa gataatagag ataatttctc acagatgtct gaccagaaag aaattctcaa 
+     9001 ctttctaaac ttttctatca taatttcaca tatttctctg gttcatttat aaagggaaaa 
+     9061 taacttgaga atattccaag atgaatacat cagcactcac ataggtaacc agaaacatgg 
+     9121 ggtgttaaat caattacagg agcagctggg ttccttatcc agataagaca gcgaaaaaag 
+     9181 accaagaagc cagtagccgg tgactttaaa aattgttcga atatgcttcc tcctcacttt 
+     9241 gtctcttgag gttctttgta aaagccaggg tttcacaatt aactttacag caatcaaaaa 
+     9301 gctttaatca gtcactaaaa caaatgctat tttcacttat caaattggta ataattagga 
+     9361 aaaaagtgat aatatcatgc tgggatattc agagcacgct tttgtgggaa tctaaattgg 
+     9421 tgcaaccact ttggctgcat gcctcaaaag cttaaaaata tgcccatctt ttctgcacct 
+     9481 tctactcctg acaacttatt taactacagg gatgttcttc ccagctatgt gatatacagc 
+     9541 cattaaatgg ctgaatacta tgcagccatt aaaatattgt tgcagaatat attgtgatat 
+     9601 ggggtggagg tggagcctag ctcaaaaatt atgattgtat ttgggtaagg aaaaattata 
+     9661 tgtatacata aaagtaatat gaaggggata gacttatgaa tattttataa atattttaga 
+     9721 tattttcttc attttctttt attcttttct ttagtcttat ctatattttc taatatgtct 
+     9781 atttgatatg tattgctttt acaagaaaaa ataacttcaa tgatcctata aaaggaggag 
+     9841 agagtgggga gcaagtgttt taaatactgc gacatgaggc tgtgaaagct ctcagaatca 
+     9901 aaatgaagtc acctatgtta aaaatcccaa caaacagagc cagacgagac cttgaagaga 
+     9961 gggttgtcat gtacaaaaac tattgcaaga ctgcaaaaat cacaaccttg cacaaagtcc 
+    10021 atctcaacct tacgcaaaaa aatacctcta caaggacatc tgcccagcaa ctgcctgtcc 
+    10081 aacctcagac tggtgctacc ctcgttattg aaccttgtag tcaaggataa ttaacccaaa 
+    10141 acagttatgt aaccctcctt atttttcctc taaaaaccct tgtcttcctt tacctccctg 
+    10201 aataggtaca tagtgtatta tagtacatgc atttccatcg caatgcctat tcccaaataa 
+    10261 atatcatttt cttttcaaaa tgtttgttat ttaggttgac aaggcctggc tgcccactcc 
+    10321 gtggtggttg ccatctgttg ctttattata acaaacttca tttaactcaa gccaggctga 
+    10381 gtggctttct ttatcttgct atcgatgctc cctaatactc taaccccaac tttgtatcat 
+    10441 ctggaatccg gagatatttt ttagccaaac aagaaaccca catgttgatt tgtaacattt 
+    10501 cagcagcacc acctgcatca ccaaagactt tgagacttat ggaaataaat tcaaatcctc 
+    10561 aacatctgga atggttgaga cacatgtata aagaacagaa atttatttct cacagtcctg 
+    10621 gaggctggga agtccaaaat caagactctg gcatgtttgg tgtctggtga gggctgctct 
+    10681 ttgcttccaa gatggcacct tgatgctgca tcgtctagcg gggaggaaca gtgtgtcctc 
+    10741 acatggcacg aggcagaagg gcaagagggc cagacgctgc tgtgtgaagc ctcttttaaa 
+    10801 agggcctgaa tcccattcac aaggaaagaa tccttgtgac tgaatcacct cttaaagcct 
+    10861 ccacttccta atactgtccc atgggccatt aagtttcaat gcctgggccg ggtgtggtgg 
+    10921 ctcacacctg taatcccaac actttgggag gctgaggcgg gcagatcacc tgaggtcagg 
+    10981 agtttgaaac cagcctggcc aacatggcaa aaacactgtc tctactaaaa aatacaaaaa 
+    11041 ttagccgggt gtgttggcac gtgcctataa tcccagctac ttggggggct gaggcaggag 
+    11101 agtcacttga acccgggagg cagaggttgc agtgagacaa gatcatgcca ctgcactcca 
+    11161 gcctggggaa cagagcgaaa ctccgtctaa aaaaaaaaag tttcaatgcc tggatcttgg 
+    11221 aggggacaca ttcaaaccgt agcaccattt tatattattt gtggattagg gttaatactt 
+    11281 tgtcatctca gacaaaccat ttctaagaag gtagaggttt gcgtgtgagg cttgagccac 
+    11341 aggtatgaca ctccattgtc atgcacaaat tgttacttcc ttaagatatg atccaacaga 
+    11401 cctggagacc tgaatgcatt taacacaaat gaaagtttct gcctcctccc tcagcccatt 
+    11461 tgagcttcca tttccctctg acccagtgcg cattctaccc tttgcagtct caagatgctt 
+    11521 ctccctggca gaaaaatcaa aagcaaaata tgaacaagta taagccagaa ttttcagagt 
+    11581 aactttccag attgcttcaa atggcagcat ttccaatcct ggtttgtctc atttgcttta 
+    11641 ttcaataaaa gaacaagaac aagaacaaga aaaaaagaac actactgtgt atgagctttg 
+    11701 acatcacttc tgaccatttt tactttcatg ttgttaattt tgccatttga ttttgtttcc 
+    11761 attacatgct attaacttct gttcagatgt cactcattta aaaatgtggg ggtatttccc 
+    11821 attgttgtcc cagtcaggca attataactt aacctaaaga cagccctgct ctcaggtcag 
+    11881 ccttgccata aagtccgatt caaagaaata acagtccatc agaaaaatga aaaccattaa 
+    11941 aatctttgtg tgtctctcaa gaaaatacca caggatgagt aaacaaagct gaaaacaaga 
+    12001 tagagaatag agtctctcaa gaaaatacca caggatgagt aaacaaagct gaaaacaaga 
+    12061 tagaggatag aagttgatag agagttagaa ttttaacatg tgacacgcca ttagtaagtg 
+    12121 ttttgaacac caagggtttg gagggaaaga actgtgtggt caggacagca agcctggaag 
+    12181 ctgaccctgg ctggcaacac tcaaagtaac aagacaaaga tctagctgag ggaggaggct 
+    12241 cagagggcct caggatgctg ccatcctaat gaagaacaat cacacggagg gtgaaggcag 
+    12301 tgttcaccct ctgtgtgaac acatcctcct aagaggatgc actgccctcc tcctagaaca 
+    12361 ctgtgtgagg gatcccagct acccaaggtc caggagccac atgaaagctg cttgaagatg 
+    12421 tcccttgcaa acctagcatc tgagaatatg gacccacaaa atacattcat taaggagagg 
+    12481 cccattttat ataatgtaca tttacaaagt taatacactt ttgacatatt ttcacacttt 
+    12541 tatttcaaaa acatcttgaa ttacctgcaa actttcagga actcatcacc aacaaggtcc 
+    12601 attcatgatg tagtgggaaa taaccactgt gtaatgatag cataagcaaa ttcagtttta 
+    12661 atgagaggaa ataggggaag aaagttgaag ataaaacatg cttcctttat aaatccttct 
+    12721 ttattttatt gtccccactc ccaaccaacc cccaaggcca agtaaagagc tgggagtaaa 
+    12781 aagttagggc actgaagata gattcgggag acgtctgggt tcctcacctg ctaatgcagg 
+    12841 acccagtttc ctacaaaaca gcgtctgcct gtccaaggat tgtggaaata caggtgtatg 
+    12901 ttcctgcatg tgtatccagg aagaacaagt ccctttctca ggctcgagcc cctggagcca 
+    12961 ggccctcttc ataggccacc ccacagtcac caccgtggag gttctggaag cctcaggatg 
+    13021 ccccagggac ttcccacccc caagccaggt agtgccccaa gcataagtga aaacaccctt 
+    13081 ttcactcctt tgtttcccta gaaatccagc agcttctaag gttcatgtgc tacaactctt 
+    13141 tccattttta atatccacac atgtgcaggt gtggtaatgg atcaactact gtgagcaact 
+    13201 ggggcttcac cccccacaga acattctacg agatagaggg tggtagcaca cttcaggtca 
+    13261 tccagctgca agagtgagga gttggagcat ttatccacag actcccatct cccactgggg 
+    13321 agaactgccc tgggacccct gacaccacac actttggggg tgcttctagg gggagtaggg 
+    13381 caagttcaga tgatgccaga aaaagtcctc aggcagagaa gagagaggca ggcatcaggg 
+    13441 tgggaaggca tcagcattct ggaagcctta gttacaggtg aactcagatg ggccaagggg 
+    13501 acacaggaca aggtatcgac agcatctgcc acaactctct tgggaggtac acaaaaccaa 
+    13561 ctgagtaaac atttgtatta tttcctggat ataggagcaa tacattttac ataaagatga 
+    13621 tgattcttca caaatttatt cttaagtgca atgccatttc aataaaaaaa cccaaccata 
+    13681 ggtatcatgg aatttgacaa gattacaaaa ttaatctgga aagagaaata agcaagaata 
+    13741 tcgggctggg cacagtggct catgcctgta atcccagcac tttgggaggc tgaggcgggc 
+    13801 agatcacttg aggtcaggag ttcgagacca gcctgggcaa tacggtgaaa cccagtctct 
+    13861 actaaaaaca caaaaattag ctaggcatag tggtgcatga ctgtaatccc agctagttag 
+    13921 gaggctgagg caggagaatc gcttgaaccc aggaggtgga ggttgcagtg agattgtgcc 
+    13981 actgcactcc agcctgggtg acagagcgag actccatcta agaaaaaaaa aatcagaaaa 
+    14041 tattctgaaa caaagagaaa gtaatgggtg atatgagtcc taccaggcat tgaagtgcat 
+    14101 tataaagcct ttacctacct catggatcta ataaagcaag aaaggaaaag cctctcctca 
+    14161 cgtggcatcc cctcccttgg ttgtgtcaat ttgaatcaca ctgatatgcc ttatgcggaa 
+    14221 tctacataaa aagaaacctt ttaggcacac accgaggaag gggctgaatg agggtagctg 
+    14281 cggatcattc actggtatca gggacaagaa aattaccatg gcctcaggaa ctgccagtaa 
+    14341 agacacagga aggttctggt tcccagaaaa ataaagtcag aagccaagcc cagggtggga 
+    14401 acaaagaaga tcagaaaaaa tcagaccatt tcataaaagc tgtgatgcag aagaagtcca 
+    14461 gtggaggagg gcccaagtgc cacacaggtt ccaggtgatg ctgaaattgt ctcgggtaac 
+    14521 tgagatacct cagacccgcc tagacagtta gaaatggcta gaaagagaaa aggaaatttt 
+    14581 tttctagaca ccaaggagaa aataggaaga aaagcaatat gagtggatgg gagaggttgc 
+    14641 cccatattca ggataccatt taactgattt tcccgggcaa agcactagga gtcatctccc 
+    14701 aaggaattta tagtccagtt aaagaccaaa agggctttaa ataataattt tttttttttg 
+    14761 agatggagtc ttgctctgtc acccaggctg gagtgcagtg gcacaatctt ggctcactgc 
+    14821 aacctccgcc tcctgggttc aagcgattct cctgcctcag cctccttagt agctgggact 
+    14881 acaggcatgc accaccacgc ccagctaatt tttgtatttt tagtagagac agggtttcac 
+    14941 catgttggcc aggctgttct tgaactcttg accttaggtg atccacccgc ctcggcctcc 
+    15001 caaagtgctg ggactatagg cgtgagccac ttcaccaggc caataataaa tttttaaata 
+    15061 ataaagcagt ttaaaatggg actggatgat acaagccagt tgctgctgga gctagaagga 
+    15121 aggaggctga cttctgatgg gaagatatgg aaggatttca gagaaaagga tgcatcagag 
+    15181 ccagaactcc acagaagaga agcagggtca agaaattcag ggctgagaga actactcaag 
+    15241 cagaccttca gcaaggcaat taaaggagga caagtggtcc tgcagggctt cgcccaggga 
+    15301 aatgcaaaga gaaagagaga gagagagaaa gaggcatcac tggaaatgtt tcacagatac 
+    15361 cttgactgta aacattaact gcaggcactg aaatctagcc attaaggaag cattgaatgc 
+    15421 ttttaaaggg tggggagaca ggaaccattc tgcagcaact gtgcaatagt ttctccttaa 
+    15481 attcatgatt cacatcttta gagaaaatgt tcctaacgcc taagagaaga ccatacaaac 
+    15541 agattagctg ttttcttcct ctgtctgaag tgctatgcca tgtgatgcct caaattgcta 
+    15601 cagctgtcaa caccagcttg ggtagggcag agtggaaaca gggaagaaac gaggtctgtg 
+    15661 aagatataaa tataccattg aatgtaccct gacccgaaga ggatcctcca gtattcaaaa 
+    15721 caccctttcc agcgcccacc ctctcctcca gctcctgccc actcctctgc tccccgcagg 
+    15781 gtaaaactca gaaatgttgt cgctactccc tcaccttcca ttccctcttc aatttgcttc 
+    15841 tgcccccatt aatccattga aactgctctc ctcaagtccc caaaaacctc cacgtcacca 
+    15901 aatccagtga gcactatcct gtcttcacat gacttggcct ctcagtagct ggctctgcct 
+    15961 tcttgaaaca ccctcctctc agcttccaga accctcttat ttcactggct gtcccttttc 
+    16021 agtctcttcc tctggttcaa agtgtggtct ctggcccagc agcatcagca tcacctaggc 
+    16081 acttgttaga aatgcaggtt cctggacccc atcccagacc tgctgaatca aatctctggt 
+    16141 ccgggagggg cgaggcagca atctgtgttt tagccaagtc ttccaggtga tgcacactag 
+    16201 agactgagaa ggactaatcc gaaactgtgg gcattcctca ttacgaaatc ctgattcctt 
+    16261 tctcttccct ggctacattt tctcccatga tgatgtcatc taagcccgtg actggaaatc 
+    16321 atctatactc tgacagcttc taaatgtgta tcttcagcac ccatctgggg attacacagc 
+    16381 catctcaaat tcaacatgtc caaatggaag gaaggaactc cagatgttcc ctctaaaatc 
+    16441 tggtcgccat ccattttttt ccatttaaga aaatagctcc accattcccc cagctgttta 
+    16501 ttaaaaaaac ttaagtcatc cacgagtcct ccttttcccc aactccttac cctattagca 
+    16561 atagtatatc tagagggtct atctctaaat tgtcatgaat ctgtcctcta ttaccactat 
+    16621 aggccaagcc acaattttct ctccccagcc cactgcaaaa gcctccagcc aggtactgct 
+    16681 catgcccaca aaacaaccag agtggacttt taagaaggta aatcaggcta agcatggtgg 
+    16741 ctcacacctg tgatcccagc aatttgagag gccgagataa gcagattgct tgagctcaag 
+    16801 agttcaaaac caacctggac aacatagtga gacccccgtc tctaaaacaa atacaaaaat 
+    16861 cagccaggca tggtggctca cgcctgtggt cccagctact cagaagactg aggtaagagg 
+    16921 atagcttaag cccaggaggc agaggttgta gtgagccgag atcaccccac ggcactccag 
+    16981 cctgggcaac agagtgagac cctatctaaa aaaaaagaag aaggtaaatc atgtcgcatc 
+    17041 attccccttc ttaaatcttc aagggcttcc tatcatattt aattattaaa acccaaacat 
+    17101 ctgtcatggg ctgtcaggcc ctatggtcac tgtctgtatg gcttcctgta tcctctttga 
+    17161 ggtctgaagt cagagactgt aactatttaa ttcacactaa gtgctcaata aagtggagga 
+    17221 aataattctc cttttgtgag aagatgaatt tagagtctaa cttctttagt ttctccttac 
+    17281 ttgctgagga ggatctatat gatgtggtca aatcactttc agccaggaca caggagatgg 
+    17341 gaagggagac ttccaaagaa tgacttgatg atgctgtgaa cctcagcaca atagggctct 
+    17401 gtgggcaaac acagtagggt ttgacctcca aggacaaacc ctacacccca ctccccaccc 
+    17461 agtccggaaa acgactttca ctgtttatag tgagatatgg gtggttgtgg tcatgggaga 
+    17521 ggcaatggga gtgagtttgg aatgaggaat tatgcagggc catttgaata gccacttcct 
+    17581 gtgggttgcc cacccttgga gtggttcata aggtcaataa aaacctctaa gaatccatag 
+    17641 gccagaccat caaccccatt gtggcagctt ttaaaactgg caacaaggtc tttgatactc 
+    17701 ttcccattga ggagtgggct ccatgtcctc tgtccttgaa tctgggggct atatgacttt 
+    17761 ttttttttct tttctgagac agagtctcgc tctgtcgccc aggctgaagt gcaatggtgc 
+    17821 catcttggct cactgcaacc tctgcctccc gggttcaagc gattctcctg cctcaccctc 
+    17881 ctgagtagct gagattacag gtgcgcatca ccatgcctgg ctaatttttg tatttttaat 
+    17941 ggagacgggg tttcaccatg ttgcccaggc tggtcttgaa ctcctgacct caagtaatcc 
+    18001 atgggcctcg gcctcccaaa gtgctgggat tacaggcatg agccaccgcg cccggcaatg 
+    18061 gggctatata actgttacgt caacagcata cagtggaagt gatgctacct gactactgag 
+    18121 cccaggcagg aagtggcatt gcagcttctt gtttgctgaa actctcacac ttggagtcct 
+    18181 gagccaacat gtaagaagtt catccaagcc gagaccacca gaccatgagg aaaccaggcc 
+    18241 acacagagaa gccgcagcta ggcaccgcaa tcagcacatc tgatcttcaa gtcctcctag 
+    18301 cccaggtgcc actcaggcaa gtgcataggc ttcagatgac tgcaaccccc ggctatcaag 
+    18361 gtacccctag acttagagtc ttctcaactg acaccccaaa cataatgggg cagaatcaag 
+    18421 tccccgctgt gcctgtccag ctccctggct taaacaatcc attggcataa taaaatggta 
+    18481 gttgttttaa accacctaag ttgtggggta tttgcagcac atcagtaata accagaatag 
+    18541 gtcataagtc aatccccttt ggttccctag ttctttccct ccaagaaatc ccaggccatt 
+    18601 tgagcccttt cctgatggga ggaaagcagt cgaccagaaa atacaattct tttgaggaaa 
+    18661 agatgggttt tagcgtcttg gaaccaagct tcacagagcg ccttctgcca gtgggcagcc 
+    18721 agccccttgc ctaggctgat ctggtcacct acttccagcc ccaccccagc tctgtcctcc 
+    18781 cacccagctc tgtcctccct gcaggccctg agcctctagg agactcaaag agacactgtg 
+    18841 ctgcccgctg aattcatctc ccagtgagcc atctctgagg aaaggaggta aggctctgaa 
+    18901 tgcgatgtca acctaagcat tacataacac tgataggttg taaaatggcc tcgctgccta 
+    18961 gtgctcattc taactggcca caatccagtc ctccctgttg cactgagtca gctccctcca 
+    19021 aaggcggcgc tttccaggcc tcctggttgc cctttcccag cagacctttc aagtgctcac 
+    19081 ccacactcac ataaacatgg cccaggcact gtttacagca gctctcctct gtgcattctc 
+    19141 ctggcttctc ctgtctctcg ccatttgtac ccctcccctg caacttgagt gacagtgatt 
+    19201 ggtcctgaga tgcaaatatt tgatgcacat atgtttacaa tgcagcctca gctttttttt 
+    19261 ttttttttgt aaagagacaa agagtgagac agggtcttgg cctatagccc tgtggcccag 
+    19321 gctggagtgc agtggcacaa ttaaagctca ctgcagcctc tacctcctgg gctcaagcaa 
+    19381 tcctcccatc tcagcctccc cagtagctgg gactacagga ctgtgccacc gttcccagca 
+    19441 atttttttta ttttttgtag aaatggggtc tcactatgtt gctcactctg gtctcaaact 
+    19501 cctgagctca agcaatcttc ctgccttggc ctctgaaagt gctgggatta caggcctgag 
+    19561 ccactgcacc tggctgtcaa cattcttaaa tctctttcct tacatgcttc ctaaacctct 
+    19621 cacccaaaac taggagacta gatgtcctat tttccccagg gcatgcctgg tttacgccca 
+    19681 tttcacttta aaagtgccca atttgggtaa taatttataa gatccccctc cctctaaatc 
+    19741 ctgtccttct atcacttcat ccttcgctct cctttaaaat gagacagttg tcagcaggaa 
+    19801 tcctgcgcaa gaacacacca ccctgtttca tagaagatat ctcaggtaat gtgcaaacac 
+    19861 gggtttttaa acggagcgca tttttctcat ttgttaatat caccacctaa atcatctctt 
+    19921 gcctaaaaca aggagtagaa agtgaatgaa ggaaggaaca ggtgatggtc agtgtccttt 
+    19981 ctacgcctca aaatttaaga gtttatgtga aaattcataa atattaatct caatccaggt 
+    20041 taagcaaaat tttttgctct cctctttaga aatttctggt tgccaaagtt ccagaaattg 
+    20101 cttcctcatt cctgagcctt tcattttctc gatttctcca ttatgtaacg gggagctgga 
+    20161 gctttgggcc gaatttccaa ttaaagatga tttttacagt caatgagcca cgtcagggag 
+    20221 cgatggcacc cgcaggcggt atcaactgat gcaagtgttc aagcgaatct caactcgttt 
+    20281 tttccggtga ctcattcccg gccctgcttg gcagcgctgc accctttaac ttaaacctcg 
+    20341 gccggccgcc cgccgggggc acagagtgtg cgccgggccg cgcggcaatt ggtccccgcg 
+    20401 ccgacctccg cccgcgagcg ccgccgcttc ccttccccgc cccgcgtccc tccccctcgg 
+    20461 ccccgcgcgt cgcctgtcct ccgagccagt cgctgacagc cgcggcgccg cgagcttctc 
+    20521 ctctcctcac gaccgaggca ggtaaacgcc cggggtggga ggaacgcggg cgggggcagg 
+    20581 ggagccgcgg gggccgagtg aggaccccgg gcctcgggtc ccaggcgcaa gggtgcccgg 
+    20641 ccgggcgggg tcgggacccc agtgaggagg ggccgggggc tgccccgcgg gcgcgtgacg 
+    20701 cgtctcgggc ctgcccggct gcgctggtct ccgctcgggt gaggcggctt ggcttcgctt 
+    20761 ttcaggttag gaaagctccc tttactgcgc gttggggggc tgggggagct ggcggagccc 
+    20821 cgttagggag gtcggtggcg ccggggtgtc tcagcgcccc ctgcaccccg cgcgggtccg 
+    20881 gcccagcggg cgatcgctgg cgcccaggga actccgggag ggccgccagc gggctccgca 
+    20941 gggcgcgggg cggggagggg cgcctggggg ccgcggggct cgcgctcccc gcccgttggc 
+    21001 cgcccctcgg aggccgagat cggggcccag aacgcccctt ggcaaggcct ggcgcttccg 
+    21061 cgatgcccag agggtgcttg gggggatgga gagaggggcg cccgccgggg gagttccggg 
+    21121 agcctcggtg cctcccgccg cagctgcagc gttcctcccg ggaggcggcc cagcccttca 
+    21181 tcctcgccgc ctgagcttct ccgagggggg ctgcagcctt gcggccgttg ccaccgcctg 
+    21241 gagaagcggc ccacgcggac tgacgggcgg gggcggggcc tcgggcctcg gcgggggcgg 
+    21301 ggtccgggga ggccccaccc tctgttctcc aggggcgggg agagaggagc tgcaggtctg 
+    21361 cggcctggcc ccaggtgcga tggcggaccc cagcttggcc agtcacattc ctcccagtcc 
+    21421 ccctggaggg agaacgctgg ccatgggggg ctccaaggaa caaccagcct cggatgacga 
+    21481 cccttgggtc accggtctcc ccacctgtgc ggcaggcgcc ttcacgtttc attattaaac 
+    21541 aatggggaga aatccatgtt tactgtcctt tttaaggaat tttttgctct tctctttgag 
+    21601 gtggctgtag gaaatagatt ttttttttaa cctcgcaatt ccaccacggt cacatccatc 
+    21661 ctcgccatcg cagagccaca gctctccgtt tttgtttcct agcctccaga ttctcacaca 
+    21721 acacagtgca gtttcactgc tgtaatgatg aggatcttca tggccgcgtt attttcttgt 
+    21781 tctgagagca tcacggttta attagcagtt ccccatatga tttgaagtgt ttcccgtttc 
+    21841 cttagggaaa actcctggta gaataggatt aaggattttt acaaatataa ttatcaaaaa 
+    21901 cataggaaca gggaattgga taaatatgtt aaacttctgg aaaaatcaac aacgctctta 
+    21961 gatttgtaga agaaaggaaa aaatcaccag tggaaaggag caattttact tacacaaaca 
+    22021 cagagaaggt cttacagtga aaaaaagcta accagtaagg ggaaaagcag gcagaggggt 
+    22081 aggatgtgat ttgtatgtta tttatatcta acacaagtct tccacaccga aaggaaaata 
+    22141 ttaagattat aatagataaa tggcaaaatg atgagtcatt tacacaataa aatgcaaatt 
+    22201 agagcatgtt tgggttatca ttttacatct attaaaataa ccaaaataat taatagtaac 
+    22261 agcaaccctt gctggaaggt tgcccaaaac ttggcatttt caagtgtctg gggaggtggc 
+    22321 agggctttgg ggtcacaaag atggttctgc agtcaatttt gtgaccttgg acaggctacc 
+    22381 taatttcctg atcctccttt tgtccattca tagaatggag gaaatgatag ctactttctg 
+    22441 cgtctgtatg tatgagttat tgggggcatt tcgaaccagt gacaaacatt ttgttaagca 
+    22501 atctggtgat gcattaagaa gctggaagct gtgacccaga aaccccactc ctgagaactt 
+    22561 acctgcaatg gaagaaacaa acaaacaaaa acaggcatgt attcctagca gaatgatcta 
+    22621 aaattagaac acctggaaaa gagcctaaat gtataacacc agggcagtag ctaagaaaat 
+    22681 tatgacacat taactgaaat gaacattatg taaccactaa aaatcatgat tttggagcct 
+    22741 gtgatatgtg gggaaaaact gacaagtaaa aaagtgggtt attaactgca cctgcttact 
+    22801 ctaacgtgaa cgcatatgtg aaaaatctga aaggaaaagc acagaaaatg gacgttttca 
+    22861 ttgaaattgt cggtgatctt aattttcctt tggtgaatat attgctctca ctaagggcgt 
+    22921 ttaaaaaata gttcacaggt tttaattttt tagatgaaat ggacccacag ttttctgtaa 
+    22981 gagaaaggag agattgttat atttgctact tagaataaaa gatttttagc caacgttgtt 
+    23041 tcctttttca aatatttttc cattttttta gttgattaat gatttagtaa tttgtgtatt 
+    23101 gggttttttt aagaatcagt tcttagattc atttatcaat tctagttttt tgttgttgtt 
+    23161 tttaaggact cctgaatatt tttcaaaact gaacaatttc agccatgtct gagctttccg 
+    23221 tcttcctgga ggcacaaatc tagtttagct gaaccacaac agattgtaca tatcctgcag 
+    23281 aacctctgtg gtcttaggaa ggttgaaagt caccaaatgt cacagaaaat gagggtcagg 
+    23341 aaaggctgtg atcacaagct cttgatccag aggccactcg ggtgcatctg tgtgactgac 
+    23401 acctcattgc atcatcattt cttgtaaaat cagcttaatt ttgcagagaa atggccacag 
+    23461 atttttagaa ttatgctgaa ttatgtaagg gagcagccat tttaaaaata atgtaatcaa 
+    23521 ataacaataa taacataaca gaagtttctg caccacactg acactgaaca tggctgtcaa 
+    23581 ccaactagcc aaaccaaggt gaaagattct ctgaacttca gttttaactt acttcgtcca 
+    23641 ttctcccttt tcagatctta tttcttcttc caaggcaact atatccactg tgaactgctg 
+    23701 catattaaac attcaaaaca tgtctgtatc taacccagtg atggctacag cattataaaa 
+    23761 taactcctaa gtgaatagtg tgtgcagcaa ttctcacagc taggagaatt ttttttgtcg 
+    23821 atgtgttaac cattcctttt tctccaactg cattctactt aaactgttac agtattgtgt 
+    23881 gatcacttta agggaggtaa tccttcagtg aaaagcatta taaatgttga agattagacc 
+    23941 cctgaggacc tagcactgaa gcctgatcac gggtgccaat tccctgagaa gcttttatag 
+    24001 attcccaaat cccatcgcta ggcactctct gactggcttg tgatgggttc cagcaatgtt 
+    24061 gttttttaaa agctcctcag gtaattctga tcatggacca ggttggggac cctttgctct 
+    24121 gttcagtttg tggtttctag gtgccagtga gaaaccccta cccccaattt ttgtgcaaaa 
+    24181 tttttttcag cttacatcaa gttctttatg aacctcagaa aattaaaata taacaaggga 
+    24241 atttacttag ctcagaagag acaagggaca ttatggggtg aaggtcgggg gttgtttgac 
+    24301 atttgcccct tcccgatgta actaattaag cttcaagttg taatgtgttt tatgggctag 
+    24361 aaggctttag tgcctatatt tggatctcag ctccaacacc ttggactctt acaaccttgg 
+    24421 gataagttct tactagctct gactctcact ccccatctat aaatgggaat aagatgaacg 
+    24481 gggtaattta tagatttttt agtaccctct ctctagttcc gctgttttgc cattctgctc 
+    24541 atgcaccaat gccatgtgat cttattgtag ctttgcactc tgacacctgg caggtcaagt 
+    24601 gcacccttga ttatcttctc attaaaaatt ttcttcagtc ttttaagttt tgagtataat 
+    24661 ttcataatgt cttttaaaat ctcttttgaa ttctttttca aatttattta ttttttcttt 
+    24721 gacagataag attatatgta ttgtgtacaa aattagaaag agatcttttc ctctaagatc 
+    24781 tgaaacaaga caagaatgct cacacgcact agttctattc aacatatggt actgcaagtc 
+    24841 ctagccagga cagttagaca agagaaagaa ataaaaagca tccaaatttg aaaggaaaaa 
+    24901 gttaaattgt tcctatttgg agacgacatg attttacact tataaaaccc taaagactcc 
+    24961 accagaaaac cattagaact aataaattca gtaaagttgc aggatacaaa attaacatac 
+    25021 aaaaatcagt agtgtttcta tatgccaaca gtgaactatc aggaaagaaa taaaaagaaa 
+    25081 gtgccattta caatagctac aaaataaata tttcagaata aatttagcca agaaggtgaa 
+    25141 agatctctac actgaaaact ataaaacact gatgaaagaa attcaaggag acacaaatag 
+    25201 aaagatagcc tgtgctcatg gggggataat taatgttgtt aaaatgtcca tactacccaa 
+    25261 agtgacctac agattccata gaatccctat caaaatacca atgacattct tcacagaaat 
+    25321 agaaaaaaca atcctaaaat tgggtgaagg tggcatcttt gtctcgtttc agatctaaga 
+    25381 ggaaaagctc tcaatttttc accattaagt atgatgttag ctgtgacctt gtcatatgtg 
+    25441 gcctttattg tgttgaggta caatgcttct acacctaatt cattgagagt ttttatcatg 
+    25501 aaagaatgtt gaattttgtc aaacgctttt tctgcatcta ttgaaatgat cgtatggtta 
+    25561 ttgtctcact ctgttactgt gatgtatcac acttattgat ttgtgtatgt tgaaccatcc 
+    25621 ttgcagccct gggatgaatc ccactgtatc atagtaaatg atctttttaa tgagctgttg 
+    25681 aatttgcttc gctagaattt tgttaagaat ttttgcacct atgttcatca gggatattgg 
+    25741 cctatactgc cattttcttg tgtgtttttg tgggactttg acatcaggat aatgctggtt 
+    25801 tctcctgtta ttaatttcta gttttatacc atcatgctta gaaaaaaaac ttgatacgat 
+    25861 ttcagtctaa ttaagtttgt taagacttgt tttatggcct aacatatgat ctgtcttgga 
+    25921 gcatgctcca tgtgctgttg agaagaatgt gtattctgca gctgttggat ggaatgtcct 
+    25981 gtatttgtct gtttggatcc atttggtcta agtgaagtgt aagtctgatg cctccttatt 
+    26041 tattttcttt ctaaatctcc cgtccaaaaa tctaagagat ccaaagcaaa cagggggtta 
+    26101 taaaattacc tttgaattct gactgaaatt gtgtttactt tgtagattat ttgctggtga 
+    26161 cttggtatct ttcaatattg gtttcccaaa caaaaaacat tgtatgtctt tctctttttc 
+    26221 cagtcttctt ttatgtctca gtaaaatttt gtagcttgcc tactacttat tttcaggtta 
+    26281 aatcctagat attttcaatt cttactgcca ttatgaatga atgtttttcc ccatgaaatg 
+    26341 tttaactaca gctgatttag ggactcactg agttttgatt tgttgatttg aaaaactacc 
+    26401 accctgttga gctcatgtat ttattctaag acattttttg agattttcca ggtaaaaaaa 
+    26461 ttatacctag atgaatttat agaacaacct aatagcataa aagcaataga ttattgttca 
+    26521 ccacattaat gggaatgcct ttcctcttaa aattatgata tcttgggctt tgtgtttgtg 
+    26581 acagcatttc tttatgatgg aaagagacta tccttccagt tctatagaaa cgttttaaaa 
+    26641 atagcttaca tttttaaaaa tttaggaatg atattgattt tcattgaaaa cttttcaaca 
+    26701 tctgaagaaa atcttttctt cctaacctat taatagagct cctgattttc aaccattctt 
+    26761 gtattcctaa aataatccat attggtcata atgtattctt cttttactaa actgttaaaa 
+    26821 taagttgggt gctgtttttt tagattttgg cacctgtgtg agaggagggt gccatggcag 
+    26881 ggtggctaag tgtgcccacc tgtgtactag cattgaattt tgacccttta tcccattggc 
+    26941 tctaaacact acatctcagg tgaagacgcc caaatgttta tctctactga gttacagatt 
+    27001 cctataacaa ttgcttaaat tgatactccc acttgaatgt ctcataggtg tggcaaagtt 
+    27061 tacatgtcta tactgaaact cttggttttc tctcccaggc atgaccctcc accagtttgt 
+    27121 cctatttcag tagatggcat caccgccatc tccctggtta tggaagtccc agacccgggc 
+    27181 aactctcact cctccatcca ctcaaccagc aggtcttatt ggctctttct gtaaaatatg 
+    27241 tctcatttat tcacagcctg ctagctgcat ggactccatc ccaggccacg ccaccatctt 
+    27301 cctgcagcag tttcttaact ggcctctcca ttccctttct tgtcccacta aattttcttc 
+    27361 tatttaagaa aaaatgtttt gtagacatgg ggtttcacca tgttgcccag gctggtctca 
+    27421 aactcctggg ctcaagcaat cctcctgcct gagcttccca aagtgctggg attataggct 
+    27481 tgagctgagc ttttgaaaaa acattctatg atgttactgt cctactaaga ccctttaatg 
+    27541 gctccccact gctttcagag gaaaatagaa atttctctct gtggaccatg aggccctcat 
+    27601 gatctgaccc tcaccacctc cctagtctta gcagtccacc tgccactgtc tcatggggct 
+    27661 ccacagattt gatctccttt ttggtcctta agcccaccaa gctaagtatc ttattcaaaa 
+    27721 ctgtgtcctc agcccctagc acaattcttg acccttagaa ttctgacact tgaaatgtgt 
+    27781 gttaagctaa tcaataaatt attgtgccag gcttggtggc acaataatgt gttgtgggtc 
+    27841 acctatatat agctgtggct cacacctata atcccagcac tttgggaggc tgaggcctgc 
+    27901 agattggttg agcccaggaa tttgagacca gcctgggcaa catggcaaga ccccatcact 
+    27961 attaaaaata caaaaaaaaa aaaaaccagg cgtggtgttg catacctgtg gtcccagcta 
+    28021 ctcaggagga tcacttgagc ccactgggtg gaggttgcag agagctgaga tcatgccact 
+    28081 acactttggc ctgggtaaga ccctgtctca agaaaaaaaa aaaaaggtta tggtactgta 
+    28141 aatattatat tacagtgtat aatttttgac agcttttttt ctccatttct tctatggtta 
+    28201 ttggtcagtt ctagccttct attttttttt ttaagctgac acatactggc tgggcatggt 
+    28261 ggctcacacc tgtaatctca gcactttggg aggccaagac aggaagatct cttgagccca 
+    28321 gaagtttgag gcgagcctgg gcaacatagc aagaccccat ctctaccaga aaagaaacaa 
+    28381 caacaaaaag aaactggcac atactagtta ttccataaat atttcttaaa tgaattaatt 
+    28441 ctaaagttga tttttataat ttacatctta atagaaagac aatccatctc agagatattt 
+    28501 ttattcatta aggaaagttg cataaagtaa tttattaacc ttttaaagca ttctctaagc 
+    28561 ctatttcccc ttatagagat atgttttcta gtgatgtgtg tatgttacat tttcaaataa 
+    28621 ctcttaattt tatttagaaa ttccacattt ttgtgggttt tatttattaa attcgatttt 
+    28681 catctctatt attaatttat gacagtttat tttgaagttt tctgttttct tccttttgag 
+    28741 ttgaataatc atttacttta ttttacttct tctattcagt tgtattatcc atgttcctct 
+    28801 gatagccatg caggttccaa atcctcacat ttttcaactt ctttaaaaga ttttttttgt 
+    28861 gctatcctga taagcgttaa gtgttatatc attttttttc atttttatta tattcttaat 
+    28921 gattttgatt ctctttttct atccttttgg ttttctttct taggtaaatg atcagttata 
+    28981 tcttttggcc atttttttct gttggaatta ctgtctctta ctgctctgta agaattcctt 
+    29041 gcaagttcta gaaatgaatc ctctgttgat tttaagtact aaagtcccct ttaccattgt 
+    29101 gtactctttc tattaacttt gtccagagtc agctttatcg tgctgaacaa gaatctttac 
+    29161 attttaattt ttttttttaa tttttaagtt caagggtaca agtgcaggtt tgttccatag 
+    29221 gtaaactcgt gtcatggggg tttgtcatac agattatttc atcactcagg tactaagcct 
+    29281 agtacccatt agttattttt cctgatcctc tccctccctt agccctccga taggccctag 
+    29341 tatgtgttgt tcctctgcat gcgtccatgt gttcttatca tttaggtccc acttataaat 
+    29401 gagaacatgt agaattgggt tttctgttcc tgtgtcagtt tgcatatccc tgcaaagaac 
+    29461 atgatctcgt tcttttctgg ggctgcatag tattcgatag catatatgta ccacactttc 
+    29521 attatcccag ctatcactga tgggcattta ggttgattcc atgtctttgc tattgtggat 
+    29581 agttttgcaa tgaacataca cgtgcatgtg tctttgtaat aggatgattt atattccttt 
+    29641 gggtatatac ctagtaatgg gattgctgag tcgaatgata tttccgtctt taggtttttg 
+    29701 aggatgtaat caaattcatc aattatttgc cttatggttt gtgctttttg tttaaaaagt 
+    29761 tcttccccca ttcctcctcc aggtcacaaa gacatttccc aatattttcc tcttctagcg 
+    29821 ccaaacttgt acctttcaca tgtaagtctt ggatccatct agagttcact tttgtatgta 
+    29881 gttagggatc tagttttctt tttcttgttt cccagaagca tgaaaccttc ctcctttatt 
+    29941 ggttcgtggt gcccatgtca gcacacatca agtccctgtt aaagtgtatc tacgtgggtt 
+    30001 tctctctcaa cttgcttttc tgtttccttt ggtctctccg tctattcctg agctttaccg 
+    30061 tccagtcttc gtcactgtgg ttttgtagtg atttcatgtc tgctttggca gattccctcc 
+    30121 tctttacact ttttttttaa ggttgacctt attattcatg gacattttct tccccataga 
+    30181 agtttactga acttctcaaa aaattgagat tacctggaat tttaactggc attttattgc 
+    30241 aactaccagt tcatttagga taatggacat ctttataata ctgagttatc gccatcaaga 
+    30301 ccatggaatg cctctccatt tttttcagac catcttctgt gttctctgta taatgtgtca 
+    30361 cccatcagaa gtcttttctt agttaagtca attcctagac gctttacagt ttggttgtta 
+    30421 ctttgaatat ctgtattttc ttctggtcag ttattgctac tgtagaggaa tgccgttggt 
+    30481 tttcgtaggc tgaccttcag tcccacaacc ttgcactcta gcgttggttc tcatgttatc 
+    30541 cctgttattc tgttggattt tctatgtgca tgatcacact aattgcaaat agtgtcagct 
+    30601 agagcacttt ccttgccatt cttacacctg ttacttcttt gcatatggcc ttggacagca 
+    30661 ccttgagtcc catgacaatg gatgtccctg ttgtatttct gagtgtattc ttagcattct 
+    30721 tcttagtaat aaacaggtat tgaccattac catatactta ataggatatc ttgaaatatg 
+    30781 ccagaggact aggccactac ttgactggtg acagagagta tcttagatgt ataggccccc 
+    30841 agacatgcca gtgtcctctc tcaccaccca tctccactcc aaagttgtct ggcctcaccc 
+    30901 accttctgtg cctggttctt ctcctctgtg cttctctcac tatgccatgt cctcgcctgt 
+    30961 tcaggtgtct ctaagagctc atagatcctt aactcttaca gctttaaatg aggcacattc 
+    31021 aaagcccgac tcagtgtcat tccctgcagt ctcctcttcc tcccatctta cccatttcag 
+    31081 gtaatatctc cagccagcca gagtctactg cagtagctgg cacatgaaat aaatgtttat 
+    31141 ttaactgaat tgaaaatgtt agctggccat tgtcaaaaat actattttgt aaatttataa 
+    31201 atatggttct ctttgtatat ccattataaa tatttagtat ttagtttgat tattccttat 
+    31261 gctttataac atgtgttttc ccattcattc atttatccag catttatttt gcatgtctat 
+    31321 gggtcaagcg ctctgtctag gaacactgct gtgaacaaaa ccaaactccc gccctaaagg 
+    31381 agcctgcact cccgtggaga acatgaataa taagcacaga ggaaataaca taatatctca 
+    31441 agtagctgta actgctccag agaataatga agccaggaaa gggggtgggc tagggggtgc 
+    31501 tgttttaggt agagtgatgg gaacagcccc actgagcaaa ctttagccac atgagtagct 
+    31561 ggaagaaaag ccttctagga ccagggaaca gcaagtgcaa cagccctgag acaggatggg 
+    31621 cttgtcagtt tgaggagcag tgggaggcct gaaccaggtt acatggggcc cagccagtat 
+    31681 ggccacgact ttgtgtttta tccagagtac aaaggagcct cactgaggga caagggaagt 
+    31741 ggcatgatgt gacccgcata ttaagaggag agcgctcaat ggcagccagg ggaggagcag 
+    31801 ggaggctggt tgggaggctg ttgaagaaat caggtgagaa gtgatggaag caccgaataa 
+    31861 gatggtcatg ttggaaaaat tgagaagctg aggtgcttag cattgatttt caaggtagag 
+    31921 ctactgagat ttgctgatag atccaatgta tgctgggaga gaaaattcag tcactctaga 
+    31981 gcattggctg gatttgtcac ccattgcagc gaatggagaa ggtgctgaca taaaagccct 
+    32041 ttagactgaa agctactgac tgaggggatg gtgccctagt ttgatttcct ggggtgtatg 
+    32101 agtagcaggg aggccaagag ctgggcctca cgagattgtg gggactacat cagggaagca 
+    32161 ggcctgcaaa gaacctgcac cacagacccc cacctaaaag agcctccaaa aaccctaact 
+    32221 ggcatgacct gagtacttta actctgcttg taactttcaa atatattttg atttgcttat 
+    32281 gaccaccaag gcaaaacttc ccatttcaat aatgttagta gaaacataaa caggatgtta 
+    32341 atttatttat ttggtaattc tttttatgaa tattatccag tttaatcatt agctctgaag 
+    32401 gagatgaaaa ataattttct aatttttaga aaaatttgca gctaattggg tgataaaggt 
+    32461 aaggggtttc tgagttcaca aaaatgttct aaaattggca acagtttcgg ttgcacgttt 
+    32521 cattaaatgt actaaaaacc attgaactgt acatggtata tggtgaatta tatggtatgt 
+    32581 gaattatatc tcaacaagct gggtattgtt tttttaaaaa ataaaaataa aaaaggagaa 
+    32641 agagagagag aaaaacaatt gcagatcatc ccagcactga ggacaagact aacttcagtg 
+    32701 ttccagtata tgccattata ggttttacgg cacacagtga tgatttggag cctatgattt 
+    32761 gacctagggt acagcaggta ctgtttagca atcattttac tattgtcata ggtctctgct 
+    32821 cttggagcta agtgcccagg gtaaatgaga tctttaattt gaaaagagat ttttgatttg 
+    32881 atgaatgtac attctccaaa gggtcataaa ttgtcattct ggatgtttga tctgtttgtt 
+    32941 gttttggtac aaaaattaga agaaaataat tcactcataa aatgttaaat aatgaactaa 
+    33001 aagtcattca tcaagtccat aacttagggt cacatttgtc cttggagcag gagaaagagt 
+    33061 tgtgttcacc cttttcttac ttttgctttt gtcctaagtg cttcagagaa gtacagggtg 
+    33121 gcaacagtgt ttctactgag cagctgatac cattgctatg cactcattca ttatgcagga 
+    33181 aacatttagt aatttcaaca taaatatggg actctgacgt tctcctcttc attttgcaga 
+    33241 gcagtcatta tggcgaacct tggctgctgg atgctggttc tctttgtggc cacatggagt 
+    33301 gacctgggcc tctgcaagaa gcgcccgaag cctggaggat ggaacactgg gggcagccga 
+    33361 tacccggggc agggcagccc tggaggcaac cgctacccac ctcagggcgg tggtggctgg 
+    33421 gggcagcctc atggtggtgg ctgggggcag cctcatggtg gtggctgggg gcagccccat 
+    33481 ggtggtggct ggggacagcc tcatggtggt ggctggggtc aaggaggtgg cacccacagt 
+    33541 cagtggaaca agccgagtaa gccaaaaacc aacatgaagc acatggctgg tgctgcagca 
+    33601 gctggggcag tggtgggggg ccttggcggc tacatgctgg gaagtgccat gagcaggccc 
+    33661 atcatacatt tcggcagtga ctatgaggac cgttactatc gtgaaaacat gcaccgttac 
+    33721 cccaaccaag tgtactacag gcccatggat gagtacagca accagaacaa ctttgtgcac 
+    33781 gactgcgtca atatcacaat caagcagcac acggtcacca caaccaccaa gggggagaac 
+    33841 ttcaccgaga ccgacgttaa gatgatggag cgcgtggttg agcagatgtg tatcacccag 
+    33901 tacgagaggg aatctcaggc ctattaccag agaggatcga gcatggtcct cttctcctct 
+    33961 ccacctgtga tcctcctgat ctctttcctc atcttcctga tagtgggatg aggaaggtct 
+    34021 tcctgttttc accatctttc taatcttttt ccagcttgag ggaggcggta tccacctgca 
+    34081 gcccttttag tggtggtgtc tcactctttc ttctctcttt gtcccggata ggctaatcaa 
+    34141 tacccttggc actgatgggc actggaaaac atagagtaga cctgagatgc tggtcaagcc 
+    34201 ccctttgatt gagttcatca tgagccgttg ctaatgccag gccagtaaaa gtataacagc 
+    34261 aaataaccat tggttaatct ggacttattt ttggacttag tgcaacaggt tgaggctaaa 
+    34321 acaaatctca gaacagtctg aaataccttt gcctggatac ctctggctcc ttcagcagct 
+    34381 agagctcagt atactaatgc cctatcttag tagagatttc atagctattt agagatattt 
+    34441 tccattttaa gaaaacccga caacatttct gccaggtttg ttaggaggcc acatgatact 
+    34501 tattcaaaaa aatcctagag attcttagct cttgggatgc aggctcagcc cgctggagca 
+    34561 tgagctctgt gtgtaccgag aactggggtg atgttttact tttcacagta tgggctacac 
+    34621 agcagctgtt caacaagagt aaatattgtc acaacactga acctctggct agaggacata 
+    34681 ttcacagtga acataactgt aacatatatg aaaggcttct gggacttgaa atcaaatgtt 
+    34741 tgggaatggt gcccttggag gcaacctccc attttagatg tttaaaggac cctatatgtg 
+    34801 gcattccttt ctttaaacta taggtaatta aggcagctga aaagtaaatt gccttctaga 
+    34861 cactgaaggc aaatctcctt tgtccattta cctggaaacc agaatgattt tgacatacag 
+    34921 gagagctgca gttgtgaaag caccatcatc atagaggatg atgtaattaa aaaatggtca 
+    34981 gtgtgcaaag aaaagaactg cttgcatttc tttatttctg tctcataatt gtcaaaaacc 
+    35041 agaattaggt caagttcata gtttctgtaa ttggcttttg aatcaaagaa tagggagaca 
+    35101 atctaaaaaa tatcttaggt tggagatgac agaaatatga ttgatttgaa gtggaaaaag 
+    35161 aaattctgtt aatgttaatt aaagtaaaat tattccctga attgtttgat attgtcacct 
+    35221 agcagatatg tattactttt ctgcaatgtt attattggct tgcactttgt gagtattcta 
+    35281 tgtaaaaata tatatgtata taaaatatat attgcatagg acagacttag gagttttgtt 
+    35341 tagagcagtt aacatctgaa gtgtctaatg cattaacttt tgtaaggtac tgaatactta 
+    35401 atatgtggga aacccttttg cgtggtcctt aggcttacaa tgtgcactga atcgtttcat 
+    35461 gtaagaatcc aaagtggaca ccattaacag gtctttgaaa tatgcatgta ctttatattt 
+    35521 tctatatttg taactttgca tgttcttgtt ttgttatata aaaaaattgt aaatgtttaa 
+    35581 tatctgactg aaattaaacg agcgaagatg agcaccacct cccgtgtctg cagttgtatt 
+    35641 tcctggtgct tgccctgtgt tggggactgt tttgggggtt aatctgagcc aagtggcgct 
+    35701 ttctgtcctc ccttctcaag tgatggccga tggttcacgc acttccccct gttcctgccc 
+    35761 ttgtcctcac ttcccagtca cccactagtt catctctgcg gcttttgcat tttctccaca 
+    35821 agcatctaag tgggcttagc actggtaaac tgcaaaggca ctattgcagc aggaggaaca 
+    35881 gtctgggagc ttttttcagt cctggattta gaaatagatt ttcttgatta aaatgaaaat 
+    35941 taacaagctc taaagaactg ttgacccttg aactacacag ggattagagg cactgacctg 
+    36001 ccgcacagtc gaaaatctgc agagaagttt tttttgtttt gttttgtttt ttttgagacg 
+    36061 gagtctcgct ctgtcgccca ggctggagtg cagtggcggg atctcggctc actgcaacct 
+    36121 ccgcctcccg ggttcaggcg attctcctgc ctcagcctcc tgagtagctg ggactacagg 
+    36181 catatgccac catgcccggc taatttttgt atttttagta gagatggagt ttcaccatat 
+    36241 tggccaggct gttctcaaac tcggcctcaa gtgatctgct cgcctcagcc acccaaagtg 
+    36301 ctaggattac aagcatgagc caccgcgccc ggcctgcata gaacttttaa ctcccccaaa 
+    36361 acttaattgc taatagatta attgcctgct gttggctgga agccttacca ataacgtaaa 
+    36421 cagttggtta gcacatattt cacatgtcat atatactata tactgtattc ttaccataaa 
+    36481 gtaagttaga gaaaatgttg ttaaaacaat gaggaaggaa aagtatattt actattcact 
+    36541 gactggaagt ggatcatcat aaagatcttc atctcatctt cctcacattg aggaaggctg 
+    36601 aggaggaagg ggaggggttg gtcttgctgt ctcctgggtg gcagaggcag aagaaaatct 
+    36661 gtgtctcgtg gactcagttc caacccgtgg tgttcaaggg tcacctgtgc ctgctttatg 
+    36721 caccccaaat caggctctaa aatagtctca ggtcctgtga gccttagtga cacactcttc 
+    36781 tcagattcaa tacctttgat ctgaaaggtg actttgattt gtcataatct tccaactcat 
+    36841 tctctacatg tttcgacgca ccagcactgt gatgttcttg gttatccttg gcagaagttt 
+    36901 tctcctgcaa ctaatttgct aaaggcaggg ggtaatcaga agtgacagtg gttgaaatca 
+    36961 caggccaata tcttagcaaa cgtctgtgtt gtaaatgggg aagtgcctct ggtggggtct 
+    37021 tcaaggatca ctccagcctg gctagggaaa ctctagggga gaggcacttg aaattattgt 
+    37081 actcataggt cctagagagg gaggcatgtc atgccaagca gggggctgga ttggaggcgt 
+    37141 gcccagggat tgggtgcaac tcagcgtgta tgagacagaa agagagagaa ctcctgggca 
+    37201 agtgccttta ctgggagcca ggatggagga cacaagcaca aggtgtaagg ggatctcact 
+    37261 ggtgtgtttg aatgtcacta agtcacagtc aggggaagac aagaagtgga acttgtggca 
+    37321 gggaccagcc ttattacact ggcacctggt tacctggaca gggtgcccac tgcctatttg 
+    37381 taggatgtca aggtatcagg aaaatatgaa gtttttaaaa atttacaata taatgccaac 
+    37441 ctcctacggt gatcagagga tcagctttgt attaaagatg gaaagatacc aatcatcacc 
+    37501 cacaaaacta ctaaaacaga aagaatgaca aatacaattc tcggccaggc acagttgctc 
+    37561 acgcctgtaa tccctgcact ttgggaggcc gaggcaggca gatcacttga ggtcaggagt 
+    37621 tcaagaccag cctggccaac atggtgaaac ccccattccc tactaaaatt acaaaaaatt 
+    37681 agctgggtgt ggtcgcacgt gcctgtaatc ccagctactc aggaggctga ggcaggagaa 
+    37741 tcgcttataa ccgggaggca gaggctgcag tgagccgaga tcccgccatt gcactccagc 
+    37801 ctggcggtaa gagcgaaact ccgtctcaaa aaaataaaat aaaataaact tttcattacc 
+    37861 tgcctataat aatttctcaa aaagagtcaa ctgaggagac ttaaagtgtt cgaagcatag 
+    37921 ctacttgtag gaccagagtg aataatatcc acctgtatct ttcccaggcc tcatgtttcc 
+    37981 tttgttattt caaacgtgtg agtcatgcaa aaggaatttt tactaaaaag gaaaagaaaa 
+    38041 aaatttaaaa tgaccagcat aaacataatt gagttcaatc ccccagaaag ggttattcgg 
+    38101 agaacagcca ggcgctgccc ttgtttttcc ccctccccat ctggggctaa gaccaaaagg 
+    38161 ggtctgtctt tggagggaaa tctgggtctg tacagcttcc cactctaagg ggagccttaa 
+    38221 tcccagccgg aacctgagct tctccaggca aggcctgacc ttgccgactg atctaagcat 
+    38281 tctgcgcttc attttcaccc cagaaaggtg acttcctcct ggctgggggg ctcctcccct 
+    38341 aggactcagc tcatcctgaa ctaataaccg cgttatgtcc atcctttgtt ccgttctttg 
+    38401 agtcccaccc atgttcttca ggaaagctgc agctggtcca cgtgccttgc ctgtgcttct 
+    38461 gtagaactac ccctcccttc tctgcctgca gcagggctcc tggaacttga atgtgcactt 
+    38521 gaatctgcag gtcctgactg taggtctgtg tttctaacat gctgctgggt gacgctgtgc 
+    38581 ccgtcctgtg gtcggcattg taacaaggct ccgcgggttc ccacgccgga gtctgcgtca 
+    38641 gaaacctctg gagggcttgt tatacacaga tggctgaacc ccatccccag agtttctgat 
+    38701 tccctagtac cagggtgggg tctgagaatt tgcatttcta acaaattccc aggtgatact 
+    38761 gatgctgctg gtgcggagag gtcacatgga aaccactgct cggcagatgc aaaagaagca 
+    38821 gaagccgccc caaccctgaa atactcacaa agctgctgtg gagaccagac acctgccggg 
+    38881 ggaatgagag cctggggatc ctgcctggga ggaagagaga gctgggagct ctatgggtga 
+    38941 atgccaatgg aggtgcaagg aggtgactaa ctcctgccgt ctgaaaatag tgaagcacag 
+    39001 ccgaggcctg aagcccaccc ttagtgagag atatagttaa acttggaaat ggtgcccagt 
+    39061 cacttgaaaa cagcacttct cagattcaga tgtacacatg aaccacctga ggatcttatt 
+    39121 aaaatgtggg ttctgaggct gtagctctga ggtgagctca gagattctgc agttctagaa 
+    39181 gcttccaggt gatgcaatgc tgctggtgca aggaccgctc tctgagaaac aaggacctag 
+    39241 aggtccaggt catcttggag agctgttcta accctggcca agagcttcgg gaggcactgg 
+    39301 ggctcaggca cccggcaggg gagtcttcac tttccttgtc tgaactctaa gtgctgcctc 
+    39361 tcacacacaa ttcccttgtc tggacccaga caacagaatc agtgcagcgg cttatctcag 
+    39421 aactaaagac agttgactgc ccctggggaa gggagggctc tctctgagga agtctcaaac 
+    39481 accctgctgc aaaattttca ccctcaggat ccccaatttc cctgaacctt aacagacttg 
+    39541 cttgttctgt agaaattgcc tgtaatttcc aagataaaag gactagaaag gtggcctttt 
+    39601 cacctatgtg gcttctcttt tttttttttc ttttgagata ggatcttgct atattgccca 
+    39661 ggctggtctc aaattcctgg gctcaagcaa tcctcccatc tcagcctccc aagtggctga 
+    39721 gatgacaggc acgtgccact atgtctggcc ctatgtggct tctccaaggt gaatatgggc 
+    39781 cttgtggggc tccaggtggc acatgtaagg tgtgtatagt agttttgtgt tcagacttaa 
+    39841 atgagactca aaattatact ggggaattct caggggcaga cccctccaaa atcaaagacc 
+    39901 tgtggggcaa agccccagca tcctgcccca atgagctggg gctgactccg acagctgctg 
+    39961 cttctgggtc tatcatctcc tgatgctttg acaggccaaa gcattagcct caggttagcc 
+    40021 tctgaggcct gtcctgtcct atgcagtccc aggcagtact gctccctgtg cctgagacac 
+    40081 tggcttctcc acatagacct cagacacaga actggggcca ctgccctcac tgtgcacttt 
+    40141 aaagggtcct cctccaggcc tccactcaga gcctactgtc ccgctcttcc taaaccacat 
+    40201 tccaggtgcc cagggtgttg gaattatctg cctcagggcc cctgttgtcc tcctatctgt 
+    40261 cctcctacga gtggaccaca ccaccagtat acacagctca atgtccaaga ggcagccacg 
+    40321 acatcactgt ttgggtctgg tggctaagaa gaaacttgga catgtaggct gggagtccac 
+    40381 atccatgaac tcaaggcccc caggaggcac acgatgaatt cgagtgggaa gagaaggggg 
+    40441 taggccacgg gacagaggcc tccctctgga gtcttcctct aaccgctgca aatgttagag 
+    40501 gcagttctac ccccaaagct tctaggggaa aggagtgaag gatttggcaa taaagtcctt 
+    40561 agtttttgca aatgtctgca agtcataaaa gtgcttttaa gttctccaca ggtcaggact 
+    40621 ggtcatgtta ggttcttaca cctctcccat agtccctcca cccctagaca ttgggagact 
+    40681 cccagtcaat tcaccaccca ggatggctgc ccctcacctt cttcccaggg ccccacatcc 
+    40741 aattaatcca aatacaccca tgtattcaag cacctttctg atgaacctct agaaagtagc 
+    40801 cagtgctgca gaaatttctt gtagcatgtg ctgaaatttc taggatccta ccagtcaaag 
+    40861 aacaacagtc tccttgcttc caccagggaa tttgctaaca cttgcttcta agatctgacc 
+    40921 tctcagagcc actgtggtcc atcaatcaat tcaaaaatta tagtggcctg gggttgtgtg 
+    40981 ggtgaggtgg ctgcttggga ggctgaggtg ggaggatggc ttaagcccag tagtgcaagg 
+    41041 ctgttgcaag ctgtgaccgc accactgcac tcctgcctgt gcaacagagc aagacaccat 
+    41101 ctttataaaa acaaaccagc agccagacgc ggtggctgac acctgtaatc ccaacacttt 
+    41161 gggaggccga ggtgggcgga tcacgaggtg aggagtttga gaccagcctg gccaatatgg 
+    41221 tgaaaccctg tctctcccaa aaacacaaaa actatctggg tgtggtggtg tgtgcctgta 
+    41281 gtcccagcca ctcgggaggc tgaggcagaa gaatcgcttg aacccaggag gcggaggctg 
+    41341 cagtgagccg agatcgcgcc actgcactcc agcctgggtg acagagtgag actctgtctc 
+    41401 aaaacaaaac aaaacaaaac aaaacaaaac accagcaaac aaacattgtg aactacaatt 
+    41461 aaatttattt aatcacagta ctaaatgcta cacagcaact gtgtagaata ctgcatagca 
+    41521 atgaaaagcc atgctttaaa agagttgtgc cttacatgag gaagtgtgca taatataatt 
+    41581 ttaattgaaa atcagattgg caggataatc attttttata aaacaacaac aacaaaaaaa 
+    41641 caatgtccgg gcgcggtggc tcacacctgt aatcccagca ctttgggagg ccgaggcggg 
+    41701 cagatcagga ggtcaggagc tcgagaccat cctggctaac acggtgaaac cccgtctcta 
+    41761 ctaaaaatac aaaaaattag ccgggcgtgg tggcgggcgc ctgtagtccc agctactcgg 
+    41821 gaggctgagg caggagaatg gcgtgaaccc gggaggcgga gcttgcagtg agccgagatt 
+    41881 gtgccactgc actccaacct gggtgacaga gcgagactcc gtctcaaaaa taaagtatat 
+    41941 atatatatac tgtacaaata cacaggaaaa aaaataacag aaatcttcag gccttactgt 
+    42001 taacagtggt tattgctggg tggtggataa caggtgattt ttttatttcc ttctgtgttg 
+    42061 tttttatatt ttccaaaaaa tttacagtgt atcaagttga ctggatcaag gggtatgtgt 
+    42121 ttgcgtgtga gtgtgtctat tctgagtgtg tctatgaggg tgtttctgga taaggttagc 
+    42181 atttgaatca gtaacctgag tgatgaaaat tgttctcacc catgtgggtg ggcaccaccc 
+    42241 gatcttctga ggtctgaata gaacaaaaag gcagaggaag gaggagttca ccccttgttg 
+    42301 cctcctgcct gcctgcttca gctgatgcat ccgtctcctc atgcccttgg actgggattt 
+    42361 acactgccac taccctggtt ctcaggcctt tggacttagg atggaaacac aaccccagct 
+    42421 ttcctgagtc tccagcttga agacagcagc aggtcatggt acttcagagc ctccataatt 
+    42481 gcatgagtga gttcttcctg tatacatgtc cttctggttc tgtttctccg agaggtctgg 
+    42541 ctgatacata cctgaccaaa tattgctttt acaatgagaa aaagattggt aactattatt 
+    42601 tttaatcagt aaatggtatg caccaaacct ggccggtctg ccttcagggg ggcctctctg 
+    42661 tagcattttc tcagacataa gtacaacttt tgagagtgta acatgccagg ctctgtgccc 
+    42721 aacatttggc acatatagcc ttacctgatc ttcacaacgc tgtccatttt aggaagctca 
+    42781 cattcagaaa cgtttattct ctcacttacc cagggtacac agtatgctcc ccaaaagtat 
+    42841 attatggaaa cacatggcca ttgatttgtg atgatattta agagtttggt atagaggtcc 
+    42901 tgagcccgga gtgctatggg cacaactcat gacctatgtg aatggtgcct cctggacttg 
+    42961 tgcagggcac cagcttcaag ggactctgct gactcccagc agtacctggg ggaattgtca 
+    43021 gcaatcctaa aagcaagctc agcctgcaag gctgcctacc ccggacagat gatgccccct 
+    43081 ccaattgagc catgatccca tagagccgta gaaaatgggt cacctcctgc aggaagccac 
+    43141 cagggtgctt gcatggctgg gaactctttt ttctctaact gtcccagacc atctgctgct 
+    43201 ttcctccctg cttccaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaagt cattctctaa 
+    43261 atttttatgg tgggcaaagt tatcagtttt cagtaagccc attccttagc tcccctattt 
+    43321 gatccatcct cttctggaaa ccttccagga ccccatcttc attgccttcc ttgctggtta 
+    43381 caccatctgg atcagttttc tagggctgcc ataaccaagt accacagatt gggtggtaca 
+    43441 acagaattct atttcttcac agttctggag gctggaagtc caacatcaaa gtgtcagcag 
+    43501 gtgtactttc ttctgaggcc tctctcctga gcatgtagat ggctctcgcc tctttatatc 
+    43561 ttctcatggt cttccctctg ggtgtgtctg tgccctaagc ccctcttctt acaaggacac 
+    43621 cagtcatatt ggattagggc ccaccccaat aacttcactt agtgtaacta cctttttaaa 
+    43681 aaccctatct ccaaatatag tcataaggtg ttagggcttc aatatacaca tggtgggggg 
+    43741 tgggaagatg caatgcagcc tatgacatca tctttctaga agtgtcataa gagtatgtct 
+    43801 gtcactctca acacagttca aaggcactct caggactgtg agggccttgt ggggacccca 
+    43861 cattcacaca ctccccatgc ttctcacaat gaagatgcca ccgtcggagt cgccgtattc 
+    43921 ctctgcacag actgggtcag gacccaccgc tcaccttagg atcaccaagg gtgcctacct 
+    43981 catagcgccc atggcagagc aaatcgccgt gtttccattc tggatatagc tcctaaaatc 
+    44041 cagccaccac acccccaagt ctggcacaaa gtgaagagtt tcatgatcaa ccaacgtggt 
+    44101 ttagtttggc tcagacctag gaagatctaa aactttacgc cggatcatgt tcctcccaca 
+    44161 cacaaataca ctgcaaacac acctggcttg gagttatgct gattagaagt taattaacat 
+    44221 aaagcaggga gtgttggctg taattcagtg gctgctgcag caaggctggc aaggtcccct 
+    44281 tcctgcatgt tgcccaattc caaatgctga gcgtgcccac caccctgcgt accgcggcta 
+    44341 cccacacatg caatgtgtcc actcaggttt cttcatggcc aaggctcacc ttcctgaggc 
+    44401 ccccaagtct aaggtcaggg gaagcaccac agagaggatc agaggatctc aaaggcccaa 
+    44461 gtccttccaa atgggtgacc actagccctg cccactgtcc agactcacag actgcagaat 
+    44521 ccaatgagaa gcctgtaatt ttgattttct tcttttccct gaatgactct gaatctcctt 
+    44581 ttaccccaac ccctggagga ggccttttct caccagccaa tctgaaaacc cctttctcta 
+    44641 caccgccttt cagtggagga atgacaggtg ctggggttgc tatttctgcc acacagatag 
+    44701 tagggcattt attgtggacc agacttgtcc caaaggaggg tttccagtct ccaattgggg 
+    44761 tcatccaagc atggctgttt cctgaagaaa tagctctgga cctttgatga acagaaaaaa 
+    44821 gaatgaagga atgattccat gtgcaatcaa gctcagattc cccacataaa gtctgtcaaa 
+    44881 ggccattctt agcttgagaa ttttaagagt aagatttttc tctgcccccc aaggaaaagg 
+    44941 tccattgtgg ttctgctaca catttgattt cttttttttt tttttttttt tgaggctggg 
+    45001 tctcactctg tcactccagc cggagtgcag tggttcgatc atagctcact gcagccttga 
+    45061 cctctctggc tcaagcgatc ttaccacatc agccttccta gtagctggga ccacaagcat 
+    45121 gtgtctccat gccaggctat tttttaaaaa ttttttgtag agatggggtc tcaccatgtt 
+    45181 tcccaggtct cgaactcctg ggctcaagta gttctcccac cttggcctcc caaaatgctg 
+    45241 ggattacagg tataagccac cacacccagc ccacatttga ttttgaccag ccacattcga 
+    45301 gttgccacat tcccccaggc tgccaggaca tggagatgaa tccaacaaac aaaccaggat 
+    45361 gggctgtttg gttctgtccc accaattgtg gaaaatgcga gcaaaaaaac caccatcttg 
+    45421 ctcctgacat aatcaccccg aagagtaagt aattggacaa aaaaaacatt gttaaattag 
+    45481 gcttctccca gttcccaaaa gtaaaaccac aatataaaat ggcagagtat ttgtgtcctc 
+    45541 caaggtgagg ggcaaccttc attataaaac cacaccgacc agacaatatt attcagtaat 
+    45601 aaaaaggtat aaaggaccgt tacatgctac aacatggatg aaccctgaaa acattatgct 
+    45661 gagtgaaaga aaccagtcac aaaagaccac ataggatgtg gtttcattta tgtaaaatgt 
+    45721 ccagaaaggg caaatctgta gaagcaaact gtggattagt ggttgccggg ggttggaggg 
+    45781 aggtggagga tgggaactgc ctactagtgg gtacagggtt tctgtctggt gtgataaaat 
+    45841 gtgctggaat taaatggtag caaatcaatg aataactttc tgactattcc aaatatccct 
+    45901 gagtgtacac cttgaaatgg cgaatctcat gttacgggaa ttaccccaat ggtgctattg 
+    45961 cggccgccca tccagctgca gctgtcaaac atgagaatta caacttatat cgtatggggc 
+    46021 tgacttcagg tgctacattt gaagagataa attgcactga aatctagaaa tattttatct 
+    46081 gattaataag atgatcttct tgagatcgtt ttggtctgcg cgtaatctct tgctctgaaa 
+    46141 acgaaaaaac cgccttgcag ggcggttttt cgaaggttct ctgagctacc aactctttga 
+    46201 accgaggtaa ctggcttgga ggagcgcagt caccaaaact tgtcctttca gtttagcctt 
+    46261 aaccggcgca tgacttcaag actaactcct ctaaatcaat taccagtggc tgctgccagt 
+    46321 ggtgcttttg catgtctttc cgggttggac tcaagacgat agttaccgga taaggcgcag 
+    46381 cggtcggact gaacgggggg ttcgtgcata cagtccagct tggagcgaac tgcctacccg 
+    46441 gaactgagtg tcaggcgtgg aatgagacaa acgcggccat aacagcggaa tgacaccggt 
+    46501 aaaccgaaag gcaggaacag gagagcgcac gagggagccg ccagggggaa acgcctggta 
+    46561 tctttatagt cctgtcgggt ttcgccacca ctgatttgag cgtcagattt cgtgatgctt 
+    46621 gtcagggggg cggagcctat ggaaaaacgg ctttgccgcg gccctctcac ttccctgtta 
+    46681 agtatcttcc tggcatcttc caggaaatct ccgccccgtt cgtaagccat ttccgctcgc 
+    46741 cgcagtcgaa cgaccgagcg tagcgagtca gtgagcgagg aagcggaata tatcctgtat 
+    46801 cacatattct gctgacgcac cggtgcagcc ttttttctcc tgccacatga agcacttcac 
+    46861 tgacaccctc atcagtgcca acatagtaag ccagtataca ctccgctagc gctgaggtct 
+    46921 gcctcgtgaa gaaggtgttg ctgactcata ccaggcctga atcgccccat catccagcca 
+    46981 gaaagtgagg gagccacggt tgatgagagc tttgttgtag gtggaccagt tggtgatttt 
+    47041 gaacttttgc tttgccacgg aacggtctgc gttgtcggga agatgcgtga tctgatcctt 
+    47101 caactcagca aaagttcgat ttattcaaca aagccacgtt gtgtctcaaa atctctgatg 
+    47161 ttacattgca caagataaaa atatatcatc atgaacaata aaactgtctg cttacataaa 
+    47221 cagtaataca aggggtgtta tgagccatat tcaacgggaa acgtcttgct cgaggccgcg 
+    47281 attaaattcc aacatggatg ctgatttata tgggtataaa tgggctcgcg ataatgtcgg 
+    47341 gcaatcaggt gcgacaatct atcgattgta tgggaagccc gatgcgccag agttgtttct 
+    47401 gaaacatggc aaaggtagcg ttgccaatga tgttacagat gagatggtca gactaaactg 
+    47461 gctgacggaa tttatgcctc ttccgaccat caagcatttt atccgtactc ctgatgatgc 
+    47521 atggttactc accactgcga tccccgggaa aacagcattc caggtattag aagaatatcc 
+    47581 tgattcaggt gaaaatattg ttgatgcgct ggcagtgttc ctgcgccggt tgcattcgat 
+    47641 tcctgtttgt aattgtcctt ttaacagcga tcgcgtattt cgtctcgctc aggcgcaatc 
+    47701 acgaatgaat aacggtttgg ttgatgcgag tgattttgat gacgagcgta atggctggcc 
+    47761 tgttgaacaa gtctggaaag aaatgcataa gcttttgcca ttctcaccgg attcagtcgt 
+    47821 cactcatggt gatttctcac ttgataacct tatttttgac gaggggaaat taataggttg 
+    47881 tattgatgtt ggacgagtcg gaatcgcaga ccgataccag gatcttgcca tcctatggaa 
+    47941 ctgcctcggt gagttttctc cttcattaca gaaacggctt tttcaaaaat atggtattga 
+    48001 taatcctgat atgaataaat tgcagtttca tttgatgctc gatgagtttt tctaatcaga 
+    48061 catgttcttt cctgcgttat cccctgattc tgtggataac cgtattaccg ctagcatgga 
+    48121 tctcggggac gtctaactac taagcgagag tagggaactg ccaggcatca aataaaacga 
+    48181 aaggctcagt cggaagactg ggcctttcgt tttatctgtt gtttgtcggt gaacgctctc 
+    48241 ctgagtagga caaatccgcc gggagcggat ttgaacgttg tgaagcaacg gcccggaggg 
+    48301 tggcgggcag gacgcccgcc ataaactgcc aggcatcaaa ctaagcagaa ggccatcctg 
+    48361 acggatggcc tttttgcgtt tctacaaact cttcctgtta gttagttact taagctcggg 
+    48421 cc 
+//

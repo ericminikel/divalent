@@ -1,0 +1,81 @@
+expt	animal	cohort	cage	inoculum	treatment	dose	tag	cohort_alias	comments
+YB	YBA1	YB-died	YBA	RML					
+YB	YBA2	YB-none-126	YBA	RML	none				
+YB	YBA3	YB-none-126	YBA	RML	none				
+YB	YBA4	YB-none-126	YBA	RML	none				
+YB	YBB1	YB-1682-75	YBB	RML	1682-exNA	20			
+YB	YBB2	YB-1682-75	YBB	RML	1682-exNA	20			
+YB	YBB3	YB-1682-75	YBB	RML	1682-exNA	20			
+YB	YBB4	YB-1682-75	YBB	RML	1682-exNA	20			
+YB	YBC1	YB-none-126	YBC	RML	none				
+YB	YBC2	YB-none-126	YBC	RML	none				
+YB	YBC3	YB-none-126	YBC	RML	none				
+YB	YBC4	YB-none-126	YBC	RML	none				
+YB	YBD1	YB-1682-75	YBD	RML	1682-exNA	20			
+YB	YBD2	YB-1682-75	YBD	RML	1682-exNA	20			
+YB	YBD3	YB-1682-75	YBD	RML	1682-exNA	20			
+YB	YBD4	YB-1682-75	YBD	RML	1682-exNA	20			
+YB	YBE1	YB-1682-126	YBE	RML	1682-exNA	20			
+YB	YBE2	YB-1682-126	YBE	RML	1682-exNA	20			
+YB	YBE3	YB-died	YBE	RML					
+YB	YBE4	YB-1682-126	YBE	RML	1682-exNA	20			
+YB	YBF1	YB-1682-126	YBF	RML	1682-exNA	20			
+YB	YBF2	YB-1682-126	YBF	RML	1682-exNA	20			
+YB	YBF3	YB-1682-126	YBF	RML	1682-exNA	20			
+YB	YBF4	YB-1682-126	YBF	RML	1682-exNA	20			
+YB	YBG1	YB-NTC-126	YBG	RML	NTC-exNA	20			
+YB	YBG2	YB-NTC-126	YBG	RML	NTC-exNA	20			
+YB	YBG3	YB-NTC-126	YBG	RML	NTC-exNA	20			
+YB	YBG4	YB-NTC-126	YBG	RML	NTC-exNA	20			
+YB	YBH1	YB-1682-126	YBH	RML	1682-exNA	20			
+YB	YBH2	YB-1682-126	YBH	RML	1682-exNA	20			
+YB	YBH3	YB-died	YBH	RML					
+YB	YBH4	YB-1682-126	YBH	RML	1682-exNA	20			
+YB	YBI1	YB-NTC-75	YBI	RML	NTC-exNA	20			
+YB	YBI2	YB-NTC-75	YBI	RML	NTC-exNA	20			
+YB	YBI3	YB-NTC-75	YBI	RML	NTC-exNA	20			
+YB	YBI4	YB-NTC-75	YBI	RML	NTC-exNA	20			
+YB	YBJ1	YB-NTC-75	YBJ	RML	NTC-exNA	20			
+YB	YBJ2	YB-NTC-75	YBJ	RML	NTC-exNA	20			
+YB	YBJ3	YB-NTC-75	YBJ	RML	NTC-exNA	20			
+YB	YBJ4	YB-NTC-75	YBJ	RML	NTC-exNA	20			
+YB	YBK1	YB-saline-75	YBK	RML	saline	0			
+YB	YBK2	YB-saline-75	YBK	RML	saline	0			
+YB	YBK3	YB-saline-75	YBK	RML	saline	0			
+YB	YBK4	YB-saline-75	YBK	RML	saline	0			
+YB	YBL1	YB-saline-75	YBL	RML	saline	0			
+YB	YBL2	YB-saline-75	YBL	RML	saline	0			
+YB	YBL3	YB-saline-75	YBL	RML	saline	0			
+YB	YBL4	YB-saline-75	YBL	RML	saline	0			
+YB	YBM1	YB-NTC-126	YBM	RML	NTC-exNA	20			
+YB	YBM2	YB-NTC-126	YBM	RML	NTC-exNA	20			
+YB	YBM3	YB-NTC-126	YBM	RML	NTC-exNA	20			
+YB	YBM4	YB-NTC-126	YBM	RML	NTC-exNA	20			
+YB	YBN1	YB-NTC-126	YBN	RML	NTC-exNA	20			
+YB	YBN2	YB-NTC-126	YBN	RML	NTC-exNA	20			
+YB	YBN3	YB-died	YBN	RML					
+YB	YBN4	YB-died	YBN	RML					
+YB	YBO1	YB-saline-126	YBO	RML	saline	0			
+YB	YBO2	YB-saline-126	YBO	RML	saline	0			
+YB	YBO3	YB-saline-126	YBO	RML	saline	0			
+YB	YBO4	YB-saline-126	YBO	RML	saline	0			
+YB	YBP1	YB-saline-126	YBP	RML	saline	0			
+YB	YBP2	YB-saline-126	YBP	RML	saline	0			
+YB	YBP3	YB-saline-126	YBP	RML	saline	0			
+YB	YBP4	YB-saline-126	YBP	RML	saline	0			
+YB	YBQ1	YB-none-126	YBQ	RML	none				
+YB	YBQ2	YB-none-126	YBQ	RML	none				
+YB	YBQ3	YB-none-126	YBQ	RML	none				
+YB	YBQ4	YB-none-126	YBQ	RML	none				
+YB	YBS1	YB-uninoc	YBS	none	none				
+YB	YBS2	YB-uninoc	YBS	none	none				
+YB	YBS3	YB-uninoc	YBS	none	none				
+YB	YBS4	YB-uninoc	YBS	none	none				
+YB	YBT1	YB-uninoc	YBT	none	none				
+YB	YBT2	YB-uninoc	YBT	none	none				
+YB	YBT3	YB-uninoc	YBT	none	none				
+YB	YBT4	YB-uninoc	YBT	none	none				
+YB	YBU1	YB-uninoc	YBU	none	none				
+YB	YBU2	YB-uninoc	YBU	none	none				
+YB	YBU3	YB-uninoc	YBU	none	none				
+YB	YBU4	YB-uninoc	YBU	none	none				

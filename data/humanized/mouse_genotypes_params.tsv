@@ -1,0 +1,8 @@
+gt	color	disp	copy_number
+Tg26372 hom	#B22222	Tg26372 hom	20
+Tg26372 het	#E47833	Tg26372 het	10
+Tg25109 hom	#5401AB	Tg25109 hom	6
+Tg25109 het	#0001CD	Tg25109 het	3
+wild-type	#8B4513	WT	2
++/-	#E9C2A6	Het KO	1
+-/-	#CDC5BF	Hom KO	0

@@ -1,0 +1,9 @@
+cohort	inoculum	txdpi	tx	disp	color	lty	txdisp	legdisp
+YB-uninoc	none			uninoculated	#A9A9A9	3	uninoculated	uninoculated
+YB-none-126	RML			none	#000000	1	none	RML untreated
+YB-saline-126	RML	126	saline	saline 126 dpi	#777777	1	saline 126 dpi	RML + saline
+YB-NTC-126	RML	126	NTC	NTC-exNA 126 dpi	#734A12	1	NTC-exNA 126 dpi	RML + NTC-s4
+YB-1682-126	RML	126	1682	1682-exNA 126 dpi	#FF0066	1	1682-exNA 126 dpi	RML + 1682-s4
+YB-saline-75	RML	75	saline	saline 75 dpi	#777777	1	saline 75 dpi	RML + saline
+YB-NTC-75	RML	75	NTC	NTC-exNA 75 dpi	#734A12	1	NTC-exNA 75 dpi	RML + NTC-s4
+YB-1682-75	RML	75	1682	1682-exNA 75 dpi	#FF0066	1	1682-exNA 75 dpi	RML + 1682-s4
