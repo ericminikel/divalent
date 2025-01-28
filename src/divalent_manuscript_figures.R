@@ -373,7 +373,7 @@ tell_user('done.\nReading in data...')
 ## Target engagement studies #### 
 study = read_tsv('data/analytic/studysheets.tsv', col_types=cols())
 elisa = read_tsv('data/analytic/elisa.tsv', col_types=cols())
-qpcr = read_tsv('data/analytic/qpcr.tsv', col_types=cols())
+qpcr = read_tsv('data/analytic/qpcr.tsv', col_types=cols(), guess_max=10000)
 wts = read_tsv('data/analytic/weights.tsv', col_types=cols(), guess_max=10000)
 meta = read_tsv('data/analytic/meta.tsv', col_types=cols())
 cellulo = read_tsv('data/analytic/in_cellulo.tsv', col_types=cols())
@@ -2994,20 +2994,6 @@ proc = process_elisas(repeat_dose_study, control_group = 'none') %>%
   mutate(dosing_regimen = case_when(dosing_regimen == '0, 70, 90' ~ '0, 7, 90',
                                     TRUE ~ dosing_regimen)) 
 
-suspected_swap = c('123413.1','136187.1')
-# From Taylor's email:
-# "Both of the two animals were in the same cage, one 
-# was dosed and one was set as a control. Sometime after 
-# dosing, one was moved to cage 123413 for fighting. 
-# Since they were single housed at this point, when [the 
-# veterinary technician] did the takedown she likely 
-# didn't check their ear punches to verify they were 
-# the correct ID."
-
-# need to re-calculate rel after swap omission
-proc %>%
-  filter(!animal %in% suspected_swap) %>%
-  mutate(rel = ngml_av/mean(ngml_av[tx=='none'])) -> proc
 
 proc %>%
   distinct(tx, dose_dio, dosing_regimen, days_harvest) %>%
@@ -3072,7 +3058,6 @@ qpcr %>%
   filter(study_id=='CMR-3164') %>%
   inner_join(study, by=c('sample_id'='animal','study_id')) %>%
   rename(animal = sample_id) %>%
-  filter(!animal %in% suspected_swap) %>% # remove the swapped animals
   filter(!grepl('noCB',sample_group)) %>%
   mutate(region = gsub('.*_','',sample_group)) %>% 
   group_by(region) %>%
