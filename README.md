@@ -1,4 +1,12 @@
-This repository holds the data and source code for the following manuscript:
+# Divalent siRNA for prion disease
+
+This repository holds regulatory documents, raw data, source code, and figures for our divalent siRNA drug candidate for prion disease.
+
+## IND
+
+We have made public [81 PDF documents comprising our Investigational New Drug (IND) application](https://drive.google.com/drive/folders/1Ef2sQk9m6Ce3z-jxFwa_tr8eskN5aICM?usp=sharing) as cleared by FDA on March 14, 2025.
+
+A pre-print describing this work has been posted to bioRxiv:
 
 [Gentile JE, Corridon TL, Serack FE, Echeverria D, Kennedy ZE, Gallant-Behm CL, Hassler MR, Kinberger G, Kamath NG, Lian Y, Gross KY, Miller R, DeSouza-Lenz K, Howard M, Guzman K, Chan N, Curtis DT, Fettes K, Lemaitre M, Cappon G, Jackson AL, Yamada K, Alterman JF, Coffey AA, Minikel EV, Khvorova A, Vallabh SM. **Divalent siRNA for prion disease.** _bioRxiv_. 2024 Dec 5;2024.12.05.627039.](https://doi.org/10.1101/2024.12.05.627039)
 
