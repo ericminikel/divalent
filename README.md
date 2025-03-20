@@ -4,7 +4,7 @@ This repository holds regulatory documents, raw data, source code, and figures f
 
 ## IND
 
-We have made public [81 PDF documents comprising our Investigational New Drug (IND) application](https://drive.google.com/drive/folders/1Ef2sQk9m6Ce3z-jxFwa_tr8eskN5aICM?usp=sharing) as cleared by FDA on March 14, 2025.
+We have made public [81 PDF documents comprising our Investigational New Drug (IND) application](https://drive.google.com/drive/folders/1Ef2sQk9m6Ce3z-jxFwa_tr8eskN5aICM?usp=sharing) as cleared by FDA on March 14, 2025. We hope this will be useful to the rare disease community. As a disclaimer, note that FDA evaluates every drug and every indication individually. What was considered acceptable for our Research IND for this drug candidate in symptomatic prion disease patients may not be considered acceptable in other programs.
 
 ## Pre-print
 
