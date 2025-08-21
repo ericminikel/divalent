@@ -1,5 +1,5 @@
 qpcr_name	group_id
-saline	saline 0 nmol
+saline	PBS 0 nmol
 0.4 NMOLE exNA	2439-s4 fixed tail 0.2 nmol
 0.4 NMOLE P3V1F-HI PS	2439-s2 fixed tail 0.2 nmol
 0.4 NMOLE P3V1M	2439-s2 matched tail 0.2 nmol

@@ -1,0 +1,7 @@
+nominal_timepoint	meta_tissue	across_n_dose_levels	mean_proportion_dose_retained
+1	Brain	3	0.010058495239444444
+1	Kidney	3	0.012884677032614584
+1	Liver	3	0.4786915474611979
+28	Brain	3	0.0074804363062847224
+28	Kidney	3	0.0037201105571666665
+28	Liver	3	0.16504319974218748

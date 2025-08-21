@@ -18,6 +18,7 @@ suppressPackageStartupMessages({
   library(openxlsx)
   library(DescTools)
   library(magick)
+  library(plotrix)
   library(drc)
   select = dplyr::select
   summarize = dplyr::summarize
@@ -127,7 +128,7 @@ weight_deltas = function(study_ids) {
   return(deltas)
 }
 
-process_elisas = function(study_ids, control_group='saline') {
+process_elisas = function(study_ids, control_group='PBS') {
   study %>%
     filter(study_id %in% study_ids) %>%
     inner_join(elisa, by=c('study_id','animal'='sample')) %>%
@@ -454,7 +455,7 @@ if ('figure-s2'=='figure-s2') {
   
 
 resx=300
-png('display_items/figure-s2.png',width=6.5*resx,height=6*resx,res=resx)
+png('display_items/figure-s02.png',width=6.5*resx,height=6*resx,res=resx)
 
 
 
@@ -785,7 +786,7 @@ if ('figure-s3'=='figure-s3') {
   
 
 resx=300
-png('display_items/figure-s3.png',width=6.5*resx,height=3.5*resx,res=resx)
+png('display_items/figure-s03.png',width=6.5*resx,height=3.5*resx,res=resx)
 
 layout_matrix = matrix(c(1, 1, 2, 3,
                          1, 1, 4, 5), nrow=2, byrow=T)
@@ -1513,6 +1514,14 @@ cellulo %>%
 human_ic50 %>%
   distinct(descno) -> human_ic50_descnos
 
+human_te_screen = c('CMR-1313','CMR-1465','CMR-1697')
+process_elisas(human_te_screen, control_group='saline') %>%
+  filter(dose_dio %in% c(0,10)) %>%
+  arrange(dose_dio, tx) %>%
+  inner_join(meta, by='tx') %>%
+  distinct(sequence_number) %>%
+  filter(!is.na(sequence_number)) -> in_vivo_descnos
+
 screen_meta = tibble(status=c('advanced','not advanced'),
                      color = c('#DD4400','#7979A9'))
 
@@ -1528,7 +1537,7 @@ cellulo %>%
             n_techreps = n(),
             mean_resid = mean(resid)) %>%
   ungroup() %>%
-  mutate(status = case_when(descno %in% human_ic50_descnos$descno ~ 'advanced',
+  mutate(status = case_when(descno %in% c(human_ic50_descnos$descno, in_vivo_descnos$sequence_number) ~ 'advanced',
                             TRUE ~ 'not advanced')) %>%
   inner_join(screen_meta, by='status') -> bioreps
 
@@ -1649,7 +1658,7 @@ for (this_conc in c(2000, 500)) {
   mtext(side=2, at=mean(ylims), text=expression(residual~italic(PRNP)), cex=0.7, line=2.1)
   abline(h=1, lty=3)
   if(this_conc==500) {
-    mtext(side=1, at=cellulo_this$x, text=cellulo_this$disp, col=cellulo_this$color, las=2, cex=0.2, line=0.1)
+    mtext(side=1, at=cellulo_this$x, text=cellulo_this$disp, col=cellulo_this$color, las=2, cex=0.2, line=0.1, font=2)
   } 
   barwidth=0.7
   rect(ybottom=rep(0,nrow(cellulo_this)), ytop=cellulo_this$mean, xleft=cellulo_this$x-barwidth/2, xright=cellulo_this$x + barwidth/2, border=NA, col=alpha(cellulo_this$color, ci_alpha))
@@ -1818,9 +1827,6 @@ ybigs=0:3/2
 ybiglabs=percent(ybigs)
 plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i')
 axis(side=1, at=xlims, labels=NA, lwd.ticks=0)
-par(xpd=T)
-text(x=xes$x, y=rep(-0.05, nrow(xes)), labels=xes$display_tx, srt=45, adj=1)
-par(xpd=F)
 axis(side=2, at=yats, tck = -0.02, labels=NA)
 axis(side=2, at=ybigs, tck = -0.05, labels=NA)
 axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.5)
@@ -1842,6 +1848,25 @@ points(x=proc$x, y=proc$rel, col=proc$color, bg='#FFFFFF', pch=21)
 par(xpd=T)
 text(x=proc_smry$x, y=proc_smry$max+0.2, labels=percent(proc_smry$mean,digits=1), cex=0.7, srt=90)
 par(xpd=F)
+
+# plot the PBS as a diagonal
+par(xpd=T)
+text(x=xes$x[1], y=-0.05, labels=xes$display_tx[1], srt=45, adj=1)
+par(xpd=F)
+# plot the rest as tranches
+proc_smry %>% 
+  mutate(scaffold = case_when(display_tx=='PBS' ~ '', TRUE ~ gsub('.+-','',display_tx)),
+         sequence = case_when(display_tx=='PBS' ~ '', TRUE ~ gsub('-.*','',display_tx))) -> xleg
+mtext(side=1, line=0.15, at=xleg$x, text=xleg$scaffold, cex=0.7)
+xleg %>%
+  group_by(sequence) %>%
+  summarize(.groups='keep', xmid=mean(x), xmin=min(x), xmax=max(x)) %>%
+  ungroup() -> xlegouter
+mtext(side=1, line=1.25, at=xlegouter$xmid, text=xlegouter$sequence, cex=0.6)
+overhang = 0.4
+for (i in 2:nrow(xlegouter)) {
+  axis(side=1, line=1.25, tck=0.02, at=c(xlegouter$xmin[i]-overhang, xlegouter$xmax[i]+overhang), labels=NA)
+}
 mtext(LETTERS[panel], side=3, cex=1, adj = -0.1, line = 0.5); panel = panel + 1
 
 proc %>%
@@ -1868,7 +1893,7 @@ qpcr %>%
   ungroup() -> regional_qpcr
 
 tx_compared_by_qpcr = tibble(tx_on_qpcr_plate=c('2768','2520','2439','2440-exNA','saline','PBS'),
-                             tx = c('2768-s4','2520-s4','2439-s4','2440-s4','saline','saline'),
+                             tx = c('2768-s4','2520-s4','2439-s4','2440-s4','PBS','PBS'),
                              x_offset = c(-0.15, 0.0, 0.3, 0.15, -0.3, -0.3))
 tx_compared_by_qpcr$color = meta$color[match(tx_compared_by_qpcr$tx, meta$display_tx)]
 
@@ -2374,7 +2399,7 @@ tell_user('done.\nCreating Figure S4...')
 if ('figure-s4'=='figure-s4') {
 
 resx=300
-png('display_items/figure-s4.png',width=6.5*resx,height=2.75*resx,res=resx)
+png('display_items/figure-s04.png',width=6.5*resx,height=2.75*resx,res=resx)
 
 
 layout_matrix = matrix(c(1,2,3,4), byrow=T, nrow=1)
@@ -2470,7 +2495,7 @@ qpcr %>%
 
 
 tx_compared_by_qpcr = tibble(tx_on_qpcr_plate=c('2440-hiPS','2440-exNA','saline','PBS'),
-                             tx = c('2440-s1','2440-s4','saline','saline'),
+                             tx = c('2440-s1','2440-s4','PBS','PBS'),
                              x_offset = c(0, 0.25, -0.25, -0.25))
 tx_compared_by_qpcr$color = meta$color[match(tx_compared_by_qpcr$tx, meta$display_tx)]
 
@@ -2585,7 +2610,7 @@ qpcr %>%
   ungroup() -> regional_qpcr
 
 tx_compared_by_qpcr = tibble(tx_on_qpcr_plate=c('2440-hiPS','2440-exNA','saline','PBS'),
-                             tx = c('2440-s1','2440-s4','saline','saline'),
+                             tx = c('2440-s1','2440-s4','PBS','PBS'),
                              x_offset = c(0, 0.25, -0.25, -0.25))
 tx_compared_by_qpcr$color = meta$color[match(tx_compared_by_qpcr$tx, meta$display_tx)]
 
@@ -2626,7 +2651,7 @@ mtext(side=2, line=2.75, text=expression(residual~italic(PRNP)), cex=0.8)
 abline(h=1, lty=3)
 barwidth=0.25
 rect(xleft=regional_smry$x + regional_smry$x_offset - barwidth/2, xright=regional_smry$x + regional_smry$x_offset + barwidth/2, ybottom=rep(0, nrow(regional_smry)), ytop=regional_smry$mean, col=alpha(regional_smry$color, ci_alpha), border=NA)
-arrows(x0=regional_smry$x + regional_smry$x_offset, y0=regional_smry$l95, y1=regional_smry$u95, code=3, angle=90, length=0.025, col=regional_smry$color)
+suppressWarnings(arrows(x0=regional_smry$x + regional_smry$x_offset, y0=regional_smry$l95, y1=regional_smry$u95, code=3, angle=90, length=0.025, col=regional_smry$color))
 points(x=regional_indivs$x + regional_indivs$x_offset, y=pmin(regional_indivs$residual, max(ylims)), pch=21, col=regional_indivs$color, bg='#FFFFFF', cex=0.5)
 par(xpd=T)
 # text(x=regional_smry$x + regional_smry$x_offset, y=regional_smry$max+.1, labels=percent(regional_smry$mean,digits=1), srt=90, cex=0.6)
@@ -2651,12 +2676,12 @@ silence_is_golden = dev.off()
 tell_user('done.\nCreating Figure S5...')
 if ('figure-s5'=='figure-s5') {
   resx=300
-  png('display_items/figure-s5.png',width=6.5*resx,height=6*resx,res=resx)
+  png('display_items/figure-s05.png',width=6.5*resx,height=6*resx,res=resx)
   
   ### prep weights #### 
   weights_qpcr_studies = c('CMR-1313', 'CMR-1418', 'CMR-1465', 'CMR-1697', 'CMR-1871', 'CMR-2198', 'CMR-2371')
   
-  process_elisas(weights_qpcr_studies, control_group='saline') %>%
+  process_elisas(weights_qpcr_studies, control_group='PBS') %>%
     arrange(dose_dio, tx) %>%
     inner_join(meta, by='tx') -> proc
   
@@ -2868,28 +2893,104 @@ if ('figure-s5'=='figure-s5') {
 ### end Figure S5 ####
 
 
+
+
+
+
 ## Figure 6 - durability, dosing regimen, PD/PK, tox #### 
 if ('figure-6'=='figure-6') {
   tell_user('done.\nCreating Figure 6...')
   resx=300
   png('display_items/figure-6.png',width=4.5*resx,height=5.0*resx,res=resx)
   
-  layout_matrix = matrix(c(1,1,
-                           2,3,
-                           4,4), byrow=T, nrow=3)
-  layout(layout_matrix, heights=c(.8,1,1), widths=c(1,1))
+  layout_matrix = matrix(c(1,2,
+                           3,4,
+                           5,5), byrow=T, nrow=3)
+  layout(layout_matrix, heights=c(1,1,1), widths=c(1,1))
   
   panel = 1
   
   ### space for diagram across top ####
-  par(mar=c(0.5,0,1.5,0))
+  par(mar=c(5,0.5,2,0.1))
   raster_panel = image_convert(image_read('received/oligo_scaffolds_2439seq.png'),'png')
   plot(as.raster(raster_panel))
   mtext(side=3, adj=0.05, text=LETTERS[panel], line=0.0); panel = panel + 1
   
+  ### PD/PK study ####
+  pdpk_qpcr_studies = c('CMR-2521') #
   
-  par(mar=c(3,4,3,1))
-
+  qpcr %>%
+    filter(study_id %in% pdpk_qpcr_studies) %>%
+    filter(target=='PRNP') %>%
+    group_by(sample_id, study_id, qpcr_id, region, biorep, sample_group) %>%
+    summarize(.groups='keep',
+              n_techreps = n(),
+              mean_twoddct = mean(twoddct)) %>%
+    ungroup() %>%
+    group_by(study_id, qpcr_id, region) %>%
+    mutate(residual = mean_twoddct / mean(mean_twoddct[sample_group %in% c('saline','PBS')])) %>%
+    ungroup() -> pdpk_qpcr
+  
+  study %>%
+    filter(study_id %in% pdpk_qpcr_studies) %>%
+    inner_join(pdpk_qpcr, by=c('animal'='sample_id','study_id')) %>%
+    mutate(dose_ug = nmol_to_ug(dose_dio)) %>%
+    mutate(pseudo_ug = case_when(dose_ug == 0 ~ 1, 
+                                 TRUE ~ dose_ug)) %>%
+    inner_join(meta, by='tx') %>%
+    mutate(residual = mean_twoddct / mean(mean_twoddct[sample_group=='aCSF'])) -> pdpk
+  
+  pdpk %>%
+    group_by(dose_ug, pseudo_ug, color) %>%
+    summarize(.groups='keep',
+              n=n(),
+              mean = mean(residual),
+              l95  = lower(residual),
+              u95  = upper(residual)) %>%
+    ungroup() -> pdpk_smry
+  
+  par(mar=c(3,3.5,2,2))
+  xlims = c(0.7, 500)
+  xats = rep(2:9, 4) * rep(10^(0:3),each=8)
+  xbigs = 10^(0:3)
+  xlabs = nmol_to_ug(c(0.2, 1, 5))
+  xlablabs = xlabs
+  ylims = c(0, 1.25)
+  yats = 0:6/4
+  ybigs = 0:2/2
+  ybiglabs = percent(0:2/2)
+  plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+  abline(h=1, lty=3)
+  axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+  axis(side=1, at=xats, tck=-0.02, labels=NA)
+  axis(side=1, at=pdpk_smry$pseudo_ug, lwd=0, line=-0.75, labels=pdpk_smry$dose_ug, cex.axis=0.8)
+  mtext(side=1, line=1.5, text='dose (µg)', cex=0.8)
+  mtext(side=2, line=2.25, text=expression(residual~italic(PRNP)), cex=0.7)
+  axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
+  axis(side=2, at=yats, tck=-0.02, labels=NA)
+  axis(side=2, at=ybigs, tck=-0.05, labels=NA)
+  axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.75, cex.axis=0.8)
+  axis.break(axis=1, breakpos=1.5, style='slash')
+  
+  points(pdpk$pseudo_ug, pdpk$residual, pch=19, col=alpha(pdpk$color, ci_alpha))
+  
+  barlogwidth = 1.3
+  segments(x0=pdpk_smry$pseudo_ug/barlogwidth,
+           x1=pdpk_smry$pseudo_ug*barlogwidth,
+           y0=pdpk_smry$mean, col=pdpk_smry$color, lwd=2)
+  arrows(x0=pdpk_smry$pseudo_ug, y0=pdpk_smry$l95, y1=pdpk_smry$u95, code=3, angle=90, length=0.05, col=pdpk_smry$color)
+  par(xpd=T)
+  text(pdpk_smry$pseudo_ug, pdpk_smry$mean+0.05, pos=4, col='#000000', cex=0.6, labels=paste0('   ',percent(pdpk_smry$mean,digits=1)))
+  par(xpd=F)
+  m = drm(residual ~ dose_ug, data=pdpk, fct=LL.4(fixed=c(b=NA,c=0,d=1,e=NA)))
+  x = 2:500
+  y = predict(m, newdata=data.frame(dose_ug=x))
+  pdpk_smry %>% filter(dose_ug > 0) %>% slice(1) %>% pull(color) -> active_color 
+  points(x, y, col=active_color, type='l', lwd=0.5)
+  mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
+  
+  ### durability 1 ####
+  par(mar=c(3,4,2,1))
 durability_study1 = c('CMR-2371') # 'CMR-2198',
 process_elisas(durability_study1, control_group=c('none')) %>%
   arrange(dose_dio, days_harvest, tx) %>%
@@ -2930,13 +3031,13 @@ points(x=proc$x, y=proc$rel, pch=20, col=alpha(proc$color,ci_alpha))
 proc_smry %>%
   filter(display_tx != 'none') -> subs
 par(xpd=T)
-text(x=subs$x, y=subs$mean, pos=4, col=subs$color, labels=paste0('     ',percent(subs$mean, digits=1)), cex=0.6)
+text(x=subs$x, y=subs$mean, pos=4, col='#000000', labels=paste0('     ',percent(subs$mean, digits=1)), cex=0.6)
 par(xpd=F)
 mtext(side=3, line=0, text='single 348 µg dose', cex=0.8)
-mtext(side=1, line=1, text='days post-dose', cex=0.8)
+mtext(side=1, line=1, text='harvest (days post-dose)', cex=0.7)
 mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
 
-
+### durability 2 ####
 durability_study2 = c('CMR-2198') 
 process_elisas(durability_study2, control_group=c('-')) %>%
   arrange(dose_dio, days_harvest, tx) %>%
@@ -2978,10 +3079,10 @@ points(x=proc$x, y=proc$rel, pch=20, col=alpha(proc$color,ci_alpha))
 proc_smry %>%
   filter(display_tx != 'none') -> subs
 par(xpd=T)
-text(x=subs$x, y=subs$mean, pos=4, col=subs$color, labels=paste0('   ',percent(subs$mean, digits=1)), cex=0.6)
+text(x=subs$x, y=subs$mean, pos=4, col='#000000', labels=paste0('   ',percent(subs$mean, digits=1)), cex=0.6)
 par(xpd=F)
 mtext(side=3, line=0, text='single 174 µg dose', cex=0.8)
-mtext(side=1, line=1, text='days post-dose', cex=0.8)
+mtext(side=1, line=1, text='harvest (days post-dose)', cex=0.7)
 mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
 
 ### CMR-3164 repeat dosing #### 
@@ -3015,12 +3116,15 @@ proc %>%
             u95 = upper(rel),
             max = max(rel)) %>%
   ungroup() %>%
-  mutate(disp = paste0(nmol_to_ug(dose_dio), ' µg day ',dosing_regimen,', harvest day ',days_harvest)) -> proc_smry
+  mutate(disp_dose = case_when(dose_dio > 0 ~ paste0(nmol_to_ug(dose_dio), ' µg'),
+                               dose_dio == 0 ~ 'no dose')) %>%
+  mutate(disp_dosing_days = str_pad(paste0('day ',dosing_regimen),side='right',pad=' ',width=21)) %>%
+  mutate(disp = paste0(disp_dosing_days, ', harvest day ',days_harvest)) -> proc_smry
 
 
 
 
-par(mar=c(2,14,2,1))
+par(mar=c(2,13,2,2))
 xlims = c(0,1.60)
 ylims = range(proc$y) + c(-0.5, 0.5)
 xats = 0:6/4
@@ -3033,12 +3137,19 @@ axis(side=1, at=xats, tck=-0.02, labels=NA)
 axis(side=1, at=xbigs, lwd=0, line=-0.75, labels=xbiglabs, cex=0.8)
 mtext(side=3, line=0.25, text='residual PrP', cex=0.8)
 axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
-mtext(side=2, at=proc_smry$y, line=0.25, text=proc_smry$disp, las=2, cex=0.6)
-mtext(side=2, at=max(ylims) + 0.5, las=2, line=0.25, text='dose\n(µg)', cex=0.6, padj=0)
+mtext(side=2, at=proc_smry$y, line=9, text=proc_smry$disp_dose, las=2, cex=0.6, adj = 1)
+mtext(side=2, at=proc_smry$y, line=8, text=proc_smry$disp_dosing_days, las=2, cex=0.6,adj = 0)
+mtext(side=2, at=proc_smry$y, line=0.25, text=paste0('day ',proc_smry$days_harvest), las=2, cex=0.6, adj = 1)
+mtext(side=2, at=max(ylims) + 0.5, las=2, line=9, text='dose level', cex=0.5, font=2, padj=1, adj=1)
+mtext(side=2, at=max(ylims) + 0.5, las=2, line=8, text='dosing days', cex=0.5, font=2, padj=1, adj=0)
+mtext(side=2, at=max(ylims) + 0.5, las=2, line=0.25, text='harvest day', cex=0.5, font=2, padj=1, adj=1)
 barwidth=0.8
 rect(xleft=rep(0, nrow(proc_smry)), xright=proc_smry$mean, ybottom=proc_smry$y-barwidth/2, , ytop=proc_smry$y+barwidth/2, col=alpha(proc_smry$color, ci_alpha), border=NA)
 arrows(x0=proc_smry$l95, x1=proc_smry$u95, y0=proc_smry$y, col=proc_smry$color, lwd=1.5, code=3, angle=90, length=0.05)
 points(x=proc$rel, y=proc$y, col=proc$color, bg='#FFFFFF', pch=21)
+par(xpd=T)
+text(x=rep(1.5,nrow(proc_smry)), y=proc_smry$y, pos=4, col='#000000', cex=0.6, labels=paste0('    ',percent(proc_smry$mean, digits=1)))
+par(xpd=F)
 mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
 
 
@@ -3127,7 +3238,7 @@ repeatdose_qpcr %>%
 ## Figure S9 - other miscellanea ####
 if ('figure-s9'=='figure-s9') {
   tell_user('done.\nCreating Figure S9...')
-  png('display_items/figure-s9.png',width=3.25*resx,height=6.0*resx,res=resx)
+  png('display_items/figure-s09.png',width=3.25*resx,height=6.0*resx,res=resx)
   
   layout_matrix = matrix(c(1,1,
                            1,1,
@@ -3146,7 +3257,7 @@ if ('figure-s9'=='figure-s9') {
   axis(side=2, at=ylims, labels=NA, lwd.ticks=0)
   region_meta$y = max(region_meta$x) - region_meta$x
   mtext(side=2, at=region_meta$y, text=region_meta$region, las=2, line=8, cex=0.9)
-  mtext(side=2, at=repeatdose_qpcr_smry$y, text=repeatdose_qpcr_smry$fulldisp, las=2, line=0.25, cex=0.6)
+  mtext(side=2, at=repeatdose_qpcr_smry$y, text=repeatdose_qpcr_smry$fulldisp, las=2, line=0.25, cex=0.5)
   axis(side=1, at=xats, tck = -0.02, labels=NA)
   axis(side=1, at=xbigs, tck = -0.05, labels=NA)
   axis(side=1, at=xbigs, lwd=0, labels=xbiglabs, line=-0.5)
@@ -3234,7 +3345,7 @@ if ('figure-s9'=='figure-s9') {
 
 ## Figure S6 - ELISA QC #### 
 resx=300
-png('display_items/figure-s6.png',width=5*resx,height=5*resx,res=resx)
+png('display_items/figure-s06.png',width=5*resx,height=5*resx,res=resx)
 tell_user('done.\nCreating Figure S6...')
 elisa_llq = 0.05
 qc_meta = tibble(qc=c('MoNeg','MoPosLo','MoPosMid','MoPosHi'),
@@ -3316,7 +3427,7 @@ write_supp_table(elisa_qc_summary_stats, 'ELISA QC performance summarized across
 ## Figure S8 - durability for 2439-s2 & s5 ####
 if ('figure-s8'=='figure-s8') {
   tell_user('done.\nCreating Figure S8...')
-  png('display_items/figure-s8.png',width=6.5*resx,height=2.5*resx,res=resx)
+  png('display_items/figure-s08.png',width=6.5*resx,height=2.5*resx,res=resx)
   
   layout_matrix = matrix(1:2, nrow=1, byrow=T)
   layout(layout_matrix)
@@ -3330,11 +3441,11 @@ if ('figure-s8'=='figure-s8') {
     filter(days_harvest %in% c(0,34,120)) %>%
     inner_join(meta, by='tx') %>% 
     filter(display_tx %in% c('2439-s5','none','-')) %>%
-    mutate(x = round(days_harvest / 30.44)) -> proc
+    mutate(x = days_harvest) -> proc
   
-  xlims = c(0,5)
-  xbiglabs = xbigs = c(1,4)
-  xats = 0:5
+  xlims = c(0,150)
+  xbiglabs = xbigs = c(34, 120)
+  xats = sort(c(xbigs, c(0,2,3,5)*30.44))
   ylims = c(0, 1.25)
   ybigs = 0:3/2
   yats = 0:6/4
@@ -3367,7 +3478,7 @@ if ('figure-s8'=='figure-s8') {
   par(xpd=F)
   mtext(side=3, line=1, text=subs$display_tx[1], cex=0.8, col=subs$color[1])
   mtext(side=3, line=0, text='single 348 µg dose', cex=0.8)
-  mtext(side=1, line=1, text='months post-dose', cex=0.8)
+  mtext(side=1, line=1, text='days post-dose', cex=0.8)
   mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
   
   
@@ -3378,11 +3489,11 @@ if ('figure-s8'=='figure-s8') {
     inner_join(meta, by='tx') %>%
     mutate(display_tx = gsub(' fixed tail','',display_tx)) %>%
     filter(grepl('s2|none', display_tx)) %>%
-    mutate(x = round(days_harvest / 30.44)) -> proc
+    mutate(x = days_harvest) -> proc
   
-  xlims = c(0,7)
-  xbiglabs = xbigs = c(1, 3, 6)
-  xats = 0:7
+  xlims = c(0,210)
+  xbiglabs = xbigs = c(29, 91, 180)
+  xats = sort(c(xbigs, c(0,2,4,5,7)*30.44))
   ylims = c(0, 1.25)
   ybigs = 0:3/2
   yats = 0:6/4
@@ -3415,7 +3526,7 @@ if ('figure-s8'=='figure-s8') {
   par(xpd=F)
   mtext(side=3, line=1, text=subs$display_tx[1], cex=0.8, col=subs$color[1])
   mtext(side=3, line=0, text='single 174 µg dose', cex=0.8)
-  mtext(side=1, line=1, text='months post-dose', cex=0.8)
+  mtext(side=1, line=1, text='days post-dose', cex=0.8)
   mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
   
   silence_is_golden = dev.off()
@@ -3423,8 +3534,782 @@ if ('figure-s8'=='figure-s8') {
 ### end Figure S8 ####
 
 
+## Figure 7 ####
+
+if ('figure-7'=='figure-7') {
+  
+  tell_user('done.\nCreating Figure 7...')
+resx=300
+png('display_items/figure-7.png' ,width=6.5*resx,height=4*resx,res=resx)
+
+par(mfrow = c(1,2))
+panel = 1
+
+#### Dog 28 day BioA ####
+
+dog_tissue_raw = read_tsv('data/ind_enabling/BioA_dog_tissue.tsv', col_types=cols()) %>%
+  clean_names() %>%
+  mutate(nominal_timepoint = nominal_timepoint_day - 1) %>%
+  rename(lloq = lloq_ng_g)  %>%
+  rename(concentration = concentration_ng_g)
+dog_plasma_raw = read_tsv('data/ind_enabling/BioA_dog_plasma.tsv', col_types=cols()) %>%
+  clean_names() %>%
+  mutate(nominal_timepoint = nominal_time_point_hours/24)  %>%
+  rename(lloq = lloq_ng_m_l) %>%
+  rename(concentration = concentration_ng_m_l) %>%
+  filter(!is.na(run_id))
+dog_csf_raw = read_tsv('data/ind_enabling/BioA_dog_CSF.tsv', col_types=cols()) %>%
+  clean_names() %>%
+  rename(run_id = axolabs_run_id) %>%
+  mutate(nominal_timepoint = case_when(core_vs_recovery == 'core' ~ 1,
+                                       core_vs_recovery == 'recovery' ~ 28))  %>%
+  rename(lloq = lloq_ng_m_l) %>%
+  rename(concentration = concentration_ng_m_l)
+
+# colnames(dog_plasma_raw)
+# colnames(dog_csf_raw)
+# colnames(dog_tissue_raw)
+
+keep_colnames = c('run_id', 'sample_no', 'animal_id',
+                  'group', 'dose_mg', 'matrix', 'nominal_timepoint',
+                  'lloq','concentration')
+
+rbind(dog_plasma_raw[,keep_colnames],
+      dog_csf_raw[,keep_colnames],
+      dog_tissue_raw[,keep_colnames]) %>%
+  mutate(concentration_ug_g = case_when(concentration == 'BQL' ~ lloq/1000,
+                                        TRUE ~ suppressWarnings(as.numeric(gsub(',','',concentration))) / 1000)) %>%
+  mutate(lloq_ug_g = lloq / 1000) -> bioa
+
+bioa -> dog_bioa
+
+tiss_meta = tibble(matrix = c("Liver", "Kidney", "Spinal Cord, cervical", "Spinal Cord, lumbar", 
+                              "Brain, frontal cortex (BRFC)", "Brain, hippocampus (BRHI)", "Brain, cerebellar cortex",
+                              "Brain, thalamus (BRTH)", "Brain, caudate (BRCA)", "Brain, putamen (BRPU)"),
+                   tiss_disp = c("Liver", "Kidney", "Cervical cord", "Lumbar cord",
+                                 "Frontal cortex", "Hippocampus", "Cerebellar cortex",
+                                 "Thalamus", "Caudate", "Putamen"),
+                   x = 1:10) %>%
+  mutate(tiss_y = max(x) - x + 1)
+
+day_meta = tibble(nominal_timepoint = c(1,28),
+                  x = 1:2,
+                  disp = c('1d core','28d recovery')) %>%
+  mutate(day_y = 0)
+
+dose_meta = tibble(dose_mg = c(0,20,60,200),
+                   x = 1:4,
+                   color = c('#fbb4b9','#f768a1','#c51b8a','#7a0177')) %>%
+  mutate(dose_y = max(x) - x + 1)
+
+dose_meta -> dog_dose_meta
+
+bioa %>%
+  inner_join(tiss_meta, by='matrix') %>%
+  select(-x) %>%
+  inner_join(day_meta, by='nominal_timepoint') %>%
+  select(-x) %>%
+  inner_join(dose_meta, by='dose_mg') %>%
+  select(-x) %>%
+  mutate(y = tiss_y * 5 + dose_y * 1) %>%
+  arrange(desc(y)) -> bioa_anno
+
+bioa_anno %>%
+  group_by(y, matrix, tiss_disp, nominal_timepoint, dose_mg, lloq_ug_g, color) %>%
+  summarize(.groups='keep',
+            n = n(),
+            mean = mean(concentration_ug_g),
+            l95 = lower(concentration_ug_g),
+            u95 = upper(concentration_ug_g)) %>%
+  ungroup() %>%
+  mutate(xleft=1e-3) -> bioa_smry
+
+bioa_anno %>%
+  select(animal_id, tiss_disp, dose_mg, nominal_timepoint, concentration_ug_g, lloq_ug_g) -> bioa_anno_out 
+bioa_smry %>%
+  select(tiss_disp, dose_mg, nominal_timepoint, n, mean_concentration_ug_g = mean, lloq_ug_g) -> bioa_smry_out 
+
+write_supp_table(bioa_anno_out, 'PK measurements in dog, individual animals.')
+write_supp_table(bioa_smry_out, 'PK measurements in dog, summarized.')
 
 
+# dog organ weights from our study - A-703-02 final report starting p. 873
+dog_brain_avg = (77.15  +75.07 + 74.37 + 75.23)/4 
+dog_liver_avg = (253.90  + 246.63 + 237.40  + 247.42)/4
+dog_kidney_avg = (50.322  + 55.873  + 54.287  + 54.387)/4
+
+# rat organ weights from our own study - see A-703-01 final report starting p. 733
+rat_brain_avg = (2.0139  + 2.0221  + 2.0154 + 2.0073)/4
+rat_liver_avg = (8.7777  + 9.0857  + 8.7077  + 9.9287)/4
+rat_kidney_avg = (2.2827  + 2.1097  + 2.1945 + 2.3923 )/4
+
+meta_tissues = tibble(meta_tissue = rep(c('Brain','Liver','Kidney'),times=2),
+                      species = rep(c('dog','rat'),each=3),
+                      mass_grams = c(dog_brain_avg, dog_liver_avg, dog_kidney_avg, 
+                                     rat_brain_avg, rat_liver_avg, rat_kidney_avg))
+
+# calculate medians for % dose retained
+bioa_smry_out %>%
+  mutate(meta_tissue = case_when(tiss_disp=='Liver' ~ 'Liver',
+                                 tiss_disp=='Kidney' ~ 'Kidney',
+                                 TRUE ~ 'Brain')) %>%
+  inner_join(meta_tissues %>% filter(species=='dog'), by='meta_tissue') %>%
+  filter(dose_mg > 0) %>%
+  group_by(meta_tissue, mass_grams, dose_mg, nominal_timepoint) %>%
+  summarize(.groups='keep',
+            n_regions=n(),
+            median_conc = median(mean_concentration_ug_g),
+            mean_conc = mean(mean_concentration_ug_g),
+            min_conc = min(mean_concentration_ug_g),
+            max_conc = max(mean_concentration_ug_g)) %>%
+  ungroup() %>%
+  mutate(proportion_dose_retained = (mass_grams * median_conc / 1000)/dose_mg) %>%
+  arrange(nominal_timepoint, meta_tissue, dose_mg) -> retained_by_dose
+
+retained_by_dose %>%
+  group_by(nominal_timepoint, meta_tissue) %>%
+  summarize(.groups='keep', 
+            across_n_dose_levels=n(),
+            mean_proportion_dose_retained = mean(proportion_dose_retained)) -> retained_by_dose_smry
+
+write_supp_table(retained_by_dose, 'Proportions of dose administered retained in each tissue by timepoint, dogs, by dose level.')
+write_supp_table(retained_by_dose_smry, 'Proportions of dose administered retained in each tissue by timepoint, dogs, summarized across dose levels.')
+
+dog_retained_by_dose_smry = retained_by_dose_smry
+
+# now that we've written out supp tables, subset to 28-day for figure
+
+bioa_anno %>% filter(nominal_timepoint==28) -> bioa_anno
+bioa_smry %>% filter(nominal_timepoint==28) -> bioa_smry
+
+ic50_col = '#009171'
+
+
+xbigs = 10^(-3:3)
+xbiglabs = c('1 ng/g', '10 ng/g', '100 ng/g', '1 µg/g', '10 µg/g', '100 µg/g', '1 mg/g')
+xats = rep(1:9, 7) * 10^rep(-3:3, each=9)
+xlims = c(1e-2, 1e3)
+ylims = range(bioa_smry$y) + c(-1, 1)
+par(mar=c(3,6,3,2))
+plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+axis(side=2, at=ylims, labels=NA, lwd.ticks=0)
+#mtext(side=2, at=bioa_smry$y, text=bioa_smry$dose_mg, las=2, cex=0.4, line=0.2, font=2)
+axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+axis(side=1, at=xbigs, lwd=0, labels=gsub(' ','\n',xbiglabs), cex.axis=0.6, line=-0.25)
+axis(side=1, at=xats, tck=-0.02, labels=NA)
+barwidth=1
+rect(xleft=bioa_smry$xleft, xright=bioa_smry$mean, ybottom=bioa_smry$y-barwidth/2, ytop=bioa_smry$y+barwidth/2, col=alpha(bioa_smry$color,.75), border=NA)
+suppressWarnings(arrows(x0=pmax(bioa_smry$l95, min(xlims)), x1=bioa_smry$u95, y0=bioa_smry$y, length=0.025, col=bioa_smry$color, code=3, angle=90))
+points(bioa_anno$concentration_ug_g, bioa_anno$y, col=bioa_anno$color, pch=21, bg='#FFFFFF', cex=0.75)
+points(x=bioa_smry$lloq_ug_g, y=bioa_smry$y, pch='|', col='#7A7A7A')
+mtext(side=1, at=bioa_smry$lloq_ug_g[1], col='#7A7A7A', cex=0.3, text='LLQ', line=-0.5)
+
+bioa_smry %>%
+  group_by(matrix, tiss_disp, nominal_timepoint) %>%
+  summarize(.groups='keep', meany = mean(y)) %>%
+  ungroup() -> timepoint_tranches
+bioa_smry %>%
+  group_by(matrix, tiss_disp) %>%
+  summarize(.groups='keep', meany = mean(y)) %>%
+  ungroup() -> matrix_tranches
+#mtext(side=2, line=1, las=2, at=timepoint_tranches$meany, text=paste0(timepoint_tranches$nominal_timepoint, 'd'), cex=0.8)
+mtext(side=2, line=0.25, at=matrix_tranches$meany, text=matrix_tranches$tiss_disp, cex=0.7, las=2)
+
+abline(v=0.5, col=ic50_col, lwd=1)
+mtext(side=3, at=0.5, col=ic50_col, cex=0.8, text='est. IC50')
+
+mtext(side=3, at=0.00005, line=0.25, text=paste0(LETTERS[panel], '    dog'), cex=1.0); panel = panel + 1
+
+par(xpd=T)
+legend(x=100,y=17, paste0(dose_meta$dose_mg, ' mg'), title='dose', bty='n', col=dose_meta$color, pch=15, cex=0.6)
+par(xpd=F)
+
+
+#### Rat 3 day BioA ####
+
+rat_tissue_raw = read_tsv('data/ind_enabling/BioA_rat_tissue.tsv', col_types=cols()) %>%
+  clean_names() %>%
+  rename(run_id = axolabs_run_id) %>%
+  rename(dose_mg = dose_level_mg) %>%
+  mutate(nominal_timepoint = nominal_timepoint_day - 1) %>%
+  rename(lloq = lloq_ng_g)  %>%
+  rename(concentration = concentration_ng_g)
+rat_plasma_raw = read_tsv('data/ind_enabling/BioA_rat_plasma.tsv', col_types=cols()) %>%
+  clean_names() %>% 
+  mutate(nominal_timepoint = nominal_time_point_hours/24)  %>%
+  rename(lloq = lloq_ng_m_l) %>%
+  rename(concentration = concentration_ng_m_l) %>%
+  filter(!is.na(run_id))
+rat_csf_raw = read_tsv('data/ind_enabling/BioA_rat_CSF.tsv', col_types=cols()) %>%
+  clean_names() %>%
+  mutate(nominal_timepoint = case_when(study_day == 'Day 2' ~ 1,
+                                       study_day == 'Day 29' ~ 28))  %>%
+  rename(lloq = lloq_ng_m_l) %>%
+  rename(concentration = concentration_ng_m_l)
+
+# colnames(rat_plasma_raw)
+# colnames(rat_csf_raw)
+# colnames(rat_tissue_raw)
+
+keep_colnames = c('run_id', 'sample_no', 'animal_id',
+                  'group', 'dose_mg', 'matrix', 'nominal_timepoint',
+                  'lloq','concentration')
+
+rbind(rat_plasma_raw[,keep_colnames],
+      rat_csf_raw[,keep_colnames],
+      rat_tissue_raw[,keep_colnames]) %>%
+  mutate(concentration_ug_g = case_when(concentration == 'BQL' ~ lloq/1000,
+                                        TRUE ~ suppressWarnings(as.numeric(gsub(',','',concentration))) / 1000)) %>%
+  mutate(lloq_ug_g = lloq / 1000) -> bioa
+
+bioa -> rat_bioa
+
+
+tiss_meta = tibble(matrix = c("Liver", "Kidney", "Spinal Cord, cervical", "Spinal Cord, lumbar", 
+                              "Brain, frontal cortex (BRFC)", "Brain, hippocampus (BRHI)", 
+                              "Brain, cerebellar cortex (BRCE)",
+                              "Brain, thalamus (BRTH)",
+                              "Brain, caudate-putamen (BRCP)"),
+                   tiss_disp = c("Liver", "Kidney", "Cervical cord", "Lumbar cord",
+                                 "Frontal cortex", "Hippocampus", "Cerebellar cortex",
+                                 "Thalamus", "Caudate/putamen"),
+                   x = 1:9) %>%
+  mutate(tiss_y = max(x) - x + 1)
+
+day_meta = tibble(nominal_timepoint = c(3),
+                  x = 1,
+                  disp = c('3d')) %>%
+  mutate(day_y = 0)
+
+dose_meta = tibble(dose_mg = c(0,0.3,1,3),
+                   x = 1:4,
+                   color = c('#fbb4b9','#f768a1','#c51b8a','#7a0177')) %>%
+  mutate(dose_y = max(x) - x + 1)
+
+dose_meta -> rat_dose_meta
+
+bioa %>%
+  inner_join(tiss_meta, by='matrix') %>%
+  select(-x) %>% 
+  inner_join(day_meta, by='nominal_timepoint') %>%
+  select(-x) %>%
+  inner_join(dose_meta, by='dose_mg') %>%
+  select(-x) %>%
+  mutate(y = tiss_y * 5 + dose_y * 1) %>%
+  arrange(desc(y)) -> bioa_anno
+
+bioa_anno %>%
+  group_by(y, matrix, tiss_disp, nominal_timepoint, dose_mg, lloq_ug_g, color) %>%
+  summarize(.groups='keep',
+            n = n(),
+            mean = mean(concentration_ug_g),
+            l95 = lower(concentration_ug_g),
+            u95 = upper(concentration_ug_g)) %>%
+  ungroup() %>%
+  mutate(xleft=1e-3) -> bioa_smry
+
+
+
+bioa_anno %>%
+  select(animal_id, tiss_disp, dose_mg, nominal_timepoint, concentration_ug_g, lloq_ug_g) -> bioa_anno_out 
+bioa_smry %>%
+  select(tiss_disp, dose_mg, nominal_timepoint, n, mean_concentration_ug_g = mean, lloq_ug_g) -> bioa_smry_out 
+
+write_supp_table(bioa_anno_out, 'PK measurements in rat, individual animals.')
+write_supp_table(bioa_smry_out, 'PK measurements in rat, summarized.')
+
+
+# calculate medians for % dose retained
+bioa_smry_out %>%
+  mutate(meta_tissue = case_when(tiss_disp=='Liver' ~ 'Liver',
+                                 tiss_disp=='Kidney' ~ 'Kidney',
+                                 TRUE ~ 'Brain')) %>%
+  inner_join(meta_tissues %>% filter(species=='rat'), by='meta_tissue') %>%
+  filter(dose_mg > 0) %>%
+  group_by(meta_tissue, mass_grams, dose_mg, nominal_timepoint) %>%
+  summarize(.groups='keep',
+            n_regions=n(),
+            median_conc = median(mean_concentration_ug_g),
+            mean_conc = mean(mean_concentration_ug_g),
+            min_conc = min(mean_concentration_ug_g),
+            max_conc = max(mean_concentration_ug_g)) %>%
+  ungroup() %>%
+  mutate(proportion_dose_retained = (mass_grams * median_conc / 1000)/dose_mg) %>%
+  arrange(nominal_timepoint, meta_tissue, dose_mg) -> retained_by_dose
+
+retained_by_dose %>%
+  group_by(nominal_timepoint, meta_tissue) %>%
+  summarize(.groups='keep', 
+            across_n_dose_levels=n(),
+            mean_proportion_dose_retained = mean(proportion_dose_retained)) -> retained_by_dose_smry
+
+write_supp_table(retained_by_dose, 'Proportions of dose administered retained in each tissue by timepoint, rats, by dose level.')
+write_supp_table(retained_by_dose_smry, 'Proportions of dose administered retained in each tissue by timepoint, rats, summarized across dose levels.')
+
+rat_retained_by_dose_smry = retained_by_dose_smry
+
+# calculate medians for % dose retained
+bioa_smry_out %>%
+  filter(!(tiss_disp %in% c('Liver','Kidney'))) %>%
+  group_by(dose_mg, nominal_timepoint) %>%
+  summarize(.groups='keep',
+            n_tissues=n(),
+            median_conc = median(mean_concentration_ug_g),
+            mean_conc = mean(mean_concentration_ug_g),
+            min_conc = min(mean_concentration_ug_g),
+            max_conc = max(mean_concentration_ug_g)) %>%
+  ungroup() -> brain_conc_by_dose
+
+write_supp_table(brain_conc_by_dose, 'Concentrations by dose and timepoint summarized across brain regions for rats.')
+
+# now that we've written out supp tables, subset to 3-day for figure
+
+bioa_anno %>% filter(nominal_timepoint==3) -> bioa_anno
+bioa_smry %>% filter(nominal_timepoint==3) -> bioa_smry
+
+xbigs = 10^(-3:3)
+xbiglabs = c('1 ng/g', '10 ng/g', '100 ng/g', '1 µg/g', '10 µg/g', '100 µg/g', '1 mg/g')
+xats = rep(1:9, 7) * 10^rep(-3:3, each=9)
+xlims = c(1e-2, 1e3)
+ylims = range(bioa_smry$y) + c(-1, 1)
+par(mar=c(3,6,3,2))
+plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+axis(side=2, at=ylims, labels=NA, lwd.ticks=0)
+#mtext(side=2, at=bioa_smry$y, text=bioa_smry$dose_mg, las=2, cex=0.4, line=0.2, font=2)
+axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+axis(side=1, at=xbigs, lwd=0, labels=gsub(' ','\n',xbiglabs), cex.axis=0.6, line=-0.25)
+axis(side=1, at=xats, tck=-0.02, labels=NA)
+barwidth=1
+rect(xleft=bioa_smry$xleft, xright=bioa_smry$mean, ybottom=bioa_smry$y-barwidth/2, ytop=bioa_smry$y+barwidth/2, col=alpha(bioa_smry$color,.75), border=NA)
+suppressWarnings(arrows(x0=pmax(bioa_smry$l95, min(xlims)), x1=bioa_smry$u95, y0=bioa_smry$y, length=0.025, col=bioa_smry$color, code=3, angle=90))
+points(bioa_anno$concentration_ug_g, bioa_anno$y, col=bioa_anno$color, pch=21, bg='#FFFFFF', cex=0.75)
+points(x=bioa_smry$lloq_ug_g, y=bioa_smry$y, pch='|', col='#7A7A7A')
+mtext(side=1, at=bioa_smry$lloq_ug_g[1], col='#7A7A7A', cex=0.3, text='LLQ', line=-0.5)
+
+bioa_smry %>%
+  group_by(matrix, tiss_disp, nominal_timepoint) %>%
+  summarize(.groups='keep', meany = mean(y)) %>%
+  ungroup() -> timepoint_tranches
+bioa_smry %>%
+  group_by(matrix, tiss_disp) %>%
+  summarize(.groups='keep', meany = mean(y)) %>%
+  ungroup() -> matrix_tranches
+#mtext(side=2, line=1, las=2, at=timepoint_tranches$meany, text=paste0(timepoint_tranches$nominal_timepoint, 'd'), cex=0.8)
+mtext(side=2, line=0.25, at=matrix_tranches$meany, text=matrix_tranches$tiss_disp, cex=0.7, las=2)
+
+abline(v=0.5, col=ic50_col, lwd=1)
+mtext(side=3, at=0.5, col=ic50_col, cex=0.8, text='est. IC50')
+
+par(xpd=T)
+legend(x=100,y=18, paste0(dose_meta$dose_mg, ' mg'), title='dose', bty='n', col=dose_meta$color, pch=15, cex=0.6)
+par(xpd=F)
+
+mtext(side=3, at=0.00005, line=0.25, text=paste0(LETTERS[panel], '    rat'), cex=1.0); panel = panel + 1
+
+silence_is_golden = dev.off()
+}
+### end Figure 7 ####
+
+rbind(cbind(dog_retained_by_dose_smry,species='dog'),
+cbind(rat_retained_by_dose_smry,species='rat')) %>%
+  select(-across_n_dose_levels) %>%
+  pivot_wider(names_from=c(species,nominal_timepoint), values_from=mean_proportion_dose_retained) -> table_2
+
+
+
+## Figure S11 - TK & CSF ####
+if ('figure-s11'=='figure-s11') {
+  tell_user('done.\nCreating Figure S11...')
+  png('display_items/figure-s11.png',width=6.5*resx,height=6.0*resx,res=resx)
+  
+  par(mfrow=c(2,2))
+
+  panel = 1
+dog_dose_meta -> dose_meta
+dog_bioa -> bioa 
+
+bioa %>%
+  filter(matrix=='Plasma') %>%
+  inner_join(dose_meta, by='dose_mg') %>%
+  mutate(hours = nominal_timepoint * 24) -> plasma
+
+plasma %>%
+  group_by(dose_mg, color, hours) %>%
+  summarize(.groups='keep',
+            n=n(),
+            mean=mean(concentration_ug_g)) %>%
+  ungroup() -> plasma_smry
+
+write_supp_table(plasma, 'Plasma toxicokinetic analysis, dogs, individual.')
+write_supp_table(plasma_smry, 'Plasma toxicokinetic analysis, dogs, summarized.')
+
+xlims = c(0.4, 100)
+xats = unique(plasma$hours)
+ylims = c(0.0008, 100)
+yats = rep(1:9, times=7) * rep(10^(-4:2),each=9)
+ybigs = 10^(-4:2)
+ybiglabs = c('0.1 ng/mL','1 ng/mL','10 ng/mL', '100 ng/mL', '1 µg/mL', '10 µg/mL', '100 µg/mL')
+
+par(mar=c(3,6,3,1))
+plot(NA, NA, xlim=xlims, ylim=ylims, log='xy', axes=F, ann=F, xaxs='i',  yaxs='i')
+axis(side=1, at=xats, labels=NA,tck=-0.02)
+axis(side=1, at=xats, labels=xats,lwd=0, line=-0.25, cex.axis=0.8)
+mtext(side=1, line=2, text='hours post-dose')
+axis(side=2, at=yats, labels=NA,tck=-0.02)
+axis(side=2, at=ybigs, labels=NA,tck=-0.05)
+axis(side=2, at=ybigs, line=-0.25, las=2, labels=ybiglabs, lwd=0, cex.axis=0.8)
+mtext(side=2, line=5, text='plasma drug concentration')
+abline(h=plasma$lloq_ug_g[1], lty=3, lwd=0.5)
+points(plasma$hours, plasma$concentration_ug_g, col=plasma$color, pch=20, cex=0.5)
+for (this_dose_level in unique(plasma_smry$dose_mg)) {
+  plasma_smry %>%
+    filter(dose_mg == this_dose_level) -> subs
+  points(subs$hours, subs$mean, col=subs$color, type='l', lwd=1)
+}
+leg = dose_meta %>% filter(dose_mg > 0)
+legend('topright', legend=paste0(leg$dose_mg,' mg'), col=leg$color, pch=20, bty='n', cex=0.8)
+mtext(side=3, text='dogs')
+mtext(side=3, adj=-0.2, text=LETTERS[panel], line=0.5); panel = panel + 1
+
+dog_dose_meta -> dose_meta
+dog_bioa -> bioa 
+
+bioa %>%
+  filter(matrix=='CSF') %>%
+  inner_join(dose_meta, by='dose_mg') -> csf
+
+csf %>%
+  group_by(dose_mg, color, nominal_timepoint) %>%
+  summarize(.groups='keep',
+            n=n(),
+            mean=mean(concentration_ug_g)) %>%
+  ungroup() -> csf_smry
+
+write_supp_table(csf, 'CSF PK analysis, dogs, individual.')
+write_supp_table(csf_smry, 'CSF PK analysis, dogs, summarized.')
+
+xlims = c(0, 30)
+xats = unique(csf$nominal_timepoint)
+ylims = c(0.0008, 100)
+yats = rep(1:9, times=7) * rep(10^(-4:2),each=9)
+ybigs = 10^(-4:2)
+ybiglabs = c('0.1 ng/mL','1 ng/mL','10 ng/mL', '100 ng/mL', '1 µg/mL', '10 µg/mL', '100 µg/mL')
+
+par(mar=c(3,6,3,1))
+plot(NA, NA, xlim=xlims, ylim=ylims, log='y', axes=F, ann=F, xaxs='i',  yaxs='i')
+axis(side=1, at=xats, labels=NA,tck=-0.02)
+axis(side=1, at=xats, labels=xats,lwd=0, line=-0.25, cex.axis=0.8)
+mtext(side=1, line=2, text='days post-dose')
+axis(side=2, at=yats, labels=NA,tck=-0.02)
+axis(side=2, at=ybigs, labels=NA,tck=-0.05)
+axis(side=2, at=ybigs, line=-0.25, las=2, labels=ybiglabs, lwd=0, cex.axis=0.8)
+mtext(side=2, line=5, text='CSF drug concentration')
+abline(h=csf$lloq_ug_g[1], lty=3, lwd=0.5)
+points(csf$nominal_timepoint, csf$concentration_ug_g, col=csf$color, pch=20, cex=0.5)
+for (this_dose_level in unique(csf_smry$dose_mg)) {
+  csf_smry %>%
+    filter(dose_mg == this_dose_level) -> subs
+  points(subs$nominal_timepoint, subs$mean, col=subs$color, type='l', lwd=1)
+}
+leg = dose_meta %>% filter(dose_mg > 0)
+legend('topright', legend=paste0(leg$dose_mg,' mg'), col=leg$color, pch=20, bty='n', cex=0.8)
+mtext(side=3, text='dogs')
+mtext(side=3, adj=-0.2, text=LETTERS[panel], line=0.5); panel = panel + 1
+# 
+# xmin = 8e-4
+# day_meta = tibble(nominal_timepoint = c(1,28),
+#                   day_y = c(5, 0),
+#                   disp = c('1d core','28d recovery'))
+# 
+# 
+# bioa %>%
+#   filter(matrix=='CSF') %>%
+#   inner_join(day_meta, by='nominal_timepoint') %>%
+#   inner_join(dose_meta, by='dose_mg') %>%
+#   select(-x) %>%
+#   mutate(y = dose_y + day_y) %>%
+#   arrange(desc(y)) -> bioa_anno
+# 
+# bioa_anno %>%
+#   group_by(y, matrix,  nominal_timepoint, dose_mg, lloq_ug_g, color) %>%
+#   summarize(.groups='keep',
+#             mean = mean(concentration_ug_g),
+#             l95 = lower(concentration_ug_g),
+#             u95 = upper(concentration_ug_g)) %>%
+#   ungroup() %>%
+#   mutate(xleft=xmin) -> bioa_smry
+# 
+# 
+# xbigs = 10^(-3:3)
+# xbiglabs = c('1 ng/g', '10 ng/g', '100 ng/g', '1 µg/g', '10 µg/g', '100 µg/g', '1 mg/g')
+# xats = rep(1:9, 7) * 10^rep(-3:3, each=9)
+# xlims = c(xmin, 1e3)
+# ylims = range(bioa_smry$y) + c(-1, 1)
+# par(mar=c(3,6,1,2))
+# plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+# axis(side=2, at=ylims, labels=NA, lwd.ticks=0)
+# #mtext(side=2, at=bioa_smry$y, text=bioa_smry$dose_mg, las=2, cex=0.4, line=0.2, font=2)
+# axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+# axis(side=1, at=xbigs, lwd=0, labels=gsub(' ','\n',xbiglabs), cex.axis=0.6, line=-0.25)
+# axis(side=1, at=xats, tck=-0.02, labels=NA)
+# barwidth=1
+# rect(xleft=bioa_smry$xleft, xright=bioa_smry$mean, ybottom=bioa_smry$y-barwidth/2, ytop=bioa_smry$y+barwidth/2, col=alpha(bioa_smry$color,.75), border=NA)
+# suppressWarnings(arrows(x0=pmax(bioa_smry$l95, min(xlims)), x1=bioa_smry$u95, y0=bioa_smry$y, length=0.025, col=bioa_smry$color, code=3, angle=90))
+# points(bioa_anno$concentration_ug_g, bioa_anno$y, col=bioa_anno$color, pch=21, bg='#FFFFFF', cex=0.75)
+# points(x=bioa_smry$lloq_ug_g, y=bioa_smry$y, pch='|', col='#7A7A7A')
+# mtext(side=1, at=bioa_smry$lloq_ug_g[1], col='#7A7A7A', cex=0.3, text='LLQ', line=-0.5)
+# mtext(side=2, at=day_meta$day_y + 2, text=day_meta$disp, las=2, line=0.5, cex=0.8)
+# par(xpd=T)
+# legend('bottomright', paste0(dose_meta$dose_mg, ' mg'), title='dose', bty='n', col=dose_meta$color, pch=15, cex=0.6)
+# par(xpd=F)
+# 
+
+
+
+rat_dose_meta -> dose_meta
+rat_bioa -> bioa 
+
+bioa %>%
+  filter(matrix=='Plasma') %>%
+  inner_join(dose_meta, by='dose_mg') %>%
+  mutate(hours = nominal_timepoint * 24) -> plasma
+
+plasma %>%
+  group_by(dose_mg, color, hours) %>%
+  summarize(.groups='keep',
+            n=n(),
+            mean=mean(concentration_ug_g)) %>%
+  ungroup() -> plasma_smry
+
+write_supp_table(plasma, 'Plasma toxicokinetic analysis, rats, individual.')
+write_supp_table(plasma_smry, 'Plasma toxicokinetic analysis, rats, summarized.')
+
+xlims = c(0.4, 100)
+xats = unique(plasma$hours)
+ylims = c(0.0008, 100)
+yats = rep(1:9, times=7) * rep(10^(-4:2),each=9)
+ybigs = 10^(-4:2)
+ybiglabs = c('0.1 ng/mL','1 ng/mL','10 ng/mL', '100 ng/mL', '1 µg/mL', '10 µg/mL', '100 µg/mL')
+
+par(mar=c(3,6,3,1))
+plot(NA, NA, xlim=xlims, ylim=ylims, log='xy', axes=F, ann=F, xaxs='i',  yaxs='i')
+axis(side=1, at=xats, labels=NA,tck=-0.02)
+axis(side=1, at=xats, labels=xats,lwd=0, line=-0.25, cex.axis=0.8)
+mtext(side=1, line=2, text='hours post-dose')
+axis(side=2, at=yats, labels=NA,tck=-0.02)
+axis(side=2, at=ybigs, labels=NA,tck=-0.05)
+axis(side=2, at=ybigs, line=-0.25, las=2, labels=ybiglabs, lwd=0, cex.axis=0.8)
+mtext(side=2, line=5, text='plasma drug concentration')
+abline(h=plasma$lloq_ug_g[1], lty=3, lwd=0.5)
+points(plasma$hours, plasma$concentration_ug_g, col=plasma$color, pch=20, cex=0.5)
+for (this_dose_level in unique(plasma_smry$dose_mg)) {
+  plasma_smry %>%
+    filter(dose_mg == this_dose_level) -> subs
+  points(subs$hours, subs$mean, col=subs$color, type='l', lwd=1)
+}
+leg = dose_meta %>% filter(dose_mg > 0)
+legend('topright', legend=paste0(leg$dose_mg,' mg'), col=leg$color, pch=20, bty='n', cex=0.8)
+mtext(side=3, text='rats')
+mtext(side=3, adj=-0.2, text=LETTERS[panel], line=0.5); panel = panel + 1
+
+rat_dose_meta -> dose_meta
+rat_bioa -> bioa 
+
+bioa %>%
+  filter(matrix=='CSF') %>%
+  inner_join(dose_meta, by='dose_mg') -> csf
+
+csf %>%
+  group_by(dose_mg, color, nominal_timepoint) %>%
+  summarize(.groups='keep',
+            n=n(),
+            mean=mean(concentration_ug_g)) %>%
+  ungroup() -> csf_smry
+
+write_supp_table(csf, 'CSF PK analysis, rats, individual.')
+write_supp_table(csf_smry, 'CSF PK analysis, rats, summarized.')
+
+xlims = c(0, 30)
+xats = unique(csf$nominal_timepoint)
+ylims = c(0.0008, 100)
+yats = rep(1:9, times=7) * rep(10^(-4:2),each=9)
+ybigs = 10^(-4:2)
+ybiglabs = c('0.1 ng/mL','1 ng/mL','10 ng/mL', '100 ng/mL', '1 µg/mL', '10 µg/mL', '100 µg/mL')
+
+par(mar=c(3,6,3,1))
+plot(NA, NA, xlim=xlims, ylim=ylims, log='y', axes=F, ann=F, xaxs='i',  yaxs='i')
+axis(side=1, at=xats, labels=NA,tck=-0.02)
+axis(side=1, at=xats, labels=xats,lwd=0, line=-0.25, cex.axis=0.8)
+mtext(side=1, line=2, text='days post-dose')
+axis(side=2, at=yats, labels=NA,tck=-0.02)
+axis(side=2, at=ybigs, labels=NA,tck=-0.05)
+axis(side=2, at=ybigs, line=-0.25, las=2, labels=ybiglabs, lwd=0, cex.axis=0.8)
+mtext(side=2, line=5, text='CSF drug concentration')
+abline(h=csf$lloq_ug_g[1], lty=3, lwd=0.5)
+points(csf$nominal_timepoint, csf$concentration_ug_g, col=csf$color, pch=20, cex=0.5)
+for (this_dose_level in unique(csf_smry$dose_mg)) {
+  csf_smry %>%
+    filter(dose_mg == this_dose_level) -> subs
+  points(subs$nominal_timepoint, subs$mean, col=subs$color, type='l', lwd=1)
+}
+leg = dose_meta %>% filter(dose_mg > 0)
+legend('topright', legend=paste0(leg$dose_mg,' mg'), col=leg$color, pch=20, bty='n', cex=0.8)
+mtext(side=3, text='rats')
+mtext(side=3, adj=-0.2, text=LETTERS[panel], line=0.5); panel = panel + 1
+
+# 
+# 
+# day_meta = tibble(nominal_timepoint = c(1,28),
+#                   day_y = c(5,0),
+#                   disp = c('1d core','28d recovery'))
+# 
+# 
+# bioa %>%
+#   filter(matrix=='CSF') %>%
+#   inner_join(day_meta, by='nominal_timepoint') %>%
+#   inner_join(dose_meta, by='dose_mg') %>%
+#   select(-x) %>%
+#   mutate(y = dose_y + day_y) %>%
+#   arrange(desc(y)) -> bioa_anno
+# 
+# bioa_anno %>%
+#   group_by(y, matrix,  nominal_timepoint, dose_mg, lloq_ug_g, color) %>%
+#   summarize(.groups='keep',
+#             mean = mean(concentration_ug_g),
+#             l95 = lower(concentration_ug_g),
+#             u95 = upper(concentration_ug_g)) %>%
+#   ungroup() %>%
+#   mutate(xleft=xmin) -> bioa_smry
+# 
+# 
+# xbigs = 10^(-3:3)
+# xbiglabs = c('1 ng/g', '10 ng/g', '100 ng/g', '1 µg/g', '10 µg/g', '100 µg/g', '1 mg/g')
+# xats = rep(1:9, 7) * 10^rep(-3:3, each=9)
+# xlims = c(xmin, 1e3)
+# ylims = range(bioa_smry$y) + c(-1, 1)
+# par(mar=c(3,6,1,2))
+# plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+# axis(side=2, at=ylims, labels=NA, lwd.ticks=0)
+# #mtext(side=2, at=bioa_smry$y, text=bioa_smry$dose_mg, las=2, cex=0.4, line=0.2, font=2)
+# axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+# axis(side=1, at=xbigs, lwd=0, labels=gsub(' ','\n',xbiglabs), cex.axis=0.6, line=-0.25)
+# axis(side=1, at=xats, tck=-0.02, labels=NA)
+# barwidth=1
+# rect(xleft=bioa_smry$xleft, xright=bioa_smry$mean, ybottom=bioa_smry$y-barwidth/2, ytop=bioa_smry$y+barwidth/2, col=alpha(bioa_smry$color,.75), border=NA)
+# suppressWarnings(arrows(x0=pmax(bioa_smry$l95, min(xlims)), x1=bioa_smry$u95, y0=bioa_smry$y, length=0.025, col=bioa_smry$color, code=3, angle=90))
+# points(bioa_anno$concentration_ug_g, bioa_anno$y, col=bioa_anno$color, pch=21, bg='#FFFFFF', cex=0.75)
+# points(x=bioa_smry$lloq_ug_g, y=bioa_smry$y, pch='|', col='#7A7A7A')
+# mtext(side=1, at=bioa_smry$lloq_ug_g[1], col='#7A7A7A', cex=0.3, text='LLQ', line=-0.5)
+# mtext(side=2, at=day_meta$day_y + 2, text=day_meta$disp, las=2, line=0.5, cex=0.8)
+# par(xpd=T)
+# legend('bottomright', paste0(dose_meta$dose_mg, ' mg'), title='dose', bty='n', col=dose_meta$color, pch=15, cex=0.6)
+# par(xpd=F)
+
+silence_is_golden = dev.off()
+} ### end Figure S11 ####
+
+
+
+
+
+
+
+## Figure S10 - manufacturing process ####
+if ('figure-s10'=='figure-s10') {
+  tell_user('done.\nCreating Figure S10...')
+  png('display_items/figure-s10.png',width=6.5*resx,height=5.0*resx,res=resx)
+  
+  par(mfrow=c(1,1))
+  
+  manuf_studies = c("CMR-2752", "CMR-2812", "CMR-2833", "CMR-2941")
+  
+  
+  manuf_meta = tribble(
+    ~display_tx, ~order,
+    'none', 1,
+    'UMass BTT+DDTT', 2,
+    'Hongene ETT+XH', 3,
+    'UMass ETT+DDTT', 4,
+    'Hongene BTT+XH', 5,
+    'Hongene BTT+DDTT', 6,
+    'Hongene BTT+DDTT scaled up', 7
+  )
+  
+  qpcr %>%
+    filter(study_id %in% manuf_studies) %>%
+    filter(target=='PRNP') %>%
+    group_by(sample_id, study_id, qpcr_id, region, biorep, sample_group) %>%
+    summarize(.groups='keep',
+              n_techreps = n(),
+              mean_twoddct = mean(twoddct)) %>%
+    ungroup() %>%
+    group_by(study_id, qpcr_id, region) %>%
+    mutate(residual = mean_twoddct / mean(mean_twoddct[sample_group %in% c('no injection')])) %>%
+    ungroup() %>%
+    filter(!is.na(sample_group) & sample_group != 'no lysate') %>%
+    left_join(study, by=c('sample_id'='animal','study_id')) %>%
+    left_join(meta, by=c('tx')) %>%
+    inner_join(manuf_meta, by='display_tx') %>%
+    mutate(panel = dense_rank(study_id)) %>%
+    group_by(panel) %>%
+    mutate(within_study_x = dense_rank(order)) %>%
+    ungroup() %>%
+    mutate(overall_x = dense_rank(paste0(panel, order))) -> manuf_qpcr
+  
+  manuf_qpcr %>%
+    group_by(panel, study_id, order, within_study_x, overall_x, display_tx, color) %>%
+    summarize(.groups='keep',
+              n=n(),
+              mean = mean(residual),
+              l95  = lower(residual),
+              u95  = upper(residual),
+              maxy = max(residual)) %>%
+    ungroup() %>%
+    mutate(pval = as.numeric(NA)) -> manuf_smry
+  
+  for (i in 1:nrow(manuf_smry)) {
+    controls = manuf_qpcr$residual[manuf_qpcr$study_id==manuf_smry$study_id[i] & manuf_qpcr$display_tx=='UMass BTT+DDTT']
+    test_group = manuf_qpcr$residual[manuf_qpcr$study_id==manuf_smry$study_id[i] & manuf_qpcr$display_tx == manuf_smry$display_tx[i]]
+    manuf_smry$pval[i] = t.test(controls, test_group)$p.value
+  }
+  manuf_smry$psymb = p_to_symbol(manuf_smry$pval)
+  manuf_smry$psymb[manuf_smry$display_tx=='none'] = '' # don't show stars for difference from control, this is obvious
+  
+  manuf_smry %>%
+    group_by(study_id, panel) %>%
+    summarize(.groups='keep', maxx = max(overall_x)) %>%
+    ungroup() -> tranches
+  
+  par(mar=c(10,4,3,1))
+  xlims = range(manuf_smry$overall_x) + c(-0.5, 0.5)
+  ylims = c(0, 1.5)
+  ybigs = 0:3/2
+  yats = 0:6/4
+  plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i')
+  axis(side=1, at=xlims, lwd.ticks=0, labels=NA)
+  mtext(side=1, line=0.25, at=manuf_smry$overall_x, text=manuf_smry$display_tx, cex=0.8, las=2)
+  axis(side=2, at=ybigs, labels=percent(ybigs), cex.axis=0.8, las=2, tck=-0.05)
+  axis(side=2, at=yats, labels=NA, cex.axis=0.8, las=2, tck=-0.02)
+  mtext(side=2, line=3, text=expression(residual~italic(PRNP)))
+  abline(h=1, lwd=0.25, lty=3)
+  points(manuf_qpcr$overall_x, manuf_qpcr$residual, pch=1, lwd=2, cex=0.8, col=manuf_qpcr$color)
+  barwidth=0.3
+  rect(xleft=manuf_smry$overall_x-barwidth, xright=manuf_smry$overall_x+barwidth, ybottom=rep(0,nrow(manuf_smry)), ytop=manuf_smry$mean, col=alpha(manuf_smry$color, ci_alpha), border=NA)
+  # segments(x0=manuf_smry$overall_x-barwidth, x1=manuf_smry$overall_x+barwidth, y0=manuf_smry$mean)
+  suppressWarnings(arrows(x0=manuf_smry$overall_x, y0=manuf_smry$l95, y1=manuf_smry$u95, code=3, angle=90, length=0.03))
+  abline(v=tranches$maxx + 0.5, lwd=0.25)
+  mtext(side=3, line=0, at=manuf_smry$overall_x, text=manuf_smry$psymb, cex=0.6)
+  mtext(side=3, line=-1, at=manuf_smry$overall_x, text=percent(manuf_smry$mean, digits=1), cex=0.6)
+  
+  manuf_qpcr %>%
+    select(study_id, sample_id, display_tx, dose_dio, residual) -> manuf_qpcr_out
+  manuf_smry %>%
+    select(study_id, display_tx, mean, l95, u95, pval) -> manuf_smry_out
+  write_supp_table(manuf_qpcr_out, 'Residual PRNP in whole hemisphere 7 days post-dose, by manufacturing process, individual animals.')
+  write_supp_table(manuf_smry_out, 'Residual PRNP in whole hemisphere 7 days post-dose, by manufacturing process, summarized.')
+  
+  silence_is_golden = dev.off()
+} ### end Figure S10 ####
 
 
 
@@ -3456,6 +4341,10 @@ for (i in 1:nrow(blast_analyses)) {
   write_supp_table(blast_hits, paste0('Off-target hits for ',blast_analyses$species[i],'for 2439-exNA antisense seed region 2-17.'))
   
 }
+
+
+
+
 
 
 

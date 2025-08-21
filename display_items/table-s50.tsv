@@ -1,0 +1,37 @@
+tiss_disp	dose_mg	nominal_timepoint	n	mean_concentration_ug_g	lloq_ug_g
+Caudate/putamen	3	3	12	4.649241666666667	0.02
+Caudate/putamen	1	3	12	2.0868583333333333	0.02
+Caudate/putamen	0.3	3	12	0.17766666666666667	0.02
+Caudate/putamen	0	3	6	0.02	0.02
+Thalamus	3	3	12	25.828475	0.02
+Thalamus	1	3	12	6.038683333333333	0.02
+Thalamus	0.3	3	12	2.740325	0.02
+Thalamus	0	3	6	0.02	0.02
+Cerebellar cortex	3	3	12	23.898725	0.02
+Cerebellar cortex	1	3	12	7.29355	0.02
+Cerebellar cortex	0.3	3	12	3.058375	0.02
+Cerebellar cortex	0	3	6	0.02	0.02
+Hippocampus	3	3	12	9.789191666666667	0.02
+Hippocampus	1	3	12	2.8387000000000002	0.02
+Hippocampus	0.3	3	12	0.6320916666666667	0.02
+Hippocampus	0	3	6	0.02	0.02
+Frontal cortex	3	3	12	12.381625	0.02
+Frontal cortex	1	3	12	3.412916666666667	0.02
+Frontal cortex	0.3	3	12	1.8753833333333332	0.02
+Frontal cortex	0	3	6	0.02	0.02
+Lumbar cord	3	3	12	92.7449	0.02
+Lumbar cord	1	3	12	24.656025	0.02
+Lumbar cord	0.3	3	12	8.794225	0.02
+Lumbar cord	0	3	6	0.02	0.02
+Cervical cord	3	3	12	11.308916666666667	0.02
+Cervical cord	1	3	12	4.493108333333333	0.02
+Cervical cord	0.3	3	12	1.5961833333333333	0.02
+Cervical cord	0	3	6	0.02	0.02
+Kidney	3	3	12	86.53618333333333	0.02
+Kidney	1	3	12	18.79195	0.02
+Kidney	0.3	3	12	4.72605	0.02
+Kidney	0	3	6	0.02	0.02
+Liver	3	3	12	74.64985	0.02
+Liver	1	3	12	25.644566666666666	0.02
+Liver	0.3	3	12	9.584041666666666	0.02
+Liver	0	3	6	0.02	0.02

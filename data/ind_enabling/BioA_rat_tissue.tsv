@@ -1,0 +1,379 @@
+Axolabs Run ID	Sample No.	Animal ID	Group	Dose Level  (mg)	Matrix	Nominal Timepoint (Day)	LLOQ  (ng/g)	Concentration (ng/g)
+AN422.0-24_01_AB01	57	121	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	58	122	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	59	123	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	60	171	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	61	172	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	62	173	1	0	Liver	4	20.0	BQL
+AN422.0-24_01_AB01	44	221	2	0.3	Liver	4	20.0	6,006.5
+AN422.0-24_01_AB01	45	222	2	0.3	Liver	4	20.0	9,551.2
+AN422.0-24_01_AB01	46	223	2	0.3	Liver	4	20.0	7,244.9
+AN422.0-24_01_AB01	47	224	2	0.3	Liver	4	20.0	9,529.2
+AN422.0-24_01_AB01	48	225	2	0.3	Liver	4	20.0	10,258.5
+AN422.0-24_01_AB01	49	226	2	0.3	Liver	4	20.0	6,713.5
+AN422.0-24_01_AB01	50	271	2	0.3	Liver	4	20.0	10,488.0
+AN422.0-24_01_AB01	51	272	2	0.3	Liver	4	20.0	12,516.8
+AN422.0-24_01_AB01	52	273	2	0.3	Liver	4	20.0	5,980.7
+AN422.0-24_01_AB01	53	274	2	0.3	Liver	4	20.0	6,328.8
+AN422.0-24_01_AB01	54	275	2	0.3	Liver	4	20.0	14,854.0
+AN422.0-24_01_AB01	55	276	2	0.3	Liver	4	20.0	15,536.4
+AN422.0-24_01_AB01	15	321	3	1.0	Liver	4	20.0	22,868.6
+AN422.0-24_01_AB01	16	322	3	1.0	Liver	4	20.0	26,743.1
+AN422.0-24_01_AB01	17	323	3	1.0	Liver	4	20.0	28,759.4
+AN422.0-24_01_AB01	18	324	3	1.0	Liver	4	20.0	21,686.6
+AN422.0-24_01_AB01	19	325	3	1.0	Liver	4	20.0	1,442.7
+AN422.0-24_01_AB01	20	326	3	1.0	Liver	4	20.0	11,699.6
+AN422.0-24_01_AB01	21	371	3	1.0	Liver	4	20.0	31,318.5
+AN422.0-24_01_AB01	22	372	3	1.0	Liver	4	20.0	30,154.4
+AN422.0-24_01_AB01	23	373	3	1.0	Liver	4	20.0	42,352.8
+AN422.0-24_01_AB01	24	374	3	1.0	Liver	4	20.0	32,743.4
+AN422.0-24_01_AB01	25	375R	3	1.0	Liver	4	20.0	44,838.8
+AN422.0-24_01_AB01	26	376	3	1.0	Liver	4	20.0	13,126.9
+AN422.0-24_01_AB01	27	421	4	3.0	Liver	4	20.0	48,025.0
+AN422.0-24_01_AB01	28	422	4	3.0	Liver	4	20.0	24,914.5
+AN422.0-24_01_AB01	29	423	4	3.0	Liver	4	20.0	65,867.8
+AN422.0-24_01_AB01	30	424	4	3.0	Liver	4	20.0	48,790.3
+AN422.0-24_01_AB01	31	425	4	3.0	Liver	4	20.0	73,734.4
+AN422.0-24_01_AB01	32	426	4	3.0	Liver	4	20.0	40,198.1
+AN422.0-24_01_AB01	33	471	4	3.0	Liver	4	20.0	110,877.7
+AN422.0-24_01_AB01	34	472	4	3.0	Liver	4	20.0	114,181.4
+AN422.0-24_01_AB01	35	473	4	3.0	Liver	4	20.0	134,785.3
+AN422.0-24_01_AB01	36	474	4	3.0	Liver	4	20.0	104,514.3
+AN422.0-24_01_AB01	42	475	4	3.0	Liver	4	20.0	117,056.0
+AN422.0-24_01_AB01	43	476	4	3.0	Liver	4	20.0	12,853.4
+AN422.0-24_01_AB01	105	121	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	106	122	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	107	123	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	102	171	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	103	172	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	104	173	1	0	Kidney	4	20.0	BQL
+AN422.0-24_01_AB01	114	221	2	0.3	Kidney	4	20.0	2,390.5
+AN422.0-24_01_AB01	115	222	2	0.3	Kidney	4	20.0	1,367.5
+AN422.0-24_01_AB01	116	223	2	0.3	Kidney	4	20.0	5,685.8
+AN422.0-24_01_AB01	117	224	2	0.3	Kidney	4	20.0	2,765.6
+AN422.0-24_01_AB01	118	225	2	0.3	Kidney	4	20.0	3,194.6
+AN422.0-24_01_AB01	119	226	2	0.3	Kidney	4	20.0	3,170.9
+AN422.0-24_01_AB01	108	271	2	0.3	Kidney	4	20.0	8,553.6
+AN422.0-24_01_AB01	109	272	2	0.3	Kidney	4	20.0	1,470.9
+AN422.0-24_01_AB01	110	273	2	0.3	Kidney	4	20.0	7,781.2
+AN422.0-24_01_AB01	111	274	2	0.3	Kidney	4	20.0	9,575.0
+AN422.0-24_01_AB01	112	275	2	0.3	Kidney	4	20.0	6,918.1
+AN422.0-24_01_AB01	113	276	2	0.3	Kidney	4	20.0	3,838.9
+AN422.0-24_01_AB01	72	321	3	1.0	Kidney	4	20.0	24,056.6
+AN422.0-24_01_AB01	73	322	3	1.0	Kidney	4	20.0	12,046.4
+AN422.0-24_01_AB01	74	323	3	1.0	Kidney	4	20.0	16,767.2
+AN422.0-24_01_AB01	75	324	3	1.0	Kidney	4	20.0	13,114.4
+AN422.0-24_01_AB02	293	325	3	1.0	Kidney	4	20.0	216.7
+AN422.0-24_01_AB01	77	326	3	1.0	Kidney	4	20.0	17,285.6
+AN422.0-24_01_AB01	78	371	3	1.0	Kidney	4	20.0	7,528.1
+AN422.0-24_01_AB01	79	372	3	1.0	Kidney	4	20.0	39,058.4
+AN422.0-24_01_AB01	80	373	3	1.0	Kidney	4	20.0	19,339.1
+AN422.0-24_01_AB01	81	374	3	1.0	Kidney	4	20.0	26,255.6
+AN422.0-24_01_AB01	82	375R	3	1.0	Kidney	4	20.0	7,785.3
+AN422.0-24_01_AB01	83	376	3	1.0	Kidney	4	20.0	42,050.0
+AN422.0-24_01_AB01	84	421	4	3.0	Kidney	4	20.0	59,475.3
+AN422.0-24_01_AB01	85	422	4	3.0	Kidney	4	20.0	60,164.0
+AN422.0-24_01_AB01	86	423	4	3.0	Kidney	4	20.0	62,946.7
+AN422.0-24_01_AB02	286	424	4	3.0	Kidney	4	20.0	114,332.6
+AN422.0-24_01_AB02	284	425	4	3.0	Kidney	4	20.0	73,796.4
+AN422.0-24_01_AB01	89	426	4	3.0	Kidney	4	20.0	49,520.7
+AN422.0-24_01_AB02	287	471	4	3.0	Kidney	4	20.0	157,140.8
+AN422.0-24_01_AB02	288	472	4	3.0	Kidney	4	20.0	95,217.1
+AN422.0-24_01_AB02	289	473	4	3.0	Kidney	4	20.0	113,952.1
+AN422.0-24_01_AB02	290	474	4	3.0	Kidney	4	20.0	118,054.0
+AN422.0-24_01_AB02	291	475	4	3.0	Kidney	4	20.0	106,002.7
+AN422.0-24_01_AB02	285	476	4	3.0	Kidney	4	20.0	27,831.8
+AN422.0-24_01_AB01	196	121	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	197	122	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	198	123	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	199	171	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	200	172	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	201	173	1	0	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	202	221	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	203	222	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	123.8
+AN422.0-24_01_AB01	204	223	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	205	224	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	392.6
+AN422.0-24_01_AB01	211	225	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	792.1
+AN422.0-24_01_AB01	212	226	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	42.0
+AN422.0-24_01_AB01	213	271	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	40.0
+AN422.0-24_01_AB01	214	272	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	280.2
+AN422.0-24_01_AB01	215	273	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	216	274	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	217	275	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	361.3
+AN422.0-24_01_AB01	218	276	2	0.3	Brain, caudate-putamen (BRCP)	4	20.0	BQL
+AN422.0-24_01_AB01	219	321	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	1,447.6
+AN422.0-24_01_AB01	220	322	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	6,941.3
+AN422.0-24_01_AB01	221	323	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	571.3
+AN422.0-24_01_AB01	222	324	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	376.5
+AN422.0-24_01_AB01	223	325	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	214.0
+AN422.0-24_01_AB01	224	326	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	24.0
+AN422.0-24_01_AB01	225	371	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	6,597.5
+AN422.0-24_01_AB01	226	372	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	115.7
+AN422.0-24_01_AB01	227	373	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	6,435.4
+AN422.0-24_01_AB01	228	374	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	1,635.5
+AN422.0-24_01_AB01	229	375R	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	614.1
+AN422.0-24_01_AB01	230	376	3	1.0	Brain, caudate-putamen (BRCP)	4	20.0	69.4
+AN422.0-24_01_AB01	183	421	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	953.2
+AN422.0-24_01_AB01	184	422	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	378.5
+AN422.0-24_01_AB01	185	423	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	19,958.8
+AN422.0-24_01_AB01	186	424	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	3,508.4
+AN422.0-24_01_AB01	187	425	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	1,867.5
+AN422.0-24_01_AB01	188	426	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	647.1
+AN422.0-24_01_AB01	189	471	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	9,947.0
+AN422.0-24_01_AB01	190	472	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	8,564.7
+AN422.0-24_01_AB01	191	473	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	4,497.3
+AN422.0-24_01_AB01	192	474	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	2,647.5
+AN422.0-24_01_AB01	193	475	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	2,607.8
+AN422.0-24_01_AB01	194	476	4	3.0	Brain, caudate-putamen (BRCP)	4	20.0	213.1
+AN422.0-24_01_AB02	28	121	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	29	122	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	30	123	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	31	171	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	32	172	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	33	173	1	0	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	80	221	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	20.1
+AN422.0-24_01_AB02	81	222	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	7,663.1
+AN422.0-24_01_AB02	82	223	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	23.0
+AN422.0-24_01_AB02	83	224	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	4,156.3
+AN422.0-24_01_AB02	84	225	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	7,611.9
+AN422.0-24_01_AB02	85	226	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	846.7
+AN422.0-24_01_AB02	86	271	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	2,627.3
+AN422.0-24_01_AB02	92	272	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	7,937.9
+AN422.0-24_01_AB02	93	273	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	840.9
+AN422.0-24_01_AB02	94	274	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB02	95	275	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	4,933.3
+AN422.0-24_01_AB02	96	276	2	0.3	Brain, cerebellar cortex (BRCE)	4	20.0	BQL
+AN422.0-24_01_AB03	28	321	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	17,234.6
+AN422.0-24_01_AB03	18	322	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	3,794.6
+AN422.0-24_01_AB03	29	323	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	14,925.5
+AN422.0-24_01_AB03	19	324	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	1,250.1
+AN422.0-24_01_AB02	161	325	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	3,290.4
+AN422.0-24_01_AB02	162	326	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	24.4
+AN422.0-24_01_AB02	168	371	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	7,155.9
+AN422.0-24_01_AB02	169	372	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	5,062.8
+AN422.0-24_01_AB02	170	373	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	7,622.6
+AN422.0-24_01_AB03	30	374	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	10,928.5
+AN422.0-24_01_AB03	31	375R	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	14,991.9
+AN422.0-24_01_AB03	20	376	3	1.0	Brain, cerebellar cortex (BRCE)	4	20.0	1,241.3
+AN422.0-24_01_AB02	234	421	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	14,236.8
+AN422.0-24_01_AB02	235	422	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	6,099.2
+AN422.0-24_01_AB02	236	423	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	48,607.6
+AN422.0-24_01_AB02	237	424	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	20,578.8
+AN422.0-24_01_AB02	238	425	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	5,198.5
+AN422.0-24_01_AB02	244	426	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	3,398.2
+AN422.0-24_01_AB02	245	471	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	28,544.1
+AN422.0-24_01_AB02	246	472	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	29,500.3
+AN422.0-24_01_AB02	247	473	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	42,450.5
+AN422.0-24_01_AB02	248	474	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	45,033.2
+AN422.0-24_01_AB02	249	475	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	39,581.5
+AN422.0-24_01_AB02	250	476	4	3.0	Brain, cerebellar cortex (BRCE)	4	20.0	3,556.0
+AN422.0-24_01_AB02	22	121	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	23	122	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	24	123	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	25	171	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	26	172	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	27	173	1	0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	68	221	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	69	222	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	2,749.9
+AN422.0-24_01_AB02	70	223	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	71	224	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	2,037.3
+AN422.0-24_01_AB02	72	225	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	9,958.9
+AN422.0-24_01_AB02	73	226	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	630.8
+AN422.0-24_01_AB02	74	271	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	320.8
+AN422.0-24_01_AB02	75	272	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	5,443.9
+AN422.0-24_01_AB02	76	273	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	276.2
+AN422.0-24_01_AB02	77	274	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	78	275	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	1,006.8
+AN422.0-24_01_AB02	79	276	2	0.3	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	145	321	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	4,805.8
+AN422.0-24_01_AB02	146	322	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	6,270.4
+AN422.0-24_01_AB02	147	323	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	4,609.3
+AN422.0-24_01_AB02	148	324	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	900.2
+AN422.0-24_01_AB02	149	325	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	503.6
+AN422.0-24_01_AB02	150	326	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	BQL
+AN422.0-24_01_AB02	151	371	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	2,151.5
+AN422.0-24_01_AB02	152	372	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	1,587.5
+AN422.0-24_01_AB02	153	373	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	7,391.8
+AN422.0-24_01_AB02	154	374	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	4,905.5
+AN422.0-24_01_AB02	155	375R	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	6,624.7
+AN422.0-24_01_AB02	156	376	3	1.0	Brain, frontal cortex (BRFC)	4	20.0	1,184.7
+AN422.0-24_01_AB02	222	421	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	6,475.1
+AN422.0-24_01_AB02	223	422	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	515.8
+AN422.0-24_01_AB02	224	423	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	42,573.6
+AN422.0-24_01_AB02	225	424	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	10,829.8
+AN422.0-24_01_AB02	226	425	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	6,869.2
+AN422.0-24_01_AB02	227	426	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	6,358.7
+AN422.0-24_01_AB02	228	471	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	18,100.8
+AN422.0-24_01_AB02	229	472	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	20,984.4
+AN422.0-24_01_AB02	230	473	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	14,806.6
+AN422.0-24_01_AB02	231	474	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	12,039.1
+AN422.0-24_01_AB02	232	475	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	8,737.0
+AN422.0-24_01_AB02	233	476	4	3.0	Brain, frontal cortex (BRFC)	4	20.0	289.4
+AN422.0-24_01_AB02	16	121	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	17	122	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	18	123	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	19	171	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	20	172	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	21	173	1	0	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	51	221	2	0.3	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	52	222	2	0.3	Brain, hippocampus (BRHI)	4	20.0	529.3
+AN422.0-24_01_AB02	53	223	2	0.3	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	54	224	2	0.3	Brain, hippocampus (BRHI)	4	20.0	821.1
+AN422.0-24_01_AB02	55	225	2	0.3	Brain, hippocampus (BRHI)	4	20.0	2,166.6
+AN422.0-24_01_AB02	56	226	2	0.3	Brain, hippocampus (BRHI)	4	20.0	367.9
+AN422.0-24_01_AB02	57	271	2	0.3	Brain, hippocampus (BRHI)	4	20.0	481.5
+AN422.0-24_01_AB02	58	272	2	0.3	Brain, hippocampus (BRHI)	4	20.0	732.8
+AN422.0-24_01_AB02	59	273	2	0.3	Brain, hippocampus (BRHI)	4	20.0	162.6
+AN422.0-24_01_AB02	60	274	2	0.3	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	61	275	2	0.3	Brain, hippocampus (BRHI)	4	20.0	2,243.3
+AN422.0-24_01_AB02	67	276	2	0.3	Brain, hippocampus (BRHI)	4	20.0	BQL
+AN422.0-24_01_AB02	128	321	3	1.0	Brain, hippocampus (BRHI)	4	20.0	2,662.2
+AN422.0-24_01_AB02	129	322	3	1.0	Brain, hippocampus (BRHI)	4	20.0	2,524.8
+AN422.0-24_01_AB02	130	323	3	1.0	Brain, hippocampus (BRHI)	4	20.0	4,203.7
+AN422.0-24_01_AB02	131	324	3	1.0	Brain, hippocampus (BRHI)	4	20.0	1,488.7
+AN422.0-24_01_AB02	132	325	3	1.0	Brain, hippocampus (BRHI)	4	20.0	364.1
+AN422.0-24_01_AB02	133	326	3	1.0	Brain, hippocampus (BRHI)	4	20.0	21.7
+AN422.0-24_01_AB02	134	371	3	1.0	Brain, hippocampus (BRHI)	4	20.0	3,087.9
+AN422.0-24_01_AB02	135	372	3	1.0	Brain, hippocampus (BRHI)	4	20.0	2,791.6
+AN422.0-24_01_AB02	136	373	3	1.0	Brain, hippocampus (BRHI)	4	20.0	5,368.3
+AN422.0-24_01_AB02	137	374	3	1.0	Brain, hippocampus (BRHI)	4	20.0	3,300.4
+AN422.0-24_01_AB02	143	375R	3	1.0	Brain, hippocampus (BRHI)	4	20.0	7,977.4
+AN422.0-24_01_AB02	144	376	3	1.0	Brain, hippocampus (BRHI)	4	20.0	273.6
+AN422.0-24_01_AB02	205	421	4	3.0	Brain, hippocampus (BRHI)	4	20.0	4,320.0
+AN422.0-24_01_AB02	206	422	4	3.0	Brain, hippocampus (BRHI)	4	20.0	794.7
+AN422.0-24_01_AB02	207	423	4	3.0	Brain, hippocampus (BRHI)	4	20.0	24,407.3
+AN422.0-24_01_AB02	208	424	4	3.0	Brain, hippocampus (BRHI)	4	20.0	10,829.6
+AN422.0-24_01_AB02	209	425	4	3.0	Brain, hippocampus (BRHI)	4	20.0	2,743.6
+AN422.0-24_01_AB02	210	426	4	3.0	Brain, hippocampus (BRHI)	4	20.0	2,838.6
+AN422.0-24_01_AB02	211	471	4	3.0	Brain, hippocampus (BRHI)	4	20.0	16,394.2
+AN422.0-24_01_AB02	212	472	4	3.0	Brain, hippocampus (BRHI)	4	20.0	13,187.9
+AN422.0-24_01_AB02	213	473	4	3.0	Brain, hippocampus (BRHI)	4	20.0	14,282.0
+AN422.0-24_01_AB02	219	474	4	3.0	Brain, hippocampus (BRHI)	4	20.0	10,792.1
+AN422.0-24_01_AB02	220	475	4	3.0	Brain, hippocampus (BRHI)	4	20.0	16,576.4
+AN422.0-24_01_AB02	221	476	4	3.0	Brain, hippocampus (BRHI)	4	20.0	303.9
+AN422.0-24_01_AB01	142	121	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	143	122	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	144	123	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	145	171	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	146	172	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	147	173	1	0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	148	221	2	0.3	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	149	222	2	0.3	Brain, thalamus (BRTH)	4	20.0	5,556.3
+AN422.0-24_01_AB01	150	223	2	0.3	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	151	224	2	0.3	Brain, thalamus (BRTH)	4	20.0	6,433.9
+AN422.0-24_01_AB01	157	225	2	0.3	Brain, thalamus (BRTH)	4	20.0	7,974.1
+AN422.0-24_01_AB01	158	226	2	0.3	Brain, thalamus (BRTH)	4	20.0	331.5
+AN422.0-24_01_AB01	159	271	2	0.3	Brain, thalamus (BRTH)	4	20.0	1,968.9
+AN422.0-24_01_AB01	160	272	2	0.3	Brain, thalamus (BRTH)	4	20.0	4,913.8
+AN422.0-24_01_AB01	161	273	2	0.3	Brain, thalamus (BRTH)	4	20.0	2,775.3
+AN422.0-24_01_AB01	162	274	2	0.3	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	163	275	2	0.3	Brain, thalamus (BRTH)	4	20.0	2,850.1
+AN422.0-24_01_AB01	164	276	2	0.3	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB02	203	321	3	1.0	Brain, thalamus (BRTH)	4	20.0	12,103.6
+AN422.0-24_01_AB02	126	322	3	1.0	Brain, thalamus (BRTH)	4	20.0	5,815.0
+AN422.0-24_01_AB02	204	323	3	1.0	Brain, thalamus (BRTH)	4	20.0	18,972.8
+AN422.0-24_01_AB02	127	324	3	1.0	Brain, thalamus (BRTH)	4	20.0	1,621.7
+AN422.0-24_01_AB01	169	325	3	1.0	Brain, thalamus (BRTH)	4	20.0	1,049.6
+AN422.0-24_01_AB01	170	326	3	1.0	Brain, thalamus (BRTH)	4	20.0	BQL
+AN422.0-24_01_AB01	171	371	3	1.0	Brain, thalamus (BRTH)	4	20.0	4,010.2
+AN422.0-24_01_AB01	172	372	3	1.0	Brain, thalamus (BRTH)	4	20.0	8,668.3
+AN422.0-24_01_AB01	173	373	3	1.0	Brain, thalamus (BRTH)	4	20.0	8,872.1
+AN422.0-24_01_AB01	174	374	3	1.0	Brain, thalamus (BRTH)	4	20.0	7,197.3
+AN422.0-24_01_AB01	175	375R	3	1.0	Brain, thalamus (BRTH)	4	20.0	2,712.1
+AN422.0-24_01_AB01	176	376	3	1.0	Brain, thalamus (BRTH)	4	20.0	1,421.5
+AN422.0-24_01_AB01	129	421	4	3.0	Brain, thalamus (BRTH)	4	20.0	25,911.9
+AN422.0-24_01_AB01	130	422	4	3.0	Brain, thalamus (BRTH)	4	20.0	1,183.3
+AN422.0-24_01_AB01	131	423	4	3.0	Brain, thalamus (BRTH)	4	20.0	87,738.0
+AN422.0-24_01_AB01	132	424	4	3.0	Brain, thalamus (BRTH)	4	20.0	22,122.4
+AN422.0-24_01_AB01	133	425	4	3.0	Brain, thalamus (BRTH)	4	20.0	25,679.3
+AN422.0-24_01_AB01	134	426	4	3.0	Brain, thalamus (BRTH)	4	20.0	1,848.6
+AN422.0-24_01_AB01	135	471	4	3.0	Brain, thalamus (BRTH)	4	20.0	9,840.4
+AN422.0-24_01_AB01	136	472	4	3.0	Brain, thalamus (BRTH)	4	20.0	35,398.3
+AN422.0-24_01_AB01	137	473	4	3.0	Brain, thalamus (BRTH)	4	20.0	51,347.5
+AN422.0-24_01_AB01	138	474	4	3.0	Brain, thalamus (BRTH)	4	20.0	21,678.2
+AN422.0-24_01_AB01	139	475	4	3.0	Brain, thalamus (BRTH)	4	20.0	18,395.3
+AN422.0-24_01_AB01	140	476	4	3.0	Brain, thalamus (BRTH)	4	20.0	8,798.5
+AN422.0-24_01_AB02	45	121	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	46	122	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	47	123	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	48	171	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	49	172	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	50	173	1	0	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	109	221	2	0.3	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	110	222	2	0.3	Spinal Cord, cervical	4	20.0	2,556.0
+AN422.0-24_01_AB02	111	223	2	0.3	Spinal Cord, cervical	4	20.0	BQL
+AN422.0-24_01_AB02	112	224	2	0.3	Spinal Cord, cervical	4	20.0	1,598.5
+AN422.0-24_01_AB02	118	225	2	0.3	Spinal Cord, cervical	4	20.0	5,322.8
+AN422.0-24_01_AB02	119	226	2	0.3	Spinal Cord, cervical	4	20.0	439.3
+AN422.0-24_01_AB02	120	271	2	0.3	Spinal Cord, cervical	4	20.0	942.5
+AN422.0-24_01_AB02	121	272	2	0.3	Spinal Cord, cervical	4	20.0	5,167.1
+AN422.0-24_01_AB02	122	273	2	0.3	Spinal Cord, cervical	4	20.0	474.2
+AN422.0-24_01_AB02	123	274	2	0.3	Spinal Cord, cervical	4	20.0	31.7
+AN422.0-24_01_AB02	124	275	2	0.3	Spinal Cord, cervical	4	20.0	2,551.4
+AN422.0-24_01_AB02	125	276	2	0.3	Spinal Cord, cervical	4	20.0	30.7
+AN422.0-24_01_AB02	186	321	3	1.0	Spinal Cord, cervical	4	20.0	8,972.4
+AN422.0-24_01_AB02	187	322	3	1.0	Spinal Cord, cervical	4	20.0	4,265.3
+AN422.0-24_01_AB02	193	323	3	1.0	Spinal Cord, cervical	4	20.0	4,852.2
+AN422.0-24_01_AB02	194	324	3	1.0	Spinal Cord, cervical	4	20.0	1,064.6
+AN422.0-24_01_AB02	195	325	3	1.0	Spinal Cord, cervical	4	20.0	1,038.1
+AN422.0-24_01_AB02	196	326	3	1.0	Spinal Cord, cervical	4	20.0	162.1
+AN422.0-24_01_AB02	197	371	3	1.0	Spinal Cord, cervical	4	20.0	4,917.9
+AN422.0-24_01_AB02	198	372	3	1.0	Spinal Cord, cervical	4	20.0	2,495.9
+AN422.0-24_01_AB03	40	373	3	1.0	Spinal Cord, cervical	4	20.0	11,724.9
+AN422.0-24_01_AB03	23	374	3	1.0	Spinal Cord, cervical	4	20.0	4,169.9
+AN422.0-24_01_AB02	201	375R	3	1.0	Spinal Cord, cervical	4	20.0	9,601.4
+AN422.0-24_01_AB02	202	376	3	1.0	Spinal Cord, cervical	4	20.0	652.6
+AN422.0-24_01_AB02	263	421	4	3.0	Spinal Cord, cervical	4	20.0	11,677.3
+AN422.0-24_01_AB02	264	422	4	3.0	Spinal Cord, cervical	4	20.0	1,558.5
+AN422.0-24_01_AB02	265	423	4	3.0	Spinal Cord, cervical	4	20.0	19,866.2
+AN422.0-24_01_AB02	266	424	4	3.0	Spinal Cord, cervical	4	20.0	7,987.7
+AN422.0-24_01_AB02	267	425	4	3.0	Spinal Cord, cervical	4	20.0	6,498.3
+AN422.0-24_01_AB02	268	426	4	3.0	Spinal Cord, cervical	4	20.0	2,968.6
+AN422.0-24_01_AB02	269	471	4	3.0	Spinal Cord, cervical	4	20.0	17,237.7
+AN422.0-24_01_AB02	270	472	4	3.0	Spinal Cord, cervical	4	20.0	17,550.0
+AN422.0-24_01_AB02	271	473	4	3.0	Spinal Cord, cervical	4	20.0	19,263.1
+AN422.0-24_01_AB02	272	474	4	3.0	Spinal Cord, cervical	4	20.0	10,127.3
+AN422.0-24_01_AB02	273	475	4	3.0	Spinal Cord, cervical	4	20.0	19,638.9
+AN422.0-24_01_AB02	274	476	4	3.0	Spinal Cord, cervical	4	20.0	1,333.4
+AN422.0-24_01_AB02	34	121	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	35	122	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	36	123	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	42	171	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	43	172	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	44	173	1	0	Spinal Cord, lumbar	4	20.0	BQL
+AN422.0-24_01_AB02	97	221	2	0.3	Spinal Cord, lumbar	4	20.0	73.3
+AN422.0-24_01_AB03	24	222	2	0.3	Spinal Cord, lumbar	4	20.0	28,355.6
+AN422.0-24_01_AB03	16	223	2	0.3	Spinal Cord, lumbar	4	20.0	2,426.3
+AN422.0-24_01_AB02	100	224	2	0.3	Spinal Cord, lumbar	4	20.0	4,264.2
+AN422.0-24_01_AB03	25	225	2	0.3	Spinal Cord, lumbar	4	20.0	25,826.1
+AN422.0-24_01_AB03	26	226	2	0.3	Spinal Cord, lumbar	4	20.0	9,481.8
+AN422.0-24_01_AB02	103	271	2	0.3	Spinal Cord, lumbar	4	20.0	5,168.0
+AN422.0-24_01_AB03	27	272	2	0.3	Spinal Cord, lumbar	4	20.0	18,699.0
+AN422.0-24_01_AB03	17	273	2	0.3	Spinal Cord, lumbar	4	20.0	1,082.5
+AN422.0-24_01_AB02	106	274	2	0.3	Spinal Cord, lumbar	4	20.0	118.5
+AN422.0-24_01_AB02	107	275	2	0.3	Spinal Cord, lumbar	4	20.0	7,168.4
+AN422.0-24_01_AB02	108	276	2	0.3	Spinal Cord, lumbar	4	20.0	2,867.0
+AN422.0-24_01_AB03	32	321	3	1.0	Spinal Cord, lumbar	4	20.0	49,771.2
+AN422.0-24_01_AB03	33	322	3	1.0	Spinal Cord, lumbar	4	20.0	20,285.2
+AN422.0-24_01_AB03	42	323	3	1.0	Spinal Cord, lumbar	4	20.0	66,235.2
+AN422.0-24_01_AB03	21	324	3	1.0	Spinal Cord, lumbar	4	20.0	4,723.7
+AN422.0-24_01_AB03	34	325	3	1.0	Spinal Cord, lumbar	4	20.0	14,085.0
+AN422.0-24_01_AB03	22	326	3	1.0	Spinal Cord, lumbar	4	20.0	287.2
+AN422.0-24_01_AB03	35	371	3	1.0	Spinal Cord, lumbar	4	20.0	30,522.5
+AN422.0-24_01_AB03	36	372	3	1.0	Spinal Cord, lumbar	4	20.0	20,735.7
+AN422.0-24_01_AB03	40	373	3	1.0	Spinal Cord, lumbar	4	20.0	11,724.9
+AN422.0-24_01_AB03	37	374	3	1.0	Spinal Cord, lumbar	4	20.0	45,825.8
+AN422.0-24_01_AB03	38	375R	3	1.0	Spinal Cord, lumbar	4	20.0	24,105.7
+AN422.0-24_01_AB03	39	376	3	1.0	Spinal Cord, lumbar	4	20.0	7,570.2
+AN422.0-24_01_AB02	251	421	4	3.0	Spinal Cord, lumbar	4	20.0	6,100.9
+AN422.0-24_01_AB02	252	422	4	3.0	Spinal Cord, lumbar	4	20.0	9,395.0
+AN422.0-24_01_AB02	253	423	4	3.0	Spinal Cord, lumbar	4	20.0	52,382.7
+AN422.0-24_01_AB02	254	424	4	3.0	Spinal Cord, lumbar	4	20.0	70,343.5
+AN422.0-24_01_AB02	255	425	4	3.0	Spinal Cord, lumbar	4	20.0	52,912.1
+AN422.0-24_01_AB02	256	426	4	3.0	Spinal Cord, lumbar	4	20.0	81,295.5
+AN422.0-24_01_AB02	257	471	4	3.0	Spinal Cord, lumbar	4	20.0	35,121.4
+AN422.0-24_01_AB03	44	472	4	3.0	Spinal Cord, lumbar	4	20.0	147,586.8
+AN422.0-24_01_AB03	45	473	4	3.0	Spinal Cord, lumbar	4	20.0	179,252.0
+AN422.0-24_01_AB03	46	474	4	3.0	Spinal Cord, lumbar	4	20.0	330,830.9
+AN422.0-24_01_AB03	47	475	4	3.0	Spinal Cord, lumbar	4	20.0	139,305.1
+AN422.0-24_01_AB03	41	476	4	3.0	Spinal Cord, lumbar	4	20.0	8,412.9

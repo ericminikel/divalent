@@ -1,0 +1,81 @@
+tiss_disp	dose_mg	nominal_timepoint	n	mean_concentration_ug_g	lloq_ug_g
+Putamen	200	1	8	5.2342125	0.02
+Putamen	200	28	4	2.3887	0.02
+Putamen	60	1	8	0.3193375	0.02
+Putamen	60	28	4	6.881925	0.02
+Putamen	20	1	8	0.0716625	0.02
+Putamen	20	28	4	0.171825	0.02
+Putamen	0	1	8	0.02	0.02
+Putamen	0	28	4	0.02	0.02
+Caudate	200	1	8	3.2815374999999998	0.02
+Caudate	200	28	4	0.33765	0.02
+Caudate	60	1	8	0.27671250000000003	0.02
+Caudate	60	28	4	0.283	0.02
+Caudate	20	1	8	0.07375	0.02
+Caudate	20	28	4	0.383	0.02
+Caudate	0	1	8	0.02	0.02
+Caudate	0	28	4	0.02	0.02
+Thalamus	200	1	8	1.8311375	0.02
+Thalamus	200	28	4	2.090125	0.02
+Thalamus	60	1	8	0.5021625	0.02
+Thalamus	60	28	4	0.220125	0.02
+Thalamus	20	1	8	0.0911375	0.02
+Thalamus	20	28	4	0.6687	0.02
+Thalamus	0	1	8	0.02	0.02
+Thalamus	0	28	4	0.02	0.02
+Cerebellar cortex	200	1	8	46.074412499999994	0.02
+Cerebellar cortex	200	28	4	26.203	0.02
+Cerebellar cortex	60	1	8	17.229737500000002	0.02
+Cerebellar cortex	60	28	4	15.290325000000001	0.02
+Cerebellar cortex	20	1	8	6.5235625	0.02
+Cerebellar cortex	20	28	4	7.415300000000001	0.02
+Cerebellar cortex	0	1	8	0.02	0.02
+Cerebellar cortex	0	28	4	0.02	0.02
+Hippocampus	200	1	8	23.1219375	0.02
+Hippocampus	200	28	4	11.769950000000001	0.02
+Hippocampus	60	1	8	7.9696125	0.02
+Hippocampus	60	28	4	4.70125	0.02
+Hippocampus	20	1	8	1.67395	0.02
+Hippocampus	20	28	4	2.44545	0.02
+Hippocampus	0	1	8	0.02	0.02
+Hippocampus	0	28	4	0.02	0.02
+Frontal cortex	200	1	8	28.874087499999998	0.02
+Frontal cortex	200	28	4	20.880475	0.02
+Frontal cortex	60	1	8	11.994950000000001	0.02
+Frontal cortex	60	28	4	16.395425	0.02
+Frontal cortex	20	1	8	3.722275	0.02
+Frontal cortex	20	28	4	2.797625	0.02
+Frontal cortex	0	1	8	0.02	0.02
+Frontal cortex	0	28	4	0.02	0.02
+Lumbar cord	200	1	8	99.141175	0.02
+Lumbar cord	200	28	4	20.78475	0.02
+Lumbar cord	60	1	8	25.116812499999998	0.02
+Lumbar cord	60	28	4	33.742875	0.02
+Lumbar cord	20	1	8	9.34905	0.02
+Lumbar cord	20	28	4	7.416125000000001	0.02
+Lumbar cord	0	1	8	0.02	0.02
+Lumbar cord	0	28	4	0.02	0.02
+Cervical cord	200	1	8	27.9999875	0.02
+Cervical cord	200	28	4	9.843725000000001	0.02
+Cervical cord	60	1	8	8.494775	0.02
+Cervical cord	60	28	4	7.556049999999999	0.02
+Cervical cord	20	1	8	3.756675	0.02
+Cervical cord	20	28	4	2.47705	0.02
+Cervical cord	0	1	8	0.02	0.02
+Cervical cord	0	28	4	0.02	0.02
+Kidney	200	1	8	60.911725000000004	0.02
+Kidney	200	28	4	18.5838	0.02
+Kidney	60	1	8	14.71505	0.02
+Kidney	60	28	4	3.56425	0.02
+Kidney	20	1	8	3.3954750000000002	0.02
+Kidney	20	28	4	1.10875	0.02
+Kidney	0	1	8	0.02	0.02
+Kidney	0	28	4	0.02	0.02
+Liver	200	1	8	233.4717875	0.02
+Liver	200	28	4	87.460625	0.02
+Liver	60	1	8	121.7231125	0.02
+Liver	60	28	4	41.075175	0.02
+Liver	20	1	8	52.672525	0.02
+Liver	20	28	4	17.761499999999998	0.02
+Liver	0	1	8	0.02	0.02
+Liver	0	28	4	0.02	0.02
