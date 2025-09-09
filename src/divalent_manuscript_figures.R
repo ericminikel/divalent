@@ -3632,50 +3632,50 @@ bioa_smry %>%
 write_supp_table(bioa_anno_out, 'PK measurements in dog, individual animals.')
 write_supp_table(bioa_smry_out, 'PK measurements in dog, summarized.')
 
+dog_organs = read_csv('data/ind_enabling/dog_organ_weights.csv', col_types=cols()) %>%
+  clean_names()
 
-# dog organ weights from our study - A-703-02 final report starting p. 873
-dog_brain_avg = (77.15  +75.07 + 74.37 + 75.23)/4 
-dog_liver_avg = (253.90  + 246.63 + 237.40  + 247.42)/4
-dog_kidney_avg = (50.322  + 55.873  + 54.287  + 54.387)/4
+dog_organs %>%
+  select(!matches('percent')) -> dog_organs_out
 
-# rat organ weights from our own study - see A-703-01 final report starting p. 733
-rat_brain_avg = (2.0139  + 2.0221  + 2.0154 + 2.0073)/4
-rat_liver_avg = (8.7777  + 9.0857  + 8.7077  + 9.9287)/4
-rat_kidney_avg = (2.2827  + 2.1097  + 2.1945 + 2.3923 )/4
+dog_organs_out %>%
+  summarize(across(matches('_g'), ~ mean(.x, na.rm=T))) %>%
+  pivot_longer(matches('_g')) %>%
+  mutate(organ = gsub('_.*','',name),
+         mean_mass_grams = value) %>%
+  select(organ, mean_mass_grams) -> dog_organ_means_out
 
-meta_tissues = tibble(meta_tissue = rep(c('Brain','Liver','Kidney'),times=2),
-                      species = rep(c('dog','rat'),each=3),
-                      mass_grams = c(dog_brain_avg, dog_liver_avg, dog_kidney_avg, 
-                                     rat_brain_avg, rat_liver_avg, rat_kidney_avg))
+write_supp_table(dog_organs_out, 'Body weight and organ weights, individual (dogs).')
+write_supp_table(dog_organ_means_out, 'Body weight and organ weights, mean (dogs).')
 
-# calculate medians for % dose retained
-bioa_smry_out %>%
+dog_organs %>%
+  select(animal_id, brain_weight_g, liver_weight_g, kidneys_weight_g) %>%
+  pivot_longer(cols=-animal_id) %>%
+  mutate(meta_tissue = str_to_title(gsub('s?_weight_g','',name))) %>%
+  select(animal_id, meta_tissue, mass_grams=value) -> organs_long
+
+bioa_anno %>%
   mutate(meta_tissue = case_when(tiss_disp=='Liver' ~ 'Liver',
                                  tiss_disp=='Kidney' ~ 'Kidney',
                                  TRUE ~ 'Brain')) %>%
-  inner_join(meta_tissues %>% filter(species=='dog'), by='meta_tissue') %>%
+  left_join(organs_long, by=c('animal_id','meta_tissue')) %>%
+  select(animal_id, dose_mg, nominal_timepoint, matrix, meta_tissue, mass_grams, concentration_ug_g) %>%
   filter(dose_mg > 0) %>%
-  group_by(meta_tissue, mass_grams, dose_mg, nominal_timepoint) %>%
+  mutate(proportion_dose_retained = (mass_grams * concentration_ug_g / 1000)/dose_mg) -> dose_retained_indiv
+  
+dose_retained_indiv %>%
+  group_by(meta_tissue, nominal_timepoint) %>%
   summarize(.groups='keep',
-            n_regions=n(),
-            median_conc = median(mean_concentration_ug_g),
-            mean_conc = mean(mean_concentration_ug_g),
-            min_conc = min(mean_concentration_ug_g),
-            max_conc = max(mean_concentration_ug_g)) %>%
+            n_animals = length(unique(animal_id)),
+            n_regions = length(unique(matrix)),
+            mean_proportion_dose_retained = mean(proportion_dose_retained)) %>%
   ungroup() %>%
-  mutate(proportion_dose_retained = (mass_grams * median_conc / 1000)/dose_mg) %>%
-  arrange(nominal_timepoint, meta_tissue, dose_mg) -> retained_by_dose
+  arrange(nominal_timepoint, meta_tissue) -> retained_by_organ
 
-retained_by_dose %>%
-  group_by(nominal_timepoint, meta_tissue) %>%
-  summarize(.groups='keep', 
-            across_n_dose_levels=n(),
-            mean_proportion_dose_retained = mean(proportion_dose_retained)) -> retained_by_dose_smry
+write_supp_table(dose_retained_indiv, 'Proportions of dose administered retained by dose level, tissue, timepoint, and individual animal (dogs).')
+write_supp_table(retained_by_organ, 'Proportions of dose administered retained, means by timepoint and tissue (dogs).')
 
-write_supp_table(retained_by_dose, 'Proportions of dose administered retained in each tissue by timepoint, dogs, by dose level.')
-write_supp_table(retained_by_dose_smry, 'Proportions of dose administered retained in each tissue by timepoint, dogs, summarized across dose levels.')
-
-dog_retained_by_dose_smry = retained_by_dose_smry
+dog_retained_by_organ = retained_by_organ
 
 # now that we've written out supp tables, subset to 28-day for figure
 
@@ -3819,48 +3819,60 @@ write_supp_table(bioa_anno_out, 'PK measurements in rat, individual animals.')
 write_supp_table(bioa_smry_out, 'PK measurements in rat, summarized.')
 
 
-# calculate medians for % dose retained
-bioa_smry_out %>%
+rat_organs = read_csv('data/ind_enabling/rat_organ_weights.csv', col_types=cols()) %>%
+  clean_names()
+
+rat_organs %>%
+  select(!matches('percent')) %>%
+  mutate(across(matches('_g'), ~ suppressWarnings(as.numeric(.x)))) -> rat_organs_out
+
+rat_organs_out %>%
+  summarize(across(matches('_g'), ~ mean(.x, na.rm=T))) %>%
+  pivot_longer(matches('_g')) %>%
+  mutate(organ = gsub('_.*','',name),
+         mean_mass_grams = value) %>%
+  select(organ, mean_mass_grams) -> rat_organ_means_out
+
+write_supp_table(rat_organs_out, 'Body weight and organ weights, individual (rats).')
+write_supp_table(rat_organ_means_out, 'Body weight and organ weights, mean (rats).')
+
+rat_organs %>%
+  select(animal_id, brain_weight_g, liver_weight_g, kidneys_weight_g) %>%
+  pivot_longer(cols=-animal_id) %>%
+  mutate(meta_tissue = str_to_title(gsub('s?_weight_g','',name))) %>%
+  select(animal_id, meta_tissue, mass_grams=value) %>%
+  mutate(mass_grams = suppressWarnings(as.numeric(mass_grams))) -> organs_long
+
+# for rats, unlike dogs, the BioA was done on TK animals for whom body weights were not collected.
+# therefore, we'll use the mean organ weights from in-study animals
+
+organs_long %>%
+  group_by(meta_tissue) %>%
+  summarize(.groups='keep', mass_grams = mean(mass_grams, na.rm=T)) %>%
+  ungroup() -> mean_rat_organ_weights
+
+bioa_anno %>%
   mutate(meta_tissue = case_when(tiss_disp=='Liver' ~ 'Liver',
                                  tiss_disp=='Kidney' ~ 'Kidney',
                                  TRUE ~ 'Brain')) %>%
-  inner_join(meta_tissues %>% filter(species=='rat'), by='meta_tissue') %>%
+  left_join(mean_rat_organ_weights, by=c('meta_tissue')) %>%
+  select(animal_id, dose_mg, nominal_timepoint, matrix, meta_tissue, mass_grams, concentration_ug_g) %>%
   filter(dose_mg > 0) %>%
-  group_by(meta_tissue, mass_grams, dose_mg, nominal_timepoint) %>%
+  mutate(proportion_dose_retained = (mass_grams * concentration_ug_g / 1000)/dose_mg) -> dose_retained_indiv
+
+dose_retained_indiv %>%
+  group_by(meta_tissue, nominal_timepoint) %>%
   summarize(.groups='keep',
-            n_regions=n(),
-            median_conc = median(mean_concentration_ug_g),
-            mean_conc = mean(mean_concentration_ug_g),
-            min_conc = min(mean_concentration_ug_g),
-            max_conc = max(mean_concentration_ug_g)) %>%
+            n_animals = length(unique(animal_id)),
+            n_regions = length(unique(matrix)),
+            mean_proportion_dose_retained = mean(proportion_dose_retained)) %>%
   ungroup() %>%
-  mutate(proportion_dose_retained = (mass_grams * median_conc / 1000)/dose_mg) %>%
-  arrange(nominal_timepoint, meta_tissue, dose_mg) -> retained_by_dose
+  arrange(nominal_timepoint, meta_tissue) -> retained_by_organ
 
-retained_by_dose %>%
-  group_by(nominal_timepoint, meta_tissue) %>%
-  summarize(.groups='keep', 
-            across_n_dose_levels=n(),
-            mean_proportion_dose_retained = mean(proportion_dose_retained)) -> retained_by_dose_smry
+write_supp_table(dose_retained_indiv, 'Proportions of dose administered retained by dose level, tissue, timepoint, and individual animal (rats).')
+write_supp_table(retained_by_organ, 'Proportions of dose administered retained, means by timepoint and tissue (rats).')
 
-write_supp_table(retained_by_dose, 'Proportions of dose administered retained in each tissue by timepoint, rats, by dose level.')
-write_supp_table(retained_by_dose_smry, 'Proportions of dose administered retained in each tissue by timepoint, rats, summarized across dose levels.')
-
-rat_retained_by_dose_smry = retained_by_dose_smry
-
-# calculate medians for % dose retained
-bioa_smry_out %>%
-  filter(!(tiss_disp %in% c('Liver','Kidney'))) %>%
-  group_by(dose_mg, nominal_timepoint) %>%
-  summarize(.groups='keep',
-            n_tissues=n(),
-            median_conc = median(mean_concentration_ug_g),
-            mean_conc = mean(mean_concentration_ug_g),
-            min_conc = min(mean_concentration_ug_g),
-            max_conc = max(mean_concentration_ug_g)) %>%
-  ungroup() -> brain_conc_by_dose
-
-write_supp_table(brain_conc_by_dose, 'Concentrations by dose and timepoint summarized across brain regions for rats.')
+rat_retained_by_organ = retained_by_organ
 
 # now that we've written out supp tables, subset to 3-day for figure
 
@@ -3910,9 +3922,9 @@ silence_is_golden = dev.off()
 }
 ### end Figure 7 ####
 
-rbind(cbind(dog_retained_by_dose_smry,species='dog'),
-cbind(rat_retained_by_dose_smry,species='rat')) %>%
-  select(-across_n_dose_levels) %>%
+rbind(cbind(dog_retained_by_organ,species='dog'),
+cbind(rat_retained_by_organ,species='rat')) %>%
+  select(-n_animals, -n_regions) %>%
   pivot_wider(names_from=c(species,nominal_timepoint), values_from=mean_proportion_dose_retained) -> table_2
 
 
@@ -3940,8 +3952,25 @@ plasma %>%
             mean=mean(concentration_ug_g)) %>%
   ungroup() -> plasma_smry
 
+dog_organs_out %>%
+  summarize(mean(terminal_bw_kg, na.rm=T)) %>%
+  pull() -> mean_terminal_bw_kg
+
+# https://www.merckvetmanual.com/circulatory-system/blood-groups-and-blood-transfusions-in-dogs-and-cats/blood-transfusions-in-dogs-and-cats
+# says 80-90 mL/kg total blood volume, take 85 as a midpoint
+
+blood_ml_per_kg = 85
+plasma_smry %>%
+  filter(dose_mg > 0) %>%
+  mutate(proportion_dose_in_blood = blood_ml_per_kg * mean_terminal_bw_kg * mean / 1000 / dose_mg) %>% 
+  group_by(hours) %>%
+  summarize(.groups='keep', estimated_proportion_dose_in_blood = mean(proportion_dose_in_blood)) %>%
+  ungroup() -> proportion_dose_in_blood_by_hours
+
+
 write_supp_table(plasma, 'Plasma toxicokinetic analysis, dogs, individual.')
 write_supp_table(plasma_smry, 'Plasma toxicokinetic analysis, dogs, summarized.')
+write_supp_table(proportion_dose_in_blood_by_hours, 'Estimated proportion dose in blood, dogs, summarized.')
 
 xlims = c(0.4, 100)
 xats = unique(plasma$hours)
@@ -4083,6 +4112,28 @@ plasma %>%
 
 write_supp_table(plasma, 'Plasma toxicokinetic analysis, rats, individual.')
 write_supp_table(plasma_smry, 'Plasma toxicokinetic analysis, rats, summarized.')
+
+
+
+rat_organs_out %>%
+  summarize(mean(terminal_bw_g, na.rm=T)) %>%
+  pull() -> mean_terminal_bw_g
+
+# https://iacuc.ucsf.edu/sites/g/files/tkssra751/f/wysiwyg/GUIDELINE%20-%20Blood%20Collection%20-%20Rat.pdf
+# says 64 mL/kg total blood volume
+
+blood_ml_per_kg = 64
+plasma_smry %>%
+  filter(dose_mg > 0) %>%
+  mutate(proportion_dose_in_blood = blood_ml_per_kg * (mean_terminal_bw_g/1000) * mean / 1000 / dose_mg) %>% 
+  group_by(hours) %>%
+  summarize(.groups='keep', estimated_proportion_dose_in_blood = mean(proportion_dose_in_blood)) %>%
+  ungroup() -> proportion_dose_in_blood_by_hours
+
+write_supp_table(proportion_dose_in_blood_by_hours, 'Estimated proportion dose in blood, rats, summarized.')
+
+
+
 
 xlims = c(0.4, 100)
 xats = unique(plasma$hours)
