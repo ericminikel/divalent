@@ -2896,7 +2896,6 @@ if ('figure-s5'=='figure-s5') {
 
 
 
-
 ## Figure 6 - durability, dosing regimen, PD/PK, tox #### 
 if ('figure-6'=='figure-6') {
   tell_user('done.\nCreating Figure 6...')
@@ -2919,6 +2918,20 @@ if ('figure-6'=='figure-6') {
   ### PD/PK study ####
   pdpk_qpcr_studies = c('CMR-2521') #
   
+  pdpk_meta = tribble(
+    ~dose_ug, ~color,
+    0,    '#A9A9A9',
+    3,    '#d4b9da',
+    10,   '#c994c7',
+    35,   '#df65b0',
+    104,  '#dd1c77',
+    348,  '#980043'
+  )
+  
+  pk = read_tsv('data/analytic/pk.tsv', col_types=cols())
+  
+  mouse_brain_weight = 0.4 # grams
+  
   qpcr %>%
     filter(study_id %in% pdpk_qpcr_studies) %>%
     filter(target=='PRNP') %>%
@@ -2938,56 +2951,81 @@ if ('figure-6'=='figure-6') {
     mutate(pseudo_ug = case_when(dose_ug == 0 ~ 1, 
                                  TRUE ~ dose_ug)) %>%
     inner_join(meta, by='tx') %>%
-    mutate(residual = mean_twoddct / mean(mean_twoddct[sample_group=='aCSF'])) -> pdpk
+    mutate(residual = mean_twoddct / mean(mean_twoddct[sample_group=='aCSF'])) %>%
+    left_join(pk %>% mutate(id=as.character(id)), by=c('animal'='id')) %>%
+    mutate(plotconc_ng_g = coalesce(concentration_ng_g,lloq_ng_g)) %>%
+    left_join(pdpk_meta, by='dose_ug', suffix=c('_tx','_dose')) %>%
+    mutate(dose_retained = case_when(dose_ug == 0 ~ NA,
+                                     TRUE ~ concentration_ng_g / 1000 * mouse_brain_weight / dose_ug)) -> pdpk
   
+  # double check annotations
+  # sum(pdpk$dose_dio != pdpk$dose_nmole) # 0, good
+    
   pdpk %>%
-    group_by(dose_ug, pseudo_ug, color) %>%
+    group_by(dose_ug, pseudo_ug, color_tx, color_dose) %>%
     summarize(.groups='keep',
               n=n(),
-              mean = mean(residual),
-              l95  = lower(residual),
-              u95  = upper(residual)) %>%
+              pd_mean =  mean(residual),
+              pd_l95  = lower(residual),
+              pd_u95  = upper(residual),
+              pk_llq = mean(lloq_ng_g),
+              pk_mean =  mean(plotconc_ng_g, na.rm=T),
+              pk_l95  = lower(plotconc_ng_g),
+              pk_u95  = upper(plotconc_ng_g),
+              retained_mean = mean(dose_retained, na.rm=T),
+              retained_l95 = lower(dose_retained),
+              retained_u95 = upper(dose_retained)) %>%
     ungroup() -> pdpk_smry
   
+  
   par(mar=c(3,3.5,2,2))
-  xlims = c(0.7, 500)
-  xats = rep(2:9, 4) * rep(10^(0:3),each=8)
-  xbigs = 10^(0:3)
-  xlabs = nmol_to_ug(c(0.2, 1, 5))
-  xlablabs = xlabs
-  ylims = c(0, 1.25)
+  xlims = c(7, 20000)
+  xats = rep(2:9, 6) * rep(10^(0:5),each=8)
+  xbigs = 10^(0:5)
+  xbiglabs = c('1 ng/g','10 ng/g','100 ng/g','1 µg/g','10 µg/g','100 µg/g')
+  ylims = c(0, 1.125)
   yats = 0:6/4
   ybigs = 0:2/2
   ybiglabs = percent(0:2/2)
   plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
   abline(h=1, lty=3)
   axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+  axis(side=1, at=xbigs, lwd=0, labels=xbiglabs, line=-0.5, cex.axis=0.8)
   axis(side=1, at=xats, tck=-0.02, labels=NA)
-  axis(side=1, at=pdpk_smry$pseudo_ug, lwd=0, line=-0.75, labels=pdpk_smry$dose_ug, cex.axis=0.8)
-  mtext(side=1, line=1.5, text='dose (µg)', cex=0.8)
+  abline(v=pdpk_smry$pk_llq[1], lty=3)
+  mtext(side=3, at=pdpk_smry$pk_llq[1], text='LLQ', cex=0.6)
+  mtext(side=1, line=1.5, text='drug accumulation', cex=0.8)
   mtext(side=2, line=2.25, text=expression(residual~italic(PRNP)), cex=0.7)
   axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
   axis(side=2, at=yats, tck=-0.02, labels=NA)
   axis(side=2, at=ybigs, tck=-0.05, labels=NA)
   axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.75, cex.axis=0.8)
-  axis.break(axis=1, breakpos=1.5, style='slash')
-  
-  points(pdpk$pseudo_ug, pdpk$residual, pch=19, col=alpha(pdpk$color, ci_alpha))
-  
-  barlogwidth = 1.3
-  segments(x0=pdpk_smry$pseudo_ug/barlogwidth,
-           x1=pdpk_smry$pseudo_ug*barlogwidth,
-           y0=pdpk_smry$mean, col=pdpk_smry$color, lwd=2)
-  arrows(x0=pdpk_smry$pseudo_ug, y0=pdpk_smry$l95, y1=pdpk_smry$u95, code=3, angle=90, length=0.05, col=pdpk_smry$color)
+  points(pdpk$plotconc_ng_g, pdpk$residual, pch=19, col=alpha(pdpk$color_dose, ci_alpha))
+  segments(x0=pdpk_smry$pk_l95, x1=pdpk_smry$pk_u95, y0=pdpk_smry$pd_mean, col=pdpk_smry$color_dose, lwd=2)
+  segments(x0=pdpk_smry$pk_mean, y0=pdpk_smry$pd_l95, y1=pdpk_smry$pd_u95, col=pdpk_smry$color_dose, lwd=2)
+  dr = drm(residual ~ concentration_ng_g, data=pdpk %>% filter(dose_ug > 0), fct=LL.4(fixed=c(b=NA,c=0,d=1,e=NA)))
+  ic50 = as.numeric(dr$coefficients['e:(Intercept)'])
+  x = 10^seq(0,5,.01)
+  y = predict(dr, newdata=data.frame(concentration_ng_g=x))
+  points(x,y,type='l',lwd=1,col='#000000')
   par(xpd=T)
-  text(pdpk_smry$pseudo_ug, pdpk_smry$mean+0.05, pos=4, col='#000000', cex=0.6, labels=paste0('   ',percent(pdpk_smry$mean,digits=1)))
+  text(x=pdpk_smry$pk_mean*1.17, y=pdpk_smry$pd_mean+.05, labels=paste(pdpk_smry$dose_ug, 'µg'), col='#000000', adj=c(0,0), srt=20, cex=.6)
   par(xpd=F)
-  m = drm(residual ~ dose_ug, data=pdpk, fct=LL.4(fixed=c(b=NA,c=0,d=1,e=NA)))
-  x = 2:500
-  y = predict(m, newdata=data.frame(dose_ug=x))
-  pdpk_smry %>% filter(dose_ug > 0) %>% slice(1) %>% pull(color) -> active_color 
-  points(x, y, col=active_color, type='l', lwd=0.5)
-  mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
+  mtext(side=3, adj=-0.2, text=LETTERS[panel], line=0.5); panel = panel + 1
+  
+  summary(dr)$coefficients %>%
+    as_tibble(rownames='parameter') %>%
+    mutate(description = case_when(grepl('^b',parameter) ~ "Hill's slope",
+                                   grepl('^e',parameter) ~ "IC50 (ng/g)")) %>%
+    rename(estimate = `Estimate`,
+           se = `Std. Error`,
+           t_value = `t-value`,
+           p_value = `p-value`) %>%
+    select(parameter, description, estimate, se, t_value, p_value) -> dr_out
+  
+  write_supp_table(dr_out, 'PD/PK model fit coefficients.')
+  
+  
   
   ### durability 1 ####
   par(mar=c(3,4,2,1))
@@ -3158,6 +3196,145 @@ silence_is_golden = dev.off()
 }
 
 
+
+
+
+## Figure S8 - more analyses about dose-response PD/PK ####
+if ('figure-s8'=='figure-s8') {
+  tell_user('done.\nCreating Figure S8...')
+  png('display_items/figure-s08.png',width=6.5*resx,height=2.5*resx,res=resx)
+  
+  
+  par(mfrow = c(1,3))
+  
+  panel = 1
+  
+  par(mar=c(3,3.5,2,2))
+  xlims = c(0.7, 500)
+  xats = rep(2:9, 4) * rep(10^(0:3),each=8)
+  xbigs = 10^(0:3)
+  xlabs = nmol_to_ug(c(0.2, 1, 5))
+  xlablabs = xlabs
+  ylims = c(0, 1.25)
+  yats = 0:6/4
+  ybigs = 0:2/2
+  ybiglabs = percent(0:2/2)
+  plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+  abline(h=1, lty=3)
+  axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+  axis(side=1, at=xats, tck=-0.02, labels=NA)
+  axis(side=1, at=pdpk_smry$pseudo_ug, lwd=0, line=-0.5, labels=pdpk_smry$dose_ug, cex.axis=0.8)
+  mtext(side=1, line=1.5, text='dose (µg)', cex=0.8)
+  mtext(side=2, line=2.25, text=expression(residual~italic(PRNP)), cex=0.7)
+  axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
+  axis(side=2, at=yats, tck=-0.02, labels=NA)
+  axis(side=2, at=ybigs, tck=-0.05, labels=NA)
+  axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.25, cex.axis=0.8)
+  axis.break(axis=1, breakpos=1.5, style='slash')
+  points(pdpk$pseudo_ug, pdpk$residual, pch=19, col=alpha(pdpk$color_dose, ci_alpha))
+  barlogwidth = 1.3
+  segments(x0=pdpk_smry$pseudo_ug/barlogwidth,
+           x1=pdpk_smry$pseudo_ug*barlogwidth,
+           y0=pdpk_smry$pd_mean, col=pdpk_smry$color_dose, lwd=2)
+  arrows(x0=pdpk_smry$pseudo_ug, y0=pdpk_smry$pd_l95, y1=pdpk_smry$pd_u95, code=3, angle=90, length=0.05, col=pdpk_smry$color_dose)
+  par(xpd=T)
+  text(pdpk_smry$pseudo_ug, pdpk_smry$pd_mean+0.05, pos=4, col='#000000', cex=0.6, labels=paste0('   ',percent(pdpk_smry$pd_mean,digits=1)))
+  par(xpd=F)
+  m = drm(residual ~ dose_ug, data=pdpk, fct=LL.4(fixed=c(b=NA,c=0,d=1,e=NA)))
+  x = 2:500
+  y = predict(m, newdata=data.frame(dose_ug=x))
+  pdpk_smry %>% filter(dose_ug > 0) %>% slice(1) %>% pull(color_dose) -> active_color 
+  points(x, y, col=active_color, type='l', lwd=0.5)
+  mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
+  
+  
+  
+  
+  par(mar=c(3,3.5,2,2))
+  xlims = c(0.7, 500)
+  xats = rep(2:9, 4) * rep(10^(0:3),each=8)
+  xbigs = 10^(0:3)
+  xlabs = nmol_to_ug(c(0.2, 1, 5))
+  xlablabs = xlabs
+  ylims = c(7, 20000)
+  yats = rep(2:9, 6) * rep(10^(0:5),each=8)
+  ybigs = 10^(0:5)
+  ybiglabs = gsub(' ','\n',c('1 ng/g','10 ng/g','100 ng/g','1 µg/g','10 µg/g','100 µg/g'))
+  plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='xy')
+  abline(h=1, lty=3)
+  axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+  axis(side=1, at=xats, tck=-0.02, labels=NA)
+  axis(side=1, at=pdpk_smry$pseudo_ug, lwd=0, line=-0.5, labels=pdpk_smry$dose_ug, cex.axis=0.8)
+  mtext(side=1, line=1.5, text='dose (µg)', cex=0.8)
+  mtext(side=2, line=2.5, text='drug accumulation', cex=0.7)
+  axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
+  axis(side=2, at=yats, tck=-0.02, labels=NA)
+  axis(side=2, at=ybigs, tck=-0.05, labels=NA)
+  axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.25, cex.axis=0.8)
+  axis.break(axis=1, breakpos=1.5, style='slash')
+  abline(h=pdpk_smry$pk_llq[1], lty=3)
+  mtext(side=4, at=pdpk_smry$pk_llq[1], text='LLQ', cex=0.6, las=2)
+  points(pdpk$pseudo_ug, pdpk$plotconc_ng_g, pch=19, col=alpha(pdpk$color_dose, ci_alpha))
+  barlogwidth = 1.3
+  segments(x0=pdpk_smry$pseudo_ug/barlogwidth,
+           x1=pdpk_smry$pseudo_ug*barlogwidth,
+           y0=pdpk_smry$pk_mean, col=pdpk_smry$color_dose, lwd=2)
+  arrows(x0=pdpk_smry$pseudo_ug, y0=pdpk_smry$pk_l95, y1=pdpk_smry$pk_u95, code=3, angle=90, length=0.05, col=pdpk_smry$color_dose)
+  m = lm(log(concentration_ng_g) ~ log(dose_ug), data=pdpk %>% filter(dose_ug > 0))
+  x = 2:500
+  y = exp(predict(m, newdata=data.frame(dose_ug=x)))
+  pdpk_smry %>% filter(dose_ug > 0) %>% slice(1) %>% pull(color_dose) -> active_color 
+  points(x, y, col=active_color, type='l', lwd=0.5)
+  mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
+  
+  
+  
+  par(mar=c(3,3.5,2,2))
+  xlims = c(0.7, 500)
+  xats = rep(2:9, 4) * rep(10^(0:3),each=8)
+  xbigs = 10^(0:3)
+  xlabs = nmol_to_ug(c(0.2, 1, 5))
+  xlablabs = xlabs
+  ylims = c(0, .08)
+  yats = seq(0, .1, .005)
+  ybigs = seq(0, .1, .01)
+  ybiglabs = percent(ybigs)
+  plot(NA, NA, xlim=xlims, ylim=ylims, axes=F, ann=F, xaxs='i', yaxs='i', log='x')
+  abline(h=1, lty=3)
+  axis(side=1, at=xbigs, tck=-0.05, labels=NA)
+  axis(side=1, at=xats, tck=-0.02, labels=NA)
+  axis(side=1, at=pdpk_smry$pseudo_ug, lwd=0, line=-0.5, labels=pdpk_smry$dose_ug, cex.axis=0.8)
+  mtext(side=1, line=1.5, text='dose (µg)', cex=0.8)
+  mtext(side=2, line=2.25, text='dose retained in brain (%)', cex=0.7)
+  axis(side=2, at=ylims, lwd.ticks=0, labels=NA)
+  axis(side=2, at=yats, tck=-0.02, labels=NA)
+  axis(side=2, at=ybigs, tck=-0.05, labels=NA)
+  axis(side=2, at=ybigs, lwd=0, labels=ybiglabs, las=2, line=-0.25, cex.axis=0.8)
+  axis.break(axis=1, breakpos=1.5, style='slash')
+  abline(h=pdpk_smry$pk_llq[1], lty=3)
+  mtext(side=4, at=pdpk_smry$pk_llq[1], text='LLQ', cex=0.6, las=2)
+  points(pdpk$pseudo_ug, pdpk$dose_retained, pch=19, col=alpha(pdpk$color_dose, ci_alpha))
+  barlogwidth = 1.3
+  segments(x0=pdpk_smry$pseudo_ug/barlogwidth,
+           x1=pdpk_smry$pseudo_ug*barlogwidth,
+           y0=pdpk_smry$retained_mean, col=pdpk_smry$color_dose, lwd=2)
+  arrows(x0=pdpk_smry$pseudo_ug, y0=pdpk_smry$retained_l95, y1=pdpk_smry$retained_u95, code=3, angle=90, length=0.05, col=pdpk_smry$color_dose)
+  # m = lm(dose_retained ~ dose_ug, data=pdpk %>% filter(dose_ug > 0))
+  # summary(m) # marginal, P=0.0379 and small effect size
+  mtext(side=3, adj=-0.0, text=LETTERS[panel], line=0.5); panel = panel + 1
+  
+  pdpk %>%
+    select(study_id, animal, genotype, sex, days_harvest, dose_ug, residual, concentration_ng_g, lloq_ng_g, dose_retained) -> pdpk_out
+  write_supp_table(pdpk_out, 'PD/PK in humanized mouse, individual.')
+  
+  pdpk_smry %>%
+    select(-color_tx, -color_dose) -> pdpk_smry_out
+  write_supp_table(pdpk_smry_out, 'PD/PK in humanized mouse, summarized.')
+  
+  silence_is_golden = dev.off()
+}
+
+
 xes %>%
   distinct(tx, dose_dio, dosing_regimen) %>%
   mutate(offset = row_number()) %>%
@@ -3233,12 +3410,12 @@ repeatdose_qpcr %>%
 # points(x=repeatdose_qpcr$x, y=pmin(repeatdose_qpcr$residual, max(ylims)), pch=21, col=repeatdose_qpcr$color, bg='#FFFFFF', cex=0.5)
 
 
-## Figure S9 - regional repeat dose ####
 
-## Figure S9 - other miscellanea ####
-if ('figure-s9'=='figure-s9') {
-  tell_user('done.\nCreating Figure S9...')
-  png('display_items/figure-s09.png',width=3.25*resx,height=6.0*resx,res=resx)
+
+## Figure S10 - other miscellanea ####
+if ('figure-s10'=='figure-s10') {
+  tell_user('done.\nCreating Figure S10...')
+  png('display_items/figure-s10.png',width=3.25*resx,height=6.0*resx,res=resx)
   
   layout_matrix = matrix(c(1,1,
                            1,1,
@@ -3424,10 +3601,10 @@ write_supp_table(elisa_qc_summary_stats, 'ELISA QC performance summarized across
 
 
 
-## Figure S8 - durability for 2439-s2 & s5 ####
-if ('figure-s8'=='figure-s8') {
-  tell_user('done.\nCreating Figure S8...')
-  png('display_items/figure-s08.png',width=6.5*resx,height=2.5*resx,res=resx)
+## Figure S9 - durability for 2439-s2 & s5 ####
+if ('figure-s9'=='figure-s9') {
+  tell_user('done.\nCreating Figure S9...')
+  png('display_items/figure-s09.png',width=6.5*resx,height=2.5*resx,res=resx)
   
   layout_matrix = matrix(1:2, nrow=1, byrow=T)
   layout(layout_matrix)
@@ -3929,10 +4106,10 @@ cbind(rat_retained_by_organ,species='rat')) %>%
 
 
 
-## Figure S11 - TK & CSF ####
-if ('figure-s11'=='figure-s11') {
-  tell_user('done.\nCreating Figure S11...')
-  png('display_items/figure-s11.png',width=6.5*resx,height=6.0*resx,res=resx)
+## Figure S12 - TK & CSF ####
+if ('figure-s12'=='figure-s12') {
+  tell_user('done.\nCreating Figure S12...')
+  png('display_items/figure-s12.png',width=6.5*resx,height=6.0*resx,res=resx)
   
   par(mfrow=c(2,2))
 
@@ -4265,10 +4442,10 @@ silence_is_golden = dev.off()
 
 
 
-## Figure S10 - manufacturing process ####
-if ('figure-s10'=='figure-s10') {
-  tell_user('done.\nCreating Figure S10...')
-  png('display_items/figure-s10.png',width=6.5*resx,height=5.0*resx,res=resx)
+## Figure S11 - manufacturing process ####
+if ('figure-s11'=='figure-s11') {
+  tell_user('done.\nCreating Figure S11...')
+  png('display_items/figure-s11.png',width=6.5*resx,height=5.0*resx,res=resx)
   
   par(mfrow=c(1,1))
   
