@@ -3892,8 +3892,9 @@ bioa_smry %>%
 #mtext(side=2, line=1, las=2, at=timepoint_tranches$meany, text=paste0(timepoint_tranches$nominal_timepoint, 'd'), cex=0.8)
 mtext(side=2, line=0.25, at=matrix_tranches$meany, text=matrix_tranches$tiss_disp, cex=0.7, las=2)
 
-abline(v=0.5, col=ic50_col, lwd=1)
-mtext(side=3, at=0.5, col=ic50_col, cex=0.8, text='est. IC50')
+est_ic50 = dr_out$estimate[dr_out$parameter=='e:(Intercept)'] / 1000 # convert ng/g to ug/g
+abline(v=est_ic50, col=ic50_col, lwd=1)
+mtext(side=3, at=est_ic50, col=ic50_col, cex=0.8, text='est. IC50')
 
 mtext(side=3, at=0.00005, line=0.25, text=paste0(LETTERS[panel], '    dog'), cex=1.0); panel = panel + 1
 
@@ -4086,8 +4087,8 @@ bioa_smry %>%
 #mtext(side=2, line=1, las=2, at=timepoint_tranches$meany, text=paste0(timepoint_tranches$nominal_timepoint, 'd'), cex=0.8)
 mtext(side=2, line=0.25, at=matrix_tranches$meany, text=matrix_tranches$tiss_disp, cex=0.7, las=2)
 
-abline(v=0.5, col=ic50_col, lwd=1)
-mtext(side=3, at=0.5, col=ic50_col, cex=0.8, text='est. IC50')
+abline(v=est_ic50, col=ic50_col, lwd=1)
+mtext(side=3, at=est_ic50, col=ic50_col, cex=0.8, text='est. IC50')
 
 par(xpd=T)
 legend(x=100,y=18, paste0(dose_meta$dose_mg, ' mg'), title='dose', bty='n', col=dose_meta$color, pch=15, cex=0.6)
