@@ -2914,7 +2914,21 @@ if ('figure-6'=='figure-6') {
   raster_panel = image_convert(image_read('received/oligo_scaffolds_2439seq.png'),'png')
   plot(as.raster(raster_panel))
   mtext(side=3, adj=0.05, text=LETTERS[panel], line=0.0); panel = panel + 1
-  
+  # and a legend in A for the panels below it
+  durability_study1 = c('CMR-2371') 
+  study %>%
+    filter(study_id %in% durability_study1) %>%
+    distinct(tx) %>%
+    inner_join(meta, by='tx') %>% 
+    filter(display_tx %in% c('2439-s4','none','-')) %>%
+    select(color, display_tx) -> leg
+  par(xpd=T)
+  legxmin = par()$usr[1]
+  legxmax = par()$usr[2]
+  legymin = par()$usr[3]
+  legymax = par()$usr[4]
+  legend(x=legxmin, y=legymin-(legymax-legymin)/2.5, horiz=T, bty='n', cex=1.2, leg$display_tx, col=leg$color, text.col=leg$color, pch=15)
+  par(xpd=F)
   ### PD/PK study ####
   pdpk_qpcr_studies = c('CMR-2521') #
   
