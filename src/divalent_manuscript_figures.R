@@ -420,6 +420,10 @@ huseq = paste0(huseq_raw$seq,collapse='')
 sirna_sequences = read_tsv('data/supptables/antisense_sequences.tsv', col_types=cols())
 write_supp_table(sirna_sequences, 'Antisense strand sequences of all siRNAs screened.')
 
+taqmans = read_tsv('data/miscellaneous/taqman_assays.tsv', col_types=cols())
+write_supp_table(taqmans, 'Taqman qPCR assays utilized.')
+
+
 all_studies = c("CMR-1313", "CMR-1403", "CMR-1418", "CMR-1465", "CMR-1656", 
   "CMR-1697", "CMR-1871", "CMR-2198", "CMR-2371", "CMR-2521", "CMR-2752", 
   "CMR-2812", "CMR-2833", "CMR-2941", "CMR-3164")
