@@ -617,8 +617,8 @@ for (cpd in cpds) {
   i = i + 1
 }
 
-ic50_points %>%
-  rename(descno = compound) %>%
+z_ic50 %>%
+  rename(descno = compound, resid = normed, concnm = dose) %>%
   select(descno, concnm, resid) -> ic50_points_out
 write_supp_table(ic50_points_out, 'Mouse siRNA sequence IC50 determination in N2a cells with bDNA assay readout.')
 
@@ -766,8 +766,8 @@ for (cpd in cpds) {
   i = i + 1
 }
 
-ic50_points %>%
-  rename(descno = compound) %>%
+z_ic50 %>%
+  rename(descno = compound, resid = normed, concnm = dose) %>%
   select(descno, concnm, resid) -> ic50_points_out
 write_supp_table(ic50_points_out, 'Human siRNA sequence IC50 determination in A549 cells with bDNA assay readout.')
 
@@ -1194,7 +1194,7 @@ for (this_txdpi in c(75,126)) {
   }
   
   allsurvdata %>% 
-    filter(grepl(this_txdpi,cohort) | grepl('uninoc',cohort)) -> survdata
+    filter(grepl(this_txdpi,cohort) | grepl('(uninoc|none)',cohort)) -> survdata
   
   sf = survfit(Surv(dpi, acm) ~ cohort, data=survdata)
   sf$color = yb_meta$color[match(gsub('cohort=','',names(sf$strata)), yb_meta$cohort)]
@@ -1219,7 +1219,7 @@ for (this_txdpi in c(75,126)) {
   yb_wts %>%
     inner_join(yb_blind %>% select(-inoculum), by='animal') %>%
     inner_join(yb_meta, by='cohort') %>%
-    filter(txdpi == this_txdpi) -> weights_curr
+    filter(txdpi == this_txdpi | is.na(txdpi)) -> weights_curr
 
   weights_curr %>%
     arrange(dpi) %>%
@@ -1243,7 +1243,7 @@ for (this_txdpi in c(75,126)) {
     filter(n > 2) -> weights_rel
   
   
-  weights_rel %>% filter(grepl(this_txdpi, cohort) | grepl('uninoc',cohort)) -> weights_curr
+  weights_rel %>% filter(grepl(this_txdpi, cohort) | grepl('(uninoc|none)',cohort)) -> weights_curr
   
   weights_rel %>%
     select(-color, -lty) -> weights_rel_out
@@ -1853,14 +1853,14 @@ par(xpd=T)
 text(x=proc_smry$x, y=proc_smry$max+0.2, labels=percent(proc_smry$mean,digits=1), cex=0.7, srt=90)
 par(xpd=F)
 
-# plot the PBS as a diagonal
+# plot the PBS and NTC as a diagonal
 par(xpd=T)
-text(x=xes$x[1], y=-0.05, labels=xes$display_tx[1], srt=45, adj=1)
+text(x=xes$x[1:4], y=-0.05, labels=xes$display_tx[1:4], srt=45, adj=1)
 par(xpd=F)
 # plot the rest as tranches
 proc_smry %>% 
-  mutate(scaffold = case_when(display_tx=='PBS' ~ '', TRUE ~ gsub('.+-','',display_tx)),
-         sequence = case_when(display_tx=='PBS' ~ '', TRUE ~ gsub('-.*','',display_tx))) -> xleg
+  mutate(scaffold = case_when(grepl('(PBS|NTC)',display_tx) ~ '', TRUE ~ gsub('.+-','',display_tx)),
+         sequence = case_when(grepl('(PBS|NTC)',display_tx) ~ '', TRUE ~ gsub('-.*','',display_tx))) -> xleg
 mtext(side=1, line=0.15, at=xleg$x, text=xleg$scaffold, cex=0.7)
 xleg %>%
   group_by(sequence) %>%
@@ -2915,7 +2915,7 @@ if ('figure-6'=='figure-6') {
   
   ### space for diagram across top ####
   par(mar=c(5,0.5,2,0.1))
-  raster_panel = image_convert(image_read('received/oligo_scaffolds_2439seq.png'),'png')
+  raster_panel = image_convert(image_read('data/miscellaneous/2439-s4_structure.png'),'png')
   plot(as.raster(raster_panel))
   mtext(side=3, adj=0.05, text=LETTERS[panel], line=0.0); panel = panel + 1
   # and a legend in A for the panels below it

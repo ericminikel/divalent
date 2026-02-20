@@ -25,9 +25,9 @@ tx	n_animals	color	is_reference	is_ntc	sequence_number	display_tx	comment
 HGb1	8	#000000	FALSE	FALSE	2439	Hongene ETT+XH	from hongene
 HGb3	8	#000000	FALSE	FALSE	2439	Hongene BTT+DDTT scaled up	GMP scaled up process
 HGb4	8	#000000	FALSE	FALSE	2439	Hongene BTT+XH	from hongene
-NTC	16	#666666	FALSE	TRUE		NTC-s1	
-NTC-P3 v1	6	#666666	FALSE	TRUE		NTC-s2	
-NTC-exNA	6	#B3B3A2	FALSE	TRUE		NTC-s4	
+NTC	16	#666666	FALSE	TRUE		NTC-U-s1	
+NTC-P3 v1	6	#666666	FALSE	TRUE		NTC-A-s2	
+NTC-exNA	6	#B3B3A2	FALSE	TRUE		NTC-U-s4	
 UMass	9	#000000	FALSE	FALSE	2439	UMass BTT+DDTT	
 aCSF	8	#A9A9A9	TRUE	FALSE		aCSF	
 fixed tail-exNA	42	#8DCFAA	FALSE	FALSE	2439	2439-s4 fixed tail	
@@ -38,7 +38,7 @@ newHG	8	#000000	FALSE	FALSE	2439	Hongene BTT+DDTT	Hongene adopted UMass process-
 no inject	1	#A9A9A9	TRUE	FALSE		none	
 no injection	47	#A9A9A9	TRUE	FALSE		none	
 none	14	#A9A9A9	TRUE	FALSE		none	
-ntc-exNA	5	#734A12	FALSE	TRUE		NTC-s4	
+ntc-exNA	5	#734A12	FALSE	TRUE		NTC-U-s4	
 origHG	8	#000000	FALSE	FALSE	2439	Hongene ETT+XH	from hongene
 origUM	8	#000000	FALSE	FALSE	2439	UMass BTT+DDTT	
 saline	45	#A9A9A9	TRUE	FALSE		PBS	
