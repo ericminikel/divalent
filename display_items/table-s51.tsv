@@ -1,379 +1,49 @@
-animal_id	tiss_disp	dose_mg	nominal_timepoint	concentration_ug_g	lloq_ug_g
-121	Liver	0	3	0.02	0.02
-122	Liver	0	3	0.02	0.02
-123	Liver	0	3	0.02	0.02
-171	Liver	0	3	0.02	0.02
-172	Liver	0	3	0.02	0.02
-173	Liver	0	3	0.02	0.02
-221	Liver	0.3	3	6.0065	0.02
-222	Liver	0.3	3	9.551200000000001	0.02
-223	Liver	0.3	3	7.2448999999999995	0.02
-224	Liver	0.3	3	9.529200000000001	0.02
-225	Liver	0.3	3	10.2585	0.02
-226	Liver	0.3	3	6.7135	0.02
-271	Liver	0.3	3	10.488	0.02
-272	Liver	0.3	3	12.5168	0.02
-273	Liver	0.3	3	5.9807	0.02
-274	Liver	0.3	3	6.3288	0.02
-275	Liver	0.3	3	14.854	0.02
-276	Liver	0.3	3	15.5364	0.02
-321	Liver	1	3	22.868599999999997	0.02
-322	Liver	1	3	26.7431	0.02
-323	Liver	1	3	28.759400000000003	0.02
-324	Liver	1	3	21.6866	0.02
-325	Liver	1	3	1.4427	0.02
-326	Liver	1	3	11.6996	0.02
-371	Liver	1	3	31.3185	0.02
-372	Liver	1	3	30.154400000000003	0.02
-373	Liver	1	3	42.3528	0.02
-374	Liver	1	3	32.7434	0.02
-375R	Liver	1	3	44.838800000000006	0.02
-376	Liver	1	3	13.1269	0.02
-421	Liver	3	3	48.025	0.02
-422	Liver	3	3	24.9145	0.02
-423	Liver	3	3	65.8678	0.02
-424	Liver	3	3	48.7903	0.02
-425	Liver	3	3	73.7344	0.02
-426	Liver	3	3	40.1981	0.02
-471	Liver	3	3	110.87769999999999	0.02
-472	Liver	3	3	114.1814	0.02
-473	Liver	3	3	134.78529999999998	0.02
-474	Liver	3	3	104.5143	0.02
-475	Liver	3	3	117.056	0.02
-476	Liver	3	3	12.853399999999999	0.02
-121	Kidney	0	3	0.02	0.02
-122	Kidney	0	3	0.02	0.02
-123	Kidney	0	3	0.02	0.02
-171	Kidney	0	3	0.02	0.02
-172	Kidney	0	3	0.02	0.02
-173	Kidney	0	3	0.02	0.02
-221	Kidney	0.3	3	2.3905	0.02
-222	Kidney	0.3	3	1.3675	0.02
-223	Kidney	0.3	3	5.6858	0.02
-224	Kidney	0.3	3	2.7656	0.02
-225	Kidney	0.3	3	3.1946	0.02
-226	Kidney	0.3	3	3.1709	0.02
-271	Kidney	0.3	3	8.553600000000001	0.02
-272	Kidney	0.3	3	1.4709	0.02
-273	Kidney	0.3	3	7.7812	0.02
-274	Kidney	0.3	3	9.575	0.02
-275	Kidney	0.3	3	6.918100000000001	0.02
-276	Kidney	0.3	3	3.8389	0.02
-321	Kidney	1	3	24.0566	0.02
-322	Kidney	1	3	12.0464	0.02
-323	Kidney	1	3	16.7672	0.02
-324	Kidney	1	3	13.1144	0.02
-325	Kidney	1	3	0.21669999999999998	0.02
-326	Kidney	1	3	17.2856	0.02
-371	Kidney	1	3	7.5281	0.02
-372	Kidney	1	3	39.0584	0.02
-373	Kidney	1	3	19.3391	0.02
-374	Kidney	1	3	26.255599999999998	0.02
-375R	Kidney	1	3	7.7853	0.02
-376	Kidney	1	3	42.05	0.02
-421	Kidney	3	3	59.475300000000004	0.02
-422	Kidney	3	3	60.164	0.02
-423	Kidney	3	3	62.9467	0.02
-424	Kidney	3	3	114.3326	0.02
-425	Kidney	3	3	73.79639999999999	0.02
-426	Kidney	3	3	49.5207	0.02
-471	Kidney	3	3	157.14079999999998	0.02
-472	Kidney	3	3	95.2171	0.02
-473	Kidney	3	3	113.9521	0.02
-474	Kidney	3	3	118.054	0.02
-475	Kidney	3	3	106.00269999999999	0.02
-476	Kidney	3	3	27.831799999999998	0.02
-121	Cervical cord	0	3	0.02	0.02
-122	Cervical cord	0	3	0.02	0.02
-123	Cervical cord	0	3	0.02	0.02
-171	Cervical cord	0	3	0.02	0.02
-172	Cervical cord	0	3	0.02	0.02
-173	Cervical cord	0	3	0.02	0.02
-221	Cervical cord	0.3	3	0.02	0.02
-222	Cervical cord	0.3	3	2.556	0.02
-223	Cervical cord	0.3	3	0.02	0.02
-224	Cervical cord	0.3	3	1.5985	0.02
-225	Cervical cord	0.3	3	5.3228	0.02
-226	Cervical cord	0.3	3	0.4393	0.02
-271	Cervical cord	0.3	3	0.9425	0.02
-272	Cervical cord	0.3	3	5.1671000000000005	0.02
-273	Cervical cord	0.3	3	0.4742	0.02
-274	Cervical cord	0.3	3	0.0317	0.02
-275	Cervical cord	0.3	3	2.5514	0.02
-276	Cervical cord	0.3	3	0.030699999999999998	0.02
-321	Cervical cord	1	3	8.9724	0.02
-322	Cervical cord	1	3	4.2653	0.02
-323	Cervical cord	1	3	4.8522	0.02
-324	Cervical cord	1	3	1.0646	0.02
-325	Cervical cord	1	3	1.0380999999999998	0.02
-326	Cervical cord	1	3	0.1621	0.02
-371	Cervical cord	1	3	4.9178999999999995	0.02
-372	Cervical cord	1	3	2.4959000000000002	0.02
-373	Cervical cord	1	3	11.7249	0.02
-374	Cervical cord	1	3	4.169899999999999	0.02
-375R	Cervical cord	1	3	9.6014	0.02
-376	Cervical cord	1	3	0.6526000000000001	0.02
-421	Cervical cord	3	3	11.677299999999999	0.02
-422	Cervical cord	3	3	1.5585	0.02
-423	Cervical cord	3	3	19.8662	0.02
-424	Cervical cord	3	3	7.9877	0.02
-425	Cervical cord	3	3	6.4983	0.02
-426	Cervical cord	3	3	2.9686	0.02
-471	Cervical cord	3	3	17.2377	0.02
-472	Cervical cord	3	3	17.55	0.02
-473	Cervical cord	3	3	19.263099999999998	0.02
-474	Cervical cord	3	3	10.1273	0.02
-475	Cervical cord	3	3	19.638900000000003	0.02
-476	Cervical cord	3	3	1.3334000000000001	0.02
-121	Lumbar cord	0	3	0.02	0.02
-122	Lumbar cord	0	3	0.02	0.02
-123	Lumbar cord	0	3	0.02	0.02
-171	Lumbar cord	0	3	0.02	0.02
-172	Lumbar cord	0	3	0.02	0.02
-173	Lumbar cord	0	3	0.02	0.02
-221	Lumbar cord	0.3	3	0.0733	0.02
-222	Lumbar cord	0.3	3	28.3556	0.02
-223	Lumbar cord	0.3	3	2.4263000000000003	0.02
-224	Lumbar cord	0.3	3	4.2642	0.02
-225	Lumbar cord	0.3	3	25.8261	0.02
-226	Lumbar cord	0.3	3	9.4818	0.02
-271	Lumbar cord	0.3	3	5.168	0.02
-272	Lumbar cord	0.3	3	18.699	0.02
-273	Lumbar cord	0.3	3	1.0825	0.02
-274	Lumbar cord	0.3	3	0.1185	0.02
-275	Lumbar cord	0.3	3	7.168399999999999	0.02
-276	Lumbar cord	0.3	3	2.867	0.02
-321	Lumbar cord	1	3	49.7712	0.02
-322	Lumbar cord	1	3	20.2852	0.02
-323	Lumbar cord	1	3	66.23519999999999	0.02
-324	Lumbar cord	1	3	4.7237	0.02
-325	Lumbar cord	1	3	14.085	0.02
-326	Lumbar cord	1	3	0.2872	0.02
-371	Lumbar cord	1	3	30.5225	0.02
-372	Lumbar cord	1	3	20.7357	0.02
-373	Lumbar cord	1	3	11.7249	0.02
-374	Lumbar cord	1	3	45.8258	0.02
-375R	Lumbar cord	1	3	24.105700000000002	0.02
-376	Lumbar cord	1	3	7.5702	0.02
-421	Lumbar cord	3	3	6.100899999999999	0.02
-422	Lumbar cord	3	3	9.395	0.02
-423	Lumbar cord	3	3	52.3827	0.02
-424	Lumbar cord	3	3	70.3435	0.02
-425	Lumbar cord	3	3	52.912099999999995	0.02
-426	Lumbar cord	3	3	81.2955	0.02
-471	Lumbar cord	3	3	35.1214	0.02
-472	Lumbar cord	3	3	147.58679999999998	0.02
-473	Lumbar cord	3	3	179.252	0.02
-474	Lumbar cord	3	3	330.83090000000004	0.02
-475	Lumbar cord	3	3	139.3051	0.02
-476	Lumbar cord	3	3	8.4129	0.02
-121	Frontal cortex	0	3	0.02	0.02
-122	Frontal cortex	0	3	0.02	0.02
-123	Frontal cortex	0	3	0.02	0.02
-171	Frontal cortex	0	3	0.02	0.02
-172	Frontal cortex	0	3	0.02	0.02
-173	Frontal cortex	0	3	0.02	0.02
-221	Frontal cortex	0.3	3	0.02	0.02
-222	Frontal cortex	0.3	3	2.7499000000000002	0.02
-223	Frontal cortex	0.3	3	0.02	0.02
-224	Frontal cortex	0.3	3	2.0373	0.02
-225	Frontal cortex	0.3	3	9.9589	0.02
-226	Frontal cortex	0.3	3	0.6307999999999999	0.02
-271	Frontal cortex	0.3	3	0.32080000000000003	0.02
-272	Frontal cortex	0.3	3	5.443899999999999	0.02
-273	Frontal cortex	0.3	3	0.2762	0.02
-274	Frontal cortex	0.3	3	0.02	0.02
-275	Frontal cortex	0.3	3	1.0068	0.02
-276	Frontal cortex	0.3	3	0.02	0.02
-321	Frontal cortex	1	3	4.8058000000000005	0.02
-322	Frontal cortex	1	3	6.2703999999999995	0.02
-323	Frontal cortex	1	3	4.6093	0.02
-324	Frontal cortex	1	3	0.9002	0.02
-325	Frontal cortex	1	3	0.5036	0.02
-326	Frontal cortex	1	3	0.02	0.02
-371	Frontal cortex	1	3	2.1515	0.02
-372	Frontal cortex	1	3	1.5875	0.02
-373	Frontal cortex	1	3	7.3918	0.02
-374	Frontal cortex	1	3	4.9055	0.02
-375R	Frontal cortex	1	3	6.6247	0.02
-376	Frontal cortex	1	3	1.1847	0.02
-421	Frontal cortex	3	3	6.4751	0.02
-422	Frontal cortex	3	3	0.5157999999999999	0.02
-423	Frontal cortex	3	3	42.5736	0.02
-424	Frontal cortex	3	3	10.829799999999999	0.02
-425	Frontal cortex	3	3	6.8692	0.02
-426	Frontal cortex	3	3	6.3587	0.02
-471	Frontal cortex	3	3	18.1008	0.02
-472	Frontal cortex	3	3	20.9844	0.02
-473	Frontal cortex	3	3	14.8066	0.02
-474	Frontal cortex	3	3	12.039100000000001	0.02
-475	Frontal cortex	3	3	8.737	0.02
-476	Frontal cortex	3	3	0.2894	0.02
-121	Hippocampus	0	3	0.02	0.02
-122	Hippocampus	0	3	0.02	0.02
-123	Hippocampus	0	3	0.02	0.02
-171	Hippocampus	0	3	0.02	0.02
-172	Hippocampus	0	3	0.02	0.02
-173	Hippocampus	0	3	0.02	0.02
-221	Hippocampus	0.3	3	0.02	0.02
-222	Hippocampus	0.3	3	0.5293	0.02
-223	Hippocampus	0.3	3	0.02	0.02
-224	Hippocampus	0.3	3	0.8211	0.02
-225	Hippocampus	0.3	3	2.1666	0.02
-226	Hippocampus	0.3	3	0.3679	0.02
-271	Hippocampus	0.3	3	0.4815	0.02
-272	Hippocampus	0.3	3	0.7328	0.02
-273	Hippocampus	0.3	3	0.1626	0.02
-274	Hippocampus	0.3	3	0.02	0.02
-275	Hippocampus	0.3	3	2.2433	0.02
-276	Hippocampus	0.3	3	0.02	0.02
-321	Hippocampus	1	3	2.6622	0.02
-322	Hippocampus	1	3	2.5248000000000004	0.02
-323	Hippocampus	1	3	4.2036999999999995	0.02
-324	Hippocampus	1	3	1.4887000000000001	0.02
-325	Hippocampus	1	3	0.36410000000000003	0.02
-326	Hippocampus	1	3	0.0217	0.02
-371	Hippocampus	1	3	3.0879000000000003	0.02
-372	Hippocampus	1	3	2.7916	0.02
-373	Hippocampus	1	3	5.3683000000000005	0.02
-374	Hippocampus	1	3	3.3004000000000002	0.02
-375R	Hippocampus	1	3	7.977399999999999	0.02
-376	Hippocampus	1	3	0.2736	0.02
-421	Hippocampus	3	3	4.32	0.02
-422	Hippocampus	3	3	0.7947000000000001	0.02
-423	Hippocampus	3	3	24.4073	0.02
-424	Hippocampus	3	3	10.829600000000001	0.02
-425	Hippocampus	3	3	2.7436	0.02
-426	Hippocampus	3	3	2.8386	0.02
-471	Hippocampus	3	3	16.3942	0.02
-472	Hippocampus	3	3	13.187899999999999	0.02
-473	Hippocampus	3	3	14.282	0.02
-474	Hippocampus	3	3	10.7921	0.02
-475	Hippocampus	3	3	16.576400000000003	0.02
-476	Hippocampus	3	3	0.3039	0.02
-121	Cerebellar cortex	0	3	0.02	0.02
-122	Cerebellar cortex	0	3	0.02	0.02
-123	Cerebellar cortex	0	3	0.02	0.02
-171	Cerebellar cortex	0	3	0.02	0.02
-172	Cerebellar cortex	0	3	0.02	0.02
-173	Cerebellar cortex	0	3	0.02	0.02
-221	Cerebellar cortex	0.3	3	0.0201	0.02
-222	Cerebellar cortex	0.3	3	7.6631	0.02
-223	Cerebellar cortex	0.3	3	0.023	0.02
-224	Cerebellar cortex	0.3	3	4.1563	0.02
-225	Cerebellar cortex	0.3	3	7.6118999999999994	0.02
-226	Cerebellar cortex	0.3	3	0.8467	0.02
-271	Cerebellar cortex	0.3	3	2.6273	0.02
-272	Cerebellar cortex	0.3	3	7.9379	0.02
-273	Cerebellar cortex	0.3	3	0.8409	0.02
-274	Cerebellar cortex	0.3	3	0.02	0.02
-275	Cerebellar cortex	0.3	3	4.9333	0.02
-276	Cerebellar cortex	0.3	3	0.02	0.02
-321	Cerebellar cortex	1	3	17.234599999999997	0.02
-322	Cerebellar cortex	1	3	3.7946	0.02
-323	Cerebellar cortex	1	3	14.9255	0.02
-324	Cerebellar cortex	1	3	1.2501	0.02
-325	Cerebellar cortex	1	3	3.2904	0.02
-326	Cerebellar cortex	1	3	0.024399999999999998	0.02
-371	Cerebellar cortex	1	3	7.1559	0.02
-372	Cerebellar cortex	1	3	5.0628	0.02
-373	Cerebellar cortex	1	3	7.6226	0.02
-374	Cerebellar cortex	1	3	10.9285	0.02
-375R	Cerebellar cortex	1	3	14.9919	0.02
-376	Cerebellar cortex	1	3	1.2412999999999998	0.02
-421	Cerebellar cortex	3	3	14.236799999999999	0.02
-422	Cerebellar cortex	3	3	6.0992	0.02
-423	Cerebellar cortex	3	3	48.6076	0.02
-424	Cerebellar cortex	3	3	20.578799999999998	0.02
-425	Cerebellar cortex	3	3	5.1985	0.02
-426	Cerebellar cortex	3	3	3.3981999999999997	0.02
-471	Cerebellar cortex	3	3	28.5441	0.02
-472	Cerebellar cortex	3	3	29.5003	0.02
-473	Cerebellar cortex	3	3	42.4505	0.02
-474	Cerebellar cortex	3	3	45.033199999999994	0.02
-475	Cerebellar cortex	3	3	39.5815	0.02
-476	Cerebellar cortex	3	3	3.556	0.02
-121	Thalamus	0	3	0.02	0.02
-122	Thalamus	0	3	0.02	0.02
-123	Thalamus	0	3	0.02	0.02
-171	Thalamus	0	3	0.02	0.02
-172	Thalamus	0	3	0.02	0.02
-173	Thalamus	0	3	0.02	0.02
-221	Thalamus	0.3	3	0.02	0.02
-222	Thalamus	0.3	3	5.5563	0.02
-223	Thalamus	0.3	3	0.02	0.02
-224	Thalamus	0.3	3	6.4338999999999995	0.02
-225	Thalamus	0.3	3	7.9741	0.02
-226	Thalamus	0.3	3	0.3315	0.02
-271	Thalamus	0.3	3	1.9689	0.02
-272	Thalamus	0.3	3	4.9138	0.02
-273	Thalamus	0.3	3	2.7753	0.02
-274	Thalamus	0.3	3	0.02	0.02
-275	Thalamus	0.3	3	2.8501	0.02
-276	Thalamus	0.3	3	0.02	0.02
-321	Thalamus	1	3	12.1036	0.02
-322	Thalamus	1	3	5.815	0.02
-323	Thalamus	1	3	18.9728	0.02
-324	Thalamus	1	3	1.6217000000000001	0.02
-325	Thalamus	1	3	1.0495999999999999	0.02
-326	Thalamus	1	3	0.02	0.02
-371	Thalamus	1	3	4.0102	0.02
-372	Thalamus	1	3	8.668299999999999	0.02
-373	Thalamus	1	3	8.8721	0.02
-374	Thalamus	1	3	7.1973	0.02
-375R	Thalamus	1	3	2.7121	0.02
-376	Thalamus	1	3	1.4215	0.02
-421	Thalamus	3	3	25.911900000000003	0.02
-422	Thalamus	3	3	1.1833	0.02
-423	Thalamus	3	3	87.738	0.02
-424	Thalamus	3	3	22.122400000000003	0.02
-425	Thalamus	3	3	25.679299999999998	0.02
-426	Thalamus	3	3	1.8485999999999998	0.02
-471	Thalamus	3	3	9.840399999999999	0.02
-472	Thalamus	3	3	35.398300000000006	0.02
-473	Thalamus	3	3	51.3475	0.02
-474	Thalamus	3	3	21.6782	0.02
-475	Thalamus	3	3	18.3953	0.02
-476	Thalamus	3	3	8.7985	0.02
-121	Caudate/putamen	0	3	0.02	0.02
-122	Caudate/putamen	0	3	0.02	0.02
-123	Caudate/putamen	0	3	0.02	0.02
-171	Caudate/putamen	0	3	0.02	0.02
-172	Caudate/putamen	0	3	0.02	0.02
-173	Caudate/putamen	0	3	0.02	0.02
-221	Caudate/putamen	0.3	3	0.02	0.02
-222	Caudate/putamen	0.3	3	0.1238	0.02
-223	Caudate/putamen	0.3	3	0.02	0.02
-224	Caudate/putamen	0.3	3	0.3926	0.02
-225	Caudate/putamen	0.3	3	0.7921	0.02
-226	Caudate/putamen	0.3	3	0.042	0.02
-271	Caudate/putamen	0.3	3	0.04	0.02
-272	Caudate/putamen	0.3	3	0.2802	0.02
-273	Caudate/putamen	0.3	3	0.02	0.02
-274	Caudate/putamen	0.3	3	0.02	0.02
-275	Caudate/putamen	0.3	3	0.3613	0.02
-276	Caudate/putamen	0.3	3	0.02	0.02
-321	Caudate/putamen	1	3	1.4476	0.02
-322	Caudate/putamen	1	3	6.9413	0.02
-323	Caudate/putamen	1	3	0.5712999999999999	0.02
-324	Caudate/putamen	1	3	0.3765	0.02
-325	Caudate/putamen	1	3	0.214	0.02
-326	Caudate/putamen	1	3	0.024	0.02
-371	Caudate/putamen	1	3	6.5975	0.02
-372	Caudate/putamen	1	3	0.1157	0.02
-373	Caudate/putamen	1	3	6.4354	0.02
-374	Caudate/putamen	1	3	1.6355	0.02
-375R	Caudate/putamen	1	3	0.6141	0.02
-376	Caudate/putamen	1	3	0.0694	0.02
-421	Caudate/putamen	3	3	0.9532	0.02
-422	Caudate/putamen	3	3	0.3785	0.02
-423	Caudate/putamen	3	3	19.9588	0.02
-424	Caudate/putamen	3	3	3.5084	0.02
-425	Caudate/putamen	3	3	1.8675	0.02
-426	Caudate/putamen	3	3	0.6471	0.02
-471	Caudate/putamen	3	3	9.947	0.02
-472	Caudate/putamen	3	3	8.5647	0.02
-473	Caudate/putamen	3	3	4.4973	0.02
-474	Caudate/putamen	3	3	2.6475	0.02
-475	Caudate/putamen	3	3	2.6078	0.02
-476	Caudate/putamen	3	3	0.21309999999999998	0.02
+animal_id	day_of_death	terminal_bw_kg	adrenal_glands_wt_g	brain_weight_g	heart_weight_g	kidneys_weight_g	liver_weight_g	lungs_weight_g	spleen_weight_g	testes_weight_g	thymus_weight_g	group	sex
+101	2	6.9	0.9881	78.82	62.82	35.5	271.55	127.49	39	1.25	12.412	Group 1 Vehicle 0 mg	Male
+102	2	5.9	0.7418	76.38	37.51	30.43	217.81	79.87	49.69	2.42	9.997	Group 1 Vehicle 0 mg	Male
+103	2	9.1	1.1497	77.49	66.29	49.5	278.73	88.21	69.33	10.35	13.282	Group 1 Vehicle 0 mg	Male
+104	2	7.1	0.957	75.9	54.48	39.87	247.52	90.79	58	4.92	9.154	Group 1 Vehicle 0 mg	Male
+105	29	8.2	1.1059	76.69	60.35	39.15	244.12	135.06	52.03	8.65	14.693	Group 1 Vehicle 0 mg	Male
+106	29	7.9	0.822	72.13	63.39	48.39	244.65	91.03	61.53	8.41	21.226	Group 1 Vehicle 0 mg	Male
+201	2	6.9	1.0936	78.03	51.5	42.48	231.17	62.07	69.69	2.11	14.193	Group 2 Low Dose 20 mg	Male
+202	2	6.8	1.0979	72.12	44.17	39.97	249.81	914.92	41.69	3.81	12.72	Group 2 Low Dose 20 mg	Male
+203	2	7.5	1.1554	73.91	53.88	43.92	223.17	68.18	62.25	4.76	19.025	Group 2 Low Dose 20 mg	Male
+204	2	8.8	1.1078	76.21	69.98	41.31	282.38	84.13	88.85	5.57	14.06	Group 2 Low Dose 20 mg	Male
+205	29	8.1	1.161	77.29	61.56	45.02	206.71	96.68	71.96	6.68	8.913	Group 2 Low Dose 20 mg	Male
+206	29	7.8	1.1392	73.79	64.98	40.58	252.21	82.02	53.77	8.08	19.575	Group 2 Low Dose 20 mg	Male
+301	2	7.6	1.1547	74.21	53.53	42.04	244.49	88.74	51.05	4.48	23.414	Group 3 Mid Dose 60 mg	Male
+302	2	7.1	0.9936	70.47	54.53	42.06	215.39	63.02	54.57	7.64	10.619	Group 3 Mid Dose 60 mg	Male
+303	2	6.6	1.1129	76.63	47.98	33.68	220.37	71	42.73	3.84	14.206	Group 3 Mid Dose 60 mg	Male
+304	2	7.8	1.0106	76.15	55.19	43.3	269.33	62.08	70.89	8.77	12.694	Group 3 Mid Dose 60 mg	Male
+305	29	8	0.9085	79.39	56.33	54.24	223.61	74.38	67.63	8.42	13.428	Group 3 Mid Dose 60 mg	Male
+306	29	7.7	0.8333	76.64	60.65	43.5	247.05	72.76	39.46	9.12	10.64	Group 3 Mid Dose 60 mg	Male
+401	2	7.6	1.1374	77.83	61.19	46.63	284.48	103.64	37.38	2.68	12.547	Group 4 High Dose 200 mg	Male
+402	2	8.8	1.1757	75.95	60.67	37.12	246.4	85.27	66.72	10.08	9.315	Group 4 High Dose 200 mg	Male
+403	2	7	0.786	76.46	62.42	39.27	234.83	77.87	48.27	4.49	9.876	Group 4 High Dose 200 mg	Male
+404	2	7.3	1.0335	70.68	52.39	40.57	223.98	71.6	34.49	4.79	8.843	Group 4 High Dose 200 mg	Male
+405	29	6.8	0.8007	71.33	52.08	36.82	223.49	85.48	45.02	8.83	7.16	Group 4 High Dose 200 mg	Male
+406	29	8.2	1.0939	71.25	58.1	39.44	269.79	78.45	68.86	10.09	16.823	Group 4 High Dose 200 mg	Male
+151	2	7.4	1.2872	73.36	66.07	36.3	252.31	66.12	98.15		12.948	Group 1 Vehicle 0 mg	Female
+152	2	6.9	1.2947	68.55	52.5	32.02	202.66	63.39	73.61		9.305	Group 1 Vehicle 0 mg	Female
+153	2	5.8	0.7943	67.1	52.43	30.14	199.5	76.48	44.01		9.653	Group 1 Vehicle 0 mg	Female
+154	2	6.7	1.2468	65.83	50.23	34	229.38	69.37	66.94		4.769	Group 1 Vehicle 0 mg	Female
+155	29	7.1	1.1785	71.2	55.43	33.01	240.89	89.3	61.85		9.189	Group 1 Vehicle 0 mg	Female
+156	29	6.6	0.8126	72.74	49.42	31.49	179.9	57.8	52.74		9.271	Group 1 Vehicle 0 mg	Female
+251	2	6.6	1.2805	72.26	52.26	36.14	248.59	71.85	41.79		6.375	Group 2 Low Dose 20 mg	Female
+252	2	6.9	0.9635	73.27	57.07	35.56	180.39	72.25	66.91		6.185	Group 2 Low Dose 20 mg	Female
+253	2	6.2	0.8532	73.26	47.88	31.11	190.75	84.25	59.12		10.974	Group 2 Low Dose 20 mg	Female
+254	2	5.1	0.9398	67.12	42.96	28.73	178.93	59.36	41.18		9.429	Group 2 Low Dose 20 mg	Female
+255	29	6.8	1.1128	64.77	61.42	28.09	184.9	74.34	60.74		6.136	Group 2 Low Dose 20 mg	Female
+256	29	7.5	1.094	77.68	62.44	35.91	241.81	74.65	70.92		9.969	Group 2 Low Dose 20 mg	Female
+351	2	6.7	1.1475	69.01	49.68	32.21	211.56	75	53.5		9.27	Group 3 Mid Dose 60 mg	Female
+352	2	6.3	1.2478	69.39	56.72	32.03	203.69	65.85	67.13		7.653	Group 3 Mid Dose 60 mg	Female
+353	2	5.8	1.0588	70.36	45.62	25.64	151.63	50.55	67.92		8.627	Group 3 Mid Dose 60 mg	Female
+354	2	6.1	0.8725	68.2	43.85	27.32	179.68	61.02	66.63		10.21	Group 3 Mid Dose 60 mg	Female
+355	29	6.2	0.8869	71.3	46.07	31.08	197.46	86.09	40.36		7.183	Group 3 Mid Dose 60 mg	Female
+356	29	7.8	1.1333	78.27	64.89	36.03	231.86	65.45	74.28		9.094	Group 3 Mid Dose 60 mg	Female
+451	2	6.5	1.244	67.68	51.45	33.61	203.92	91.09	62.53		10.564	Group 4 High Dose 200 mg	Female
+452	2	6.2	0.8641	72.2	46.82	31.31	213.5	96.32	37.47		9.782	Group 4 High Dose 200 mg	Female
+453	2	7	1.0572	73.22	52.81	35.14	225.25	101.59	34.4		12.037	Group 4 High Dose 200 mg	Female
+454	2	6.8	0.9504	70.98	62.15	40.85	200.35	86.78	51.02		5.111	Group 4 High Dose 200 mg	Female
+455	29	6.3	0.8492	69.86	48.24	30.01	215.06	65.29	35.56		12.537	Group 4 High Dose 200 mg	Female
+456	29	7.1	1.0416	67.58	58.92	33.12	227.08	69.1	70.23		15.695	Group 4 High Dose 200 mg	Female

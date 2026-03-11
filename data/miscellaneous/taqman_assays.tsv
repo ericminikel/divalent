@@ -1,0 +1,4 @@
+target	target_species	catalog_number	sequence_accession_number	amplicon_length	amplicon_location	exon_boundary	location_indentity_modifications
+PRNP	human	Hs00175591_m1	NM_000311.3	64	361	1,2 	5' FAM, 3' NFQ-MGB
+TBP	human	Hs00427620_m1	NM_001172085.1	91	578	2,3	5' VIC, 3' NFQ-MGB
+Tbp	mouse	Mm00446971_m1	NM_013684.3	93	305	2,3	5' VIC, 3' NFQ-MGB
